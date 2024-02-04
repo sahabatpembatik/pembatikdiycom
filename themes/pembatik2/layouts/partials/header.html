@@ -1,0 +1,116 @@
+<header class="h-16 bg-white bg-opacity-75 backdrop-blur fixed w-screen flex px-2 inset-0 border-b border-neutral-200" >
+    <div class="w-11/12 md:w-10/12 mx-auto flex flex-row content-center items-center space-x-4 content-stretch h-full justify-between">
+        <a href="{{ .Site.BaseURL }}">
+            <img src="/logo/logo-sahabat-pembatik.svg" width="60" alt="{{ .Site.Title }}" />
+        </a>
+        <span class="w-px bg-gray-400 h-6 md:flex hidden"> </span>
+        <nav class="items-center justify-between w-full md:flex hidden">
+            <div class="flex flex-row space-x-6 text-base font-medium list-none"></div>
+                <a
+                    class="hover:text-blue-500 font-extrabold inline-flex items-center flex-row items-center space-x-1.5"
+                    href="{{ .Site.BaseURL }}"
+                >
+                    <svg
+                        width="21"
+                        height="21"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                        ></path>
+                    </svg>
+                    <span>Home</span>
+                </a>
+                <a
+                    class="hover:text-blue-500 font-extrabold inline-flex flex-row items-center space-x-1.5 ml-4 mr-auto"
+                    href="/about"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path
+                            d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+                        ></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <span >About</span>
+                </a>
+                
+                
+            </div>
+            
+        </nav>
+        <!-- BAR when responsive -->
+        <label class="flex md:hidden text-2xl text-gray-600 hamburger">
+            <img
+                src="/icons/menu.svg"
+                width="35"
+                height="35"
+                alt="menu button"
+                id="icons"
+            />
+        </label>
+        
+    </div>
+</header>
+<div
+    class="bg-white bg-opacity-75 backdrop-blur top-16 md:hidden flex flex-col text-center space-y-6 h-full w-full pt-8 px-14 sm:px-32 fixed z-50 text-xl font-medium menu-res hidden"
+>
+    <a
+        class="hover:text-blue-500 inline-flex items-center flex-row items-center space-x-1.5"
+        href="{{ .Site.BaseURL }}"
+    >
+        <svg
+            width="21"
+            height="21"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+            ></path>
+        </svg>
+        <span>Home</span>
+    </a>
+    <a
+        class="hover:text-blue-500 inline-flex flex-row items-center space-x-1.5"
+        href="/about"
+    >
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+        <span>About</span>
+    </a>
+    
+    
+</div>

@@ -1,0 +1,4 @@
+
+{{- $alpine := resources.Get "js/alpine.js" | js.Build "alpine.js" -}}
+
+<script defer src="{{ $alpine.Permalink }}" crossorigin="anonymous"></script>

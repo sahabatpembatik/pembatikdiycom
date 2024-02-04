@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.Params.isoCode | default (.Site.LanguageCode | default " en") }} {{- . -}} {{ end }}" dir="{{ if .Site.Params.rtl | default false -}}
+    rtl
+  {{- else -}}
+    ltr
+  {{- end }}" class="scroll-smooth" data-default-appearance="{{ .Site.Params.defaultAppearance | default " light" }}"
+  data-auto-appearance="{{ .Site.Params.autoSwitchAppearance | default " true" }}">
+{{- partial "head.html" . -}}
+<body class="text-gray-700">
+    {{- partial "header.html" . -}}
+    <main class="w-11/12 md:w-8/12 mx-auto mt-24 mb-8">
+    {{- block "main" . }}{{- end }}
+    </main>
+    {{- partial "footer.html" . -}}
+    <script type="text/javascript">
+        // Grab HTML Elements
+        const btn = document.querySelector(".hamburger");
+        const menu = document.querySelector(".menu-res");
+        let icons = document.getElementById('icons');
+        let isActive = false;
+
+        // Add Event Listeners
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+            if(!isActive) {
+                icons.src = "/icons/close.svg";
+                isActive = true
+            } else {
+                icons.src = "/icons/menu.svg";
+                isActive = false
+            }
+        });
+    </script>
+</body>
+</html>

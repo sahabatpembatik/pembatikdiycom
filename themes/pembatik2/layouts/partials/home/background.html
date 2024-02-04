@@ -1,0 +1,27 @@
+{{ $disableImageOptimization := .Site.Params.disableImageOptimization | default false }}
+<article class="max-w-full text-center prose dark:prose-invert">
+    <a href="{{ .Site.BaseURL }}">
+        <img class="mx-auto mb-2 rounded-full h-36 w-36 border-4 border-blue-500" width="144" height="144"
+            alt="{{ .Site.Title }}" src="/logo/logo-sahabat-pembatik.svg" />
+    </a>
+    <h1 class="mb-2 text-4xl font-extrabold text-neutral-800 dark:text-neutral-200">
+        {{ .Site.Title }}
+    </h1>
+    <section class="prose dark:prose-invert">{{ .Content | emojify }}</section>
+
+</article>
+<section>
+    {{ partial "recent-articles/main.html" . }}
+</section>
+
+{{ if .Site.Params.homepage.layoutBackgroundBlur | default false }}
+<div id="background-blur"
+    class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl"></div>
+<script>
+    window.addEventListener('scroll', function (e) {
+        var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        var background_blur = document.getElementById('background-blur');
+        background_blur.style.opacity = (scroll / 300)
+    });
+</script>
+{{ end }}
