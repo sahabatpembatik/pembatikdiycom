@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Events on Sahabat Pembatik DIY</title>
+    <link>https://pembatikdiy.com/event/</link>
+    <description>Recent content in Events on Sahabat Pembatik DIY</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id</language>
+    <lastBuildDate>Sun, 04 Feb 2024 17:51:40 +0700</lastBuildDate><atom:link href="https://pembatikdiy.com/event/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Webinar Praktik Baik Pembelajaran Berbasis CT dan AI dalam Menunjang Kurikulum Merdeka</title>
+      <link>https://pembatikdiy.com/event/wb04/</link>
+      <pubDate>Sun, 04 Feb 2024 17:51:40 +0700</pubDate>
+      
+      <guid>https://pembatikdiy.com/event/wb04/</guid>
+      <description>Webinar</description>
+    </item>
+    
+  </channel>
+</rss>

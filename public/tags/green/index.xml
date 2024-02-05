@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>green on Sahabat Pembatik DIY</title>
+    <link>https://pembatikdiy.com/tags/green/</link>
+    <description>Recent content in green on Sahabat Pembatik DIY</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id</language>
+    <lastBuildDate>Wed, 15 Mar 2023 11:00:00 -0700</lastBuildDate><atom:link href="https://pembatikdiy.com/tags/green/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Post 3</title>
+      <link>https://pembatikdiy.com/posts/post-3/</link>
+      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
+      
+      <guid>https://pembatikdiy.com/posts/post-3/</guid>
+      <description>Occaecat aliqua consequat laborum ut ex aute aliqua culpa quis irure esse magna dolore quis.</description>
+    </item>
+    
+    <item>
+      <title>Post 2</title>
+      <link>https://pembatikdiy.com/posts/post-2/</link>
+      <pubDate>Wed, 15 Feb 2023 10:00:00 -0700</pubDate>
+      
+      <guid>https://pembatikdiy.com/posts/post-2/</guid>
+      <description>Anim eiusmod irure incididunt sint cupidatat.</description>
+    </item>
+    
+  </channel>
+</rss>
