@@ -6,6 +6,7 @@
     <description>Recent content in Posts on Sahabat Pembatik DIY</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id</language>
+    <copyright>© 2024 Bakhtiar Rifai</copyright>
     <lastBuildDate>Sun, 01 Jan 2023 08:30:00 -0700</lastBuildDate><atom:link href="https://pembatikdiy.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Post 3</title>
@@ -14,6 +15,7 @@
       
       <guid>https://pembatikdiy.com/posts/post-3/</guid>
       <description>Occaecat aliqua consequat laborum ut ex aute aliqua culpa quis irure esse magna dolore quis.</description>
+      
     </item>
     
     <item>
@@ -23,6 +25,7 @@
       
       <guid>https://pembatikdiy.com/posts/post-2/</guid>
       <description>Anim eiusmod irure incididunt sint cupidatat.</description>
+      
     </item>
     
     <item>
@@ -32,6 +35,7 @@
       
       <guid>https://pembatikdiy.com/posts/post-1/</guid>
       <description>Tempor proident minim aliquip reprehenderit dolor et ad anim Lorem duis sint eiusmod.</description>
+      
     </item>
     
   </channel>

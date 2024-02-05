@@ -915,9 +915,21 @@ video {
 .m-2 {
   margin: 0.5rem;
 }
+.-mx-2 {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+.my-0 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 .my-4 {
   margin-top: 1rem;
@@ -978,6 +990,9 @@ video {
 .mt-3 {
   margin-top: 0.75rem;
 }
+.mt-5 {
+  margin-top: 1.25rem;
+}
 .mt-6 {
   margin-top: 1.5rem;
 }
@@ -1029,6 +1044,9 @@ video {
 .max-h-3 {
   max-height: 0.75rem;
 }
+.min-h-0 {
+  min-height: 0px;
+}
 .min-h-full {
   min-height: 100%;
 }
@@ -1058,6 +1076,9 @@ video {
 }
 .w-screen {
   width: 100vw;
+}
+.min-w-0 {
+  min-width: 0px;
 }
 .min-w-full {
   min-width: 100%;
@@ -1462,6 +1483,10 @@ video {
 .text-neutral-800 {
   --tw-text-opacity: 1;
   color: rgba(var(--color-neutral-800), var(--tw-text-opacity));
+}
+.text-neutral-900 {
+  --tw-text-opacity: 1;
+  color: rgba(var(--color-neutral-900), var(--tw-text-opacity));
 }
 .text-primary-300 {
   --tw-text-opacity: 1;
@@ -2142,6 +2167,9 @@ html {
   .sm\:mt-16 {
     margin-top: 4rem;
   }
+  .sm\:w-1\/2 {
+    width: 50%;
+  }
   .sm\:w-5\/12 {
     width: 41.666667%;
   }
@@ -2195,6 +2223,9 @@ html {
   }
   .md\:hidden {
     display: none;
+  }
+  .md\:w-1\/3 {
+    width: 33.333333%;
   }
   .md\:w-10\/12 {
     width: 83.333333%;
@@ -2272,6 +2303,9 @@ html {
   .lg\:h-full {
     height: 100%;
   }
+  .lg\:w-1\/4 {
+    width: 25%;
+  }
   .lg\:w-auto {
     width: auto;
   }
@@ -2287,8 +2321,11 @@ html {
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .lg\:grid-cols-5 {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+  .lg\:grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+  .lg\:flex-row {
+    flex-direction: row;
   }
   .lg\:gap-24 {
     gap: 6rem;
@@ -2315,6 +2352,9 @@ html {
   }
 }
 @media (min-width: 1280px) {
+  .xl\:w-1\/4 {
+    width: 25%;
+  }
   .xl\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -2335,4 +2375,9 @@ html {
 }
 .rtl\:hidden:where([dir="rtl"], [dir="rtl"] *) {
   display: none;
+}
+@media print {
+  .print\:hidden {
+    display: none;
+  }
 }

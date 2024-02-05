@@ -22,10 +22,9 @@ buildFuture = false
   anchor = 'Center'
 
 [taxonomies]
-  tag = "tags"
-  category = "categories"
-  author = "authors"
-  series = "series"
+  tag = "topik"
+  category = "kategori"
+  series = "seri"
 
 [sitemap]
   changefreq = 'daily'

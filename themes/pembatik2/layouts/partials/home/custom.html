@@ -1,13 +1,18 @@
 <div id="background" class="flex flex-col justify-center content-center items-center space-y-3 mt-20 md:mt-32">
   {{ partial "partials/home/background.html" . }}
 </div>
-
+<section>
+    {{ partial "recent-event.html" . }}
+  </section>
 <section class="bg-white dark:bg-gray-900">
   <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
       <h2 class="mb-8 text-3xl font-extrabold tracking-tight leading-tight text-center text-gray-900 lg:mb-16 dark:text-white md:text-4xl">Suported by</h2>
-      <div class="grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 md:grid-cols-3 lg:grid-cols-5 dark:text-gray-400">
+      <div class="grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 md:grid-cols-3 lg:grid-cols-6 dark:text-gray-400">
           <a href="https://pusdatin.kemdikbud.go.id/" class="flex justify-center items-center" target="_blank">
-              <img src="/img/logo/blpt.png">                       
+              <img src="/img/logo/logo-blpt.png">                       
+          </a>
+          <a href="https://kurikulum.kemdikbud.go.id/" class="flex justify-center items-center" target="_blank">
+              <img src="/img/logo/logo-merdeka-belajar.png">                       
           </a>
           <a href="https://guru.kemdikbud.go.id/" class="flex justify-center items-center" target="_blank">
               <img src="/img/logo/pmm.png">                       
