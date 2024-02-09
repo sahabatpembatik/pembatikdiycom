@@ -1,58 +1,136 @@
 {{ define "main" }}
 
-<h3>{{ .Title }}</h3>
-
-<hr class="my-4" />
-
-<p>
-  My journey in writing format was here. I write more about programming and any
-  other technologies and mostly with Indonesian language 🇮🇩. Enjoy reading 😉.
-</p>
-
-<br />
-
-<div
-  class="flex flex-col space-y-3 md:rounded-xl md:shadow-md md:border md:border-gray-200 md:p-4 md:w-11/12 md:mx-auto lg:px-6"
->
-  {{ range (.Site.RegularPages.GroupByDate "2006") }}
-  <div class="flex flex-col space-y-2 mt-1 mb-2">
-    <div class="flex flex-row items-center space-x-2 mb-2">
-      <svg
-        width="30"
-        height="30"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-        ></path>
-      </svg>
-      <span class="text-2xl font-bold">{{ .Key }}</span>
-    </div>
-
-    <ul class="w-full ml-4 flex flex-col space-y-2 font-medium list-none">
-      {{ range where .Pages "Section" "event"}}
-      <li class="flex flex-row items-center content-center space-x-2">
-        <small
-          class="flex-none text-gray-600 font-bold py-px px-2 bg-gray-100 rounded-md"
-          ><time>{{.Date.Format "Jan 02"}}</time></small
-        >
-        <a
-          class="flex-shrink text-blue-500 hover:text-purple-600"
-          href="{{.Permalink}}"
-        >
-          {{.Title}}
-        </a>
-      </li>
-      {{ end }}
-    </ul>
-  </div>
-  {{ end }}
-</div>
-
+{{ .Scratch.Set "scope" "list" }}
+{{ if .Site.Params.list.showHero | default false }}
+{{ $heroStyle := print "partials/hero/" .Site.Params.list.heroStyle ".html" }}
+{{ if templates.Exists $heroStyle }}
+{{ partial $heroStyle . }}
+{{ else }}
+{{ partial "partials/hero/basic.html" . }}
 {{ end }}
+{{- end -}}
+
+{{ $toc := and (.Params.showTableOfContents | default (.Site.Params.list.showTableOfContents | default false)) (in
+.TableOfContents "<ul") }} <header>
+  {{ if .Params.showBreadcrumbs | default (.Site.Params.list.showBreadcrumbs | default false) }}
+  {{ partial "breadcrumbs.html" . }}
+  {{ end }}
+  <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
+  <div class="mt-1 mb-2 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+    {{ partial "article-meta/list.html" (dict "context" . "scope" "single") }}
+  </div>
+  
+  </header>
+  <section class="{{ if $toc -}}
+      mt-12
+    {{- else -}}
+      mt-0
+    {{- end }} prose flex max-w-full flex-col dark:prose-invert lg:flex-row">
+    {{ if $toc }}
+    <div class="order-first px-0 lg:order-last lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 lg:sticky {{ if hasPrefix .Site.Params.header.layout "fixed" -}}
+      lg:top-[140px]{{ else }}lg:top-10{{ end }}">
+        {{ partial "toc.html" . }}
+      </div>
+    </div>
+    {{ end }}
+    <div class="min-w-0 min-h-0 max-w-prose">
+      {{ .Content | emojify }}
+    </div>
+   
+
+
+
+  </section>
+  {{ if gt .Pages 0 }}
+
+    {{ $cardView := .Params.cardView | default (.Site.Params.list.cardView | default false) }}
+    {{ $cardViewScreenWidth := .Params.cardViewScreenWidth | default (.Site.Params.list.cardViewScreenWidth | default false) }}
+    {{ $groupByYear := .Params.groupByYear | default ($.Site.Params.list.groupByYear | default false) }}
+
+    {{ if not $cardView }}
+
+    <section class="space-y-10 w-full">
+      {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
+      {{ if $groupByYear }}
+      <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
+        {{ .Key }}
+      </h2>
+      {{ end }}
+      {{ range .Pages }}
+      {{ partial "article-link/simple.html" . }}
+      {{ end }}
+      {{ end }}
+    </section>
+
+    {{ else if and $cardView (not $cardViewScreenWidth) }}
+
+      {{ if $groupByYear }}
+
+      {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
+        <h2 class="mt-12 mb-3 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
+          {{ .Key }}
+        </h2>
+        <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+          {{ range .Pages }}
+          {{ partial "article-link/card.html" . }}
+          {{ end }}
+        </section>
+      {{ end }}
+
+    {{ else }}
+
+        <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+          {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
+          {{ range .Pages }}
+          {{ partial "article-link/card.html" . }}
+          {{ end }}
+          {{ end }}
+        </section>
+
+    {{ end }}
+
+    {{ else if and $cardView $cardViewScreenWidth }}
+
+      {{ if $groupByYear }}
+
+        {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
+        <div class="relative w-screen max-w-[1600px] px-[30px]" style="left: calc(max(-50vw,-800px) + 50%);">
+          <h2 class="mt-12 mb-3 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
+            {{ .Key }}
+          </h2>
+          <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+            {{ range .Pages }}
+            {{ partial "article-link/card.html" . }}
+            {{ end }}
+          </section>
+        </div>
+        {{ end }}
+
+      {{ else }}
+
+        <div class="relative w-screen max-w-[1600px] px-[30px]" style="left: calc(max(-50vw,-800px) + 50%);">
+          <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+            {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
+            {{ range .Pages }}
+            {{ partial "article-link/card.html" . }}
+            {{ end }}
+            {{ end }}
+          </section>
+        </div>
+
+      {{ end }}
+
+    {{end}}
+
+  {{ else }}
+  <section class="mt-10 prose dark:prose-invert">
+    <p class="py-8 border-t">
+      <em>{{ i18n "list.no_articles" | emojify }}</em>
+    </p>
+  </section>
+  {{ end }}
+
+    
+
+  {{ end }}
