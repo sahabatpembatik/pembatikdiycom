@@ -1,0 +1,68 @@
+{
+    "A1": {
+        "name": "Sigit Suryono, M.Pd.",
+        "jabatan": "Koordinator Komunitas",
+        "instansi": "SMPN 1 Wonosari",
+        "bio": "Duta Teknologi 2018",
+        "avatar": "/img/team/sigit.jpg",
+        "web": "https://ciget.info",
+        "instagram": "https://www.instagram.com/ciget_suryo/",
+        "facebook" : "https://www.facebook.com/ssuryono/",
+        "youtube" : "https://www.youtube.com/channel/UCfgl2NIvMAcZz-2E9qnkftg"
+    },
+    "A2": {
+        "name": "Nur Ernawati, S.Pd.Gr",
+        "jabatan": "Ketua Komunitas",
+        "instansi": "SMP Islam Al Azhar 26 Yogyakarta",
+        "bio": "Duta Teknologi 2019",
+        "avatar": "/img/team/erna.jpg",
+        "web": "https://www.nurerna.my.id",
+        "instagram": "https://www.instagram.com/nduk_marsha/",
+        "facebook" : "https://www.facebook.com/ernaresindra",
+        "youtube" : "https://www.youtube.com/@noererna9770"
+    },
+    "A3": {
+        "name": "Yuli Nestiyarum, S.Pd",
+        "jabatan": "Penggerak Komunitas",
+        "instansi": "SMA Negeri 1 Seyegan",
+        "bio": "Duta Teknologi 2020",
+        "avatar": "/img/team/yuli.jpg",
+        "web": "https://www.pembatik.com",
+        "instagram": "https://www.instagram.com/yulinestya/",
+        "facebook" : "https://www.facebook.com/yuli.nestya",
+        "youtube" : "https://www.youtube.com/@yulinestya5754"
+    },
+    "A4": {
+        "name": "Bakhtiar Rifai, S.Pd",
+        "jabatan": "Sekretaris Komunitas",
+        "instansi": "SMK Negeri 1 Temon",
+        "bio": "Duta Teknologi 2021",
+        "avatar": "/img/team/bakhtiar.jpg",
+        "web": "https://www.sinmat.my.id",
+        "instagram": "https://www.instagram.com/bherifai/",
+        "facebook" : "https://www.facebook.com/bhe.rifai",
+        "youtube" : "https://www.youtube.com/channel/UCPqHmSdwMI5ah-1jrn00bBw"
+    },
+    "A5": {
+        "name": "Rini Sri Lestari, S.Pd",
+        "jabatan": "Penggerak Komunitas",
+        "instansi": "SMK Negeri 1 Pleret",
+        "bio": "Duta Teknologi 2022",
+        "avatar": "/img/team/rini.jpg",
+        "web": "https://www.rienzkinarya.my.id/",
+        "instagram": "https://www.instagram.com/rienz_kinarya15/",
+        "facebook" : "https://www.facebook.com/rini.srilestari.9",
+        "youtube" : "https://youtube.com/@RienzKinarya"
+    },
+    "A6": {
+        "name": "Rofiana, S.Pd",
+        "jabatan": "Penggerak Komunitas",
+        "instansi": "SD Negeri Pungkuran",
+        "bio": "Duta Teknologi 2023",
+        "avatar": "/img/team/rofiana.jpg",
+        "web": "https://www.pembatikdiy.com/",
+        "instagram": "https://www.instagram.com/rofiana_aira/",
+        "facebook" : "https://www.facebook.com/rofiana.aira",
+        "youtube" : "https://www.youtube.com/@rofianaa"
+    }
+}

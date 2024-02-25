@@ -1319,8 +1319,8 @@ video {
 .w-6 {
   width: 1.5rem;
 }
-.w-\[240px\] {
-  width: 240px;
+.w-\[150px\] {
+  width: 150px;
 }
 .w-full {
   width: 100%;
@@ -2508,13 +2508,6 @@ html {
   .sm\:overflow-hidden {
     overflow: hidden;
   }
-  .sm\:rounded-none {
-    border-radius: 0px;
-  }
-  .sm\:rounded-l-lg {
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
-  }
   .sm\:px-32 {
     padding-left: 8rem;
     padding-right: 8rem;
@@ -2571,9 +2564,6 @@ html {
   }
   .md\:w-auto {
     width: auto;
-  }
-  .md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
