@@ -3,6 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
+    <loc>https://pembatikdiy.com/berita/</loc>
+    <lastmod>2024-04-05T00:11:04+07:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pembatikdiy.com/berita/02-demo-pengelolaan-kinerja/</loc>
+    <lastmod>2024-04-05T00:11:04+07:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://pembatikdiy.com/event/</loc>
     <lastmod>2024-02-04T17:51:40+07:00</lastmod>
     <changefreq>daily</changefreq>
@@ -11,6 +23,12 @@
   <url>
     <loc>https://pembatikdiy.com/event/wb04/</loc>
     <lastmod>2024-02-04T17:51:40+07:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pembatikdiy.com/berita/01-pengelolaan-kinerja/</loc>
+    <lastmod>2024-01-09T23:50:25+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

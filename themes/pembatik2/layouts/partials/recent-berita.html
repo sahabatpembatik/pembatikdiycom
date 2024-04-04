@@ -1,0 +1,26 @@
+{{ $recentArticles := 5 }}
+{{ $showMoreLinkDest := "/berita" }}
+{{ if index .Site.Params.homepage "showRecentItems" }}
+{{ $recentArticles = .Site.Params.homepage.showRecentItems }}
+{{ end }}
+
+<h2 class="mt-8 text-2xl font-extrabold mb-10">Berita Terbaru</h2>
+
+<div class="h-full">
+    <div class="grid  grid-cols-1 lg:grid-cols-3 md:grid-cols-2 py-2 sm:grid-cols-1 gap-4" tabindex="0">
+    {{ partial "recent-articles/card-berita.html" . }}
+</div>
+</div>
+
+{{ if .Site.Params.homepage.showMoreLink | default false }}
+{{ if index .Site.Params.homepage "showRecentItems" }}
+{{ $showMoreLinkDest = .Site.Params.homepage.showMoreLinkDest }}
+{{ end }}
+<div class="mt-10 flex justify-center">
+    <a href="{{ $showMoreLinkDest }}">
+        <button
+            class="bg-transparent hover:text-primary-500 prose dark:prose-invert font-semibold hover:text-white py-2 px-4 border border-primary-500 hover:border-transparent rounded">Show
+            More</button>
+    </a>
+</div>
+{{ end }}
