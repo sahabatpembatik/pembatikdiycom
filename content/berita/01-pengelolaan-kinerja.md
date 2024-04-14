@@ -3,6 +3,7 @@ title : "Komunitas Sahabat PembaTIK DIY Gelar Webinar Pengelolaan Kinerja Guru d
 description : "Tingkatkan kualitas pembelajaran & profesionalisme!  Simak rangkuman webinar Pengelolaan Kinerja Guru & Kepala Sekolah di Merdeka Mengajar by Komunitas Sahabat Pembatik DIY."
 date : 2024-01-09T23:50:25+07:00
 math : false
+author : "masbhe"
 featured : false
 draft : false
 comment : true
@@ -29,9 +30,9 @@ cover :
 ---
 **Yogyakarta, 9 Januari 2024** - Komunitas Sahabat Pembatik DIY sukses menyelenggarakan webinar bertajuk "Pengelolaan Kinerja Guru dan Kepala Sekolah di Platform Merdeka Mengajar" pada hari Selasa, 9 Januari 2024, pukul 15.30 - 17.00 WIB. 
 
-Webinar ini bertujuan untuk meningkatkan pemahaman dan keterampilan guru dan kepala sekolah dalam menggunakan Platform Merdeka Mengajar untuk mengelola kinerja mereka. Acara ini diikuti oleh lebih dari 100 peserta dari berbagai jenjang pendidikan di Yogyakarta.
+Webinar ini bertujuan untuk meningkatkan pemahaman dan keterampilan guru dan kepala sekolah dalam menggunakan Platform Merdeka Mengajar untuk mengelola kinerja mereka. Acara ini diikuti oleh lebih dari 400 peserta dari berbagai jenjang pendidikan dari berbagai daerah, tidak hanya Yogyakarta.
 
-Narasumber webinar ini adalah Dr. H. Ahmad Mu'iz, M.Pd., pakar pendidikan dan asesor Badan Akreditasi Nasional Sekolah/Madrasah (BAN S/M). Dalam materinya, beliau menjelaskan tentang pentingnya pengelolaan kinerja bagi guru dan kepala sekolah, serta bagaimana cara menggunakan Platform Merdeka Mengajar untuk mengelola kinerja mereka secara efektif.
+Narasumber webinar ini adalah Ibu Nur Ernamati, S.Pd.,Gr dan Ibu Rofiana, S.Pd., Duta Teknologi Kemendikbudristek sekaligus Narasumber Bergema. Dalam materinya, beliau menjelaskan tentang pentingnya pengelolaan kinerja bagi guru dan kepala sekolah, serta bagaimana cara menggunakan Platform Merdeka Mengajar untuk merencanakan pengelolaan kinerja.
 
 **Beberapa poin penting dari materi webinar:**
 
@@ -49,17 +50,4 @@ Narasumber webinar ini adalah Dr. H. Ahmad Mu'iz, M.Pd., pakar pendidikan dan as
 
 "Webinar ini sangat bermanfaat bagi saya. Saya jadi lebih memahami tentang pentingnya pengelolaan kinerja dan bagaimana cara menggunakan Platform Merdeka Mengajar untuk mengelola kinerja saya," ujar salah satu peserta webinar.
 
-**Komunitas Sahabat Pembatik DIY berkomitmen untuk terus menyelenggarakan kegiatan-kegiatan yang bermanfaat bagi guru dan kepala sekolah di Yogyakarta.**
-
-**Informasi lebih lanjut tentang komunitas Sahabat Pembatik DIY dapat diperoleh melalui:**
-
-* Website: [https://pembatikdiy.com/](https://pembatikdiy.com/)
-* Facebook: [https://m.facebook.com/groups/DIYBesiBattenCChannel/posts/1128153077958928/](https://m.facebook.com/groups/DIYBesiBattenCChannel/posts/1128153077958928/)
-* Instagram: [https://www.instagram.com/p/CyivaAlPqQD/](https://www.instagram.com/p/CyivaAlPqQD/)
-
-**###**
-
-**Narahubung:**
-
-[Nama Narahubung]
-[Nomor Telepon/Email]
+**Komunitas Sahabat Pembatik DIY berkomitmen untuk terus menyelenggarakan kegiatan-kegiatan yang bermanfaat bagi guru dan kepala sekolah khususnya di Yogyakarta.**

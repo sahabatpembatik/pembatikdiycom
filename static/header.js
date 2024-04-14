@@ -45,6 +45,6 @@ function getExtension(filename) {
   return ext[ext.length - 1];
 };
 function getName(filename) {
-  let ext = path.basename(filename || '', 'png');
+  let ext = path.basename(filename || '', 'jpg');
   return ext;
 };

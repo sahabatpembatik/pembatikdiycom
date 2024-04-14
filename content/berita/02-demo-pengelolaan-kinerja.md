@@ -2,7 +2,7 @@
 title : "Komunitas Sahabat Pembatik DIY Gelar Webinar Demo Pengelolaan Kinerja"
 description : 
 date : 2024-04-05T00:11:04+07:00
-math : false
+author: "masbhe"
 featured : false
 draft : false
 comment : true
@@ -52,20 +52,5 @@ Webinar ini diikuti oleh ratusan guru dan kepala sekolah dari berbagai daerah di
 
 Komunitas Sahabat Pembatik DIY merupakan komunitas yang bergerak di bidang pendidikan. Komunitas ini didirikan pada tahun 2022 oleh sekelompok guru di Yogyakarta yang memiliki kepedulian terhadap pengembangan kualitas pendidikan di Indonesia.
 
-**Narahubung:**
-
-Yuli Nestiyarum
-
-Email: [alamat email dihapus]
-
-**Website:**
-
-[https://pembatikdiy.com/](https://pembatikdiy.com/)
-
-**Sosial Media:**
-
-[https://m.facebook.com/groups/DIYBesiBattenCChannel/posts/1128153077958928/](https://m.facebook.com/groups/DIYBesiBattenCChannel/posts/1128153077958928/)
-
-[https://www.instagram.com/p/CyivaAlPqQD/](https://www.instagram.com/p/CyivaAlPqQD/)
 
 **#SahabatPembatikDIY #MerdekaMengajar #PengelolaanKinerja #Guru #KepalaSekolah**

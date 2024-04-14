@@ -2,7 +2,7 @@
 title : "{{ replace .Name "-" " " | title }}"
 description : 
 date : {{ .Date }}
-math : false
+author : 
 featured : false
 draft : true
 comment : true

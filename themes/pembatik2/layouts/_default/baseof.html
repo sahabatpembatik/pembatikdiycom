@@ -8,11 +8,12 @@
 {{- partial "head.html" . -}}
 <body class="text-gray-700">
     {{- partial "header.html" . -}}
-    <main class="w-11/12 md:w-8/12 mx-auto mt-24 mb-8">
+    <main class="w-11/12 md:w-10/12 mx-auto mt-24 mb-8">
         
     {{- block "main" . }}{{- end }}
     </main>
     {{- partial "footer.html" . -}}
+    {{- partial "body-end.html" . -}}
     <script type="text/javascript">
         // Grab HTML Elements
         const btn = document.querySelector(".hamburger");
