@@ -2,7 +2,7 @@
 title : "Pendaftaran Kurikulum Merdeka 2024 Masih Dibuka! Fleksibel & Sesuai Kebutuhan Siswa"
 description : "Tingkatkan kualitas belajar mengajar! Daftar Kurikulum Merdeka 2024 (sampai 28 April) untuk raih pembelajaran yang lebih fleksibel, fokus pada kompetensi siswa, dan tingkatkan peran guru."
 date : 2024-04-15T01:11:59+07:00
-author : "erna"
+author : "19erna"
 featured : false
 draft : false
 comment : true

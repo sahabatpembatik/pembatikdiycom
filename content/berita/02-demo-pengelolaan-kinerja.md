@@ -2,7 +2,7 @@
 title : "Komunitas Sahabat Pembatik DIY Gelar Webinar Demo Pengelolaan Kinerja"
 description : 
 date : 2024-04-05T00:11:04+07:00
-author: "masbhe"
+author: "21masbhe"
 featured : false
 draft : false
 comment : true

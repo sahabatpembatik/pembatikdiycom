@@ -3,7 +3,7 @@ title : "Komunitas Sahabat PembaTIK DIY Gelar Webinar Pengelolaan Kinerja Guru d
 description : "Tingkatkan kualitas pembelajaran & profesionalisme!  Simak rangkuman webinar Pengelolaan Kinerja Guru & Kepala Sekolah di Merdeka Mengajar by Komunitas Sahabat Pembatik DIY."
 date : 2024-01-09T23:50:25+07:00
 math : false
-author : "masbhe"
+author : "21masbhe"
 featured : false
 draft : false
 comment : true
