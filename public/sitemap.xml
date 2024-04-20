@@ -3,6 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
+    <loc>https://pembatikdiy.com/artikel/</loc>
+    <lastmod>2024-04-20T22:13:58+07:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pembatikdiy.com/artikel/pramuka-kurmer/</loc>
+    <lastmod>2024-04-20T22:13:58+07:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pembatikdiy.com/artikel/aturan-seragam/</loc>
+    <lastmod>2024-04-20T21:51:13+07:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://pembatikdiy.com/berita/</loc>
     <lastmod>2024-04-15T01:11:59+07:00</lastmod>
     <changefreq>daily</changefreq>

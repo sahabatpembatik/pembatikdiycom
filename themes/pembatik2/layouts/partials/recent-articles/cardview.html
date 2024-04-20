@@ -1,9 +1,21 @@
-{{ $recentArticles := 5 }}
-{{ $recentArticles = .Site.Params.homepage.showRecentItems }}
-
-<section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-  {{ range first $recentArticles (.Paginate (where .Site.RegularPages "Type" "in"
-  .Site.Params.mainSections)).Pages }}
-  {{ partial "article-link/card.html" . }}
-  {{ end }}
-</section>
+{{ with .Site.GetPage "section" "artikel" }}
+{{ range first 6 .Pages }}
+<div class="ease-in duration-150 hover:-translate-y-1 mx-auto shadow-lg p-4 rounded-lg bg-white dark:bg-slate-800 hover:shadow-md max-w-sm">
+  <a href="{{ .Permalink }}">
+    {{ if .Params.Tumbnail }}
+          <img class="w-full mx-auto object-cover lazyload center dark:brightness-75" alt="{{ partial "helpers/title" . }}" src="/img/placeholder.svg" onerror="this.src='/img/placeholder.svg'" data-src="{{ index .Params.Tumbnail 0 | absURL }}" loading="lazy" data-sizes="auto" height='180px'/>
+          {{else}}
+            {{ partial "helpers/image" (dict "filename" "/tumbnail/default.png?height=180px" "alt" .Title "class" " object-cover w-full lazyload mx-auto center dark:brightness-75" "resources" .Resources) }}
+         
+        {{- end -}}
+  </a>
+  <div class="p-2">
+    <h5 class="text-gray-900 dark:text-gray-100 hover:text-bluem-500 dark:hover:underline text-lg font-bold mb-2">
+      <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
+    </h5>	
+    <p class="text-gray-500 text-sm mb-1">
+       
+    </p>
+  </div>
+</div>{{ end }}
+{{ end }}

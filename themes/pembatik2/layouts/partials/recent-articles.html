@@ -7,7 +7,10 @@
 <h2 class="mt-8 text-2xl font-extrabold mb-10">{{ i18n "shortcode.recent_articles" | emojify }}</h2>
 
 <div class="h-full">
-    {{ partial "recent-articles/cardview.html" . }}
+    <div class="grid  grid-cols-1 lg:grid-cols-4 md:grid-cols-3 py-2 sm:grid-cols-1 gap-4" tabindex="0">
+        {{ partial "recent-articles/cardview.html" . }}
+    </div>
+    
 </div>
 
 {{ if .Site.Params.homepage.showMoreLink | default false }}
