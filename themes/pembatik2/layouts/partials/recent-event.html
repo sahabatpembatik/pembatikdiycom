@@ -1,13 +1,15 @@
 {{ $recentArticles := 5 }}
-{{ $showMoreLinkDest := "/posts" }}
+{{ $showMoreLinkDest := "/event" }}
 {{ if index .Site.Params.homepage "showRecentItems" }}
 {{ $recentArticles = .Site.Params.homepage.showRecentItems }}
 {{ end }}
 
-<h2 class="mt-8 text-2xl font-extrabold mb-10">{{ i18n "shortcode.recent_articles" | emojify }}</h2>
+<h2 class="mt-8 text-2xl font-extrabold mb-10">Event Terbaru</h2>
 
 <div class="h-full">
+    <div class="grid  grid-cols-1 lg:grid-cols-4 md:grid-cols-3 py-2 sm:grid-cols-1 gap-4" tabindex="0">
     {{ partial "recent-articles/card-event.html" . }}
+</div>
 </div>
 
 {{ if .Site.Params.homepage.showMoreLink | default false }}
