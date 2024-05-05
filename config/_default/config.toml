@@ -65,3 +65,6 @@ buildFuture = false
       weight = 10
 [params]
   logo = 'images/logo.png'
+
+[permalinks]
+  artikel ='/:slug'
