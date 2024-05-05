@@ -1587,11 +1587,6 @@ video {
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
-.space-y-8 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
-}
 .overflow-hidden {
   overflow: hidden;
 }
@@ -2586,14 +2581,29 @@ html {
 .prose-headings\:tracking-tight :is(:where(h1, h2, h3, h4, h5, h6, th):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
   letter-spacing: -0.025em;
 }
+.prose-p\:my-1 :is(:where(p):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
 .prose-p\:text-justify :is(:where(p):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
   text-align: justify;
 }
 .prose-p\:font-serif :is(:where(p):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
+.prose-ol\:my-2 :is(:where(ol):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.prose-ol\:text-justify :is(:where(ol):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+  text-align: justify;
+}
 .prose-ol\:font-serif :is(:where(ol):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+.prose-ul\:my-2 :is(:where(ul):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .prose-ul\:ml-6 :is(:where(ul):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
   margin-left: 1.5rem;
@@ -2601,11 +2611,34 @@ html {
 .prose-ul\:list-disc :is(:where(ul):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
   list-style-type: disc;
 }
+.prose-ul\:text-justify :is(:where(ul):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+  text-align: justify;
+}
 .prose-ul\:font-serif :is(:where(ul):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 .prose-ul\:font-bold :is(:where(ul):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
   font-weight: 700;
+}
+.prose-table\:mx-auto :is(:where(table):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+  margin-left: auto;
+  margin-right: auto;
+}
+.prose-table\:w-max :is(:where(table):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+  width: -moz-max-content;
+  width: max-content;
+}
+.prose-th\:px-2 :is(:where(th):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.prose-td\:px-2 :is(:where(td):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.prose-td\:py-0 :is(:where(td):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 :is(.dark .dark\:border-neutral-700) {
   --tw-border-opacity: 1;

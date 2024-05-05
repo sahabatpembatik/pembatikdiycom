@@ -59,6 +59,8 @@
   {{- $img = $img.Resize $resize -}}
   {{- $link = $img.Permalink | safeURL -}}
 {{- end -}}
-<img class="{{ $className }} lazyload" alt="{{ .alt }}" src="/img/placeholder.svg" data-src="{{ $link }}" loading="lazy"
+<figure>
+<img class="{{ $className }} lazyload mx-auto" alt="{{ .alt }}" src="/img/placeholder.svg" data-src="{{ $link }}" loading="lazy"
   {{ with $img }} width="{{ $img.Width }}" height="{{ $img.Height }}"{{ end }}
   {{ if and (not $pageResource) (or $width $height) }}style="{{ with $width }}width: {{ $width }}{{ end }}{{ with $height }};height: {{ $height }}{{ end }}"{{ end }} />
+</figure>
