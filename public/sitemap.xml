@@ -4,7 +4,13 @@
 
   <url>
     <loc>https://pembatikdiy.com/event/</loc>
-    <lastmod>2024-05-13T20:19:16+07:00</lastmod>
+    <lastmod>2024-05-20T20:19:16+07:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pembatikdiy.com/event/webinar-17-pmm/</loc>
+    <lastmod>2024-05-20T20:19:16+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

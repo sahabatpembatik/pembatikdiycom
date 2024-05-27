@@ -1,5 +1,5 @@
 {{ with .Site.GetPage "section" "event" }}
-{{ range first 4 .Pages }}
+{{ range first 6 .Pages }}
 <div class="ease-in duration-150 hover:-translate-y-1 mx-auto shadow-lg p-4 rounded-lg bg-white dark:bg-slate-800 hover:shadow-md max-w-sm">
   <a href="{{ .Permalink }}">
     {{ if .Params.Tumbnail }}
