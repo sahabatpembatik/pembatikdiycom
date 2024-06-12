@@ -1,0 +1,27 @@
+{{- $count := default 5 .Site.Params.recentPostCount -}}
+  {{- if $count -}}
+  <section class="mb-4 rounded-lg bg-white dark:bg-slate-800 shadow-md">
+    <h5 class="text-2xl font-bold p-4 tracking-tight border-b dark:border-slate-700">🔥Artikel Terbaru</h5>
+    {{- range first $count .Site.RegularPages -}}
+      <a class='surface list-group-item list-group-item-action flex-column align-items-start' href="{{ .Permalink }}">
+        <div class="flex justify-between items-center gap-2 p-4 hover:bg-slate-100 dark:hover:bg-slate-700 active:scale-95 transition-all">
+          <div>
+            <h6 class="text-lg font-semibold tracking-tight line-clamp-2 leading-tight mb-1">{{ partial "helpers/title" . }}</h6>
+            <p class="text-sm text-slate-700 dark:text-slate-200 line-clamp-1">
+              {{- if and (default true (default .Site.Params.postDate .Params.postDate)) -}}
+              <span class="post-date">
+                 {{ .Date.Format (default "Jan 2, 2006" $.Site.Params.dateFormat) }}
+              </span>
+              {{- end -}}
+              {{- if and (default true (default .Site.Params.readingTime .Params.readingTime)) -}}
+              <span class="post-reading-time">
+                • Baca {{ .ReadingTime }} menit
+              </span>
+              {{- end -}}
+            </p>
+          </div>
+        </div>
+      </a>
+    {{- end -}}
+  </section>
+  {{- end -}}

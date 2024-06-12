@@ -1,0 +1,8 @@
+{{- $content :=  "" -}}
+{{- if and (default true (default .Site.Params.postDate .Params.postDate)) -}}
+  {{- $content = .Description -}}
+{{- else -}}
+  {{- $content = .Summary -}}
+{{- end -}}
+{{- $maxLength := default 320 $.Site.Params.post.excerptMaxLength -}}
+{{- $content | truncate $maxLength -}}

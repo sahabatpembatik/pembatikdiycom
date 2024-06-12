@@ -1,0 +1,41 @@
+<link rel="icon" href="{{ absURL "images/favicons/favicon-32x32.png" }}" sizes="32x32" type="image/png">
+<link rel="icon" href="{{ absURL "images/favicons/favicon-16x16.png" }}" sizes="16x16" type="image/png">
+<link rel="icon" href="{{ absURL "images/favicons/favicon.ico" }}">
+<link rel="manifest" href="{{ absLangURL "manifest.json" }}">
+
+<link rel="canonical" href="{{ .Permalink }}" />
+{{- if .PrevInSection -}}
+    <link rel="prev" href="{{ .PrevInSection.Permalink }}" />
+{{- end -}}
+{{- if .NextInSection -}}
+    <link rel="next" href="{{ .NextInSection.Permalink }}" />
+{{- end -}}
+
+{{- with .OutputFormats.Get "RSS" -}}
+    <link rel="alternate" href="{{ .RelPermalink }}" type="application/rss+xml" title="{{ $.Site.Title }}">
+    <link rel="feed" href="{{ .RelPermalink }}" type="application/rss+xml" title="{{ $.Site.Title }}">
+{{- end -}}
+
+{{ $mainStyle := resources.Get "css/main.css" | postCSS }}
+{{- $highlightStyle := resources.Get "css/highlight.css" -}}
+{{- $customStyle := resources.Get "css/custom.css" -}}
+
+{{ if .Site.IsServer }}
+<!-- Gunakan Tailwind dari CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class"
+    }
+  </script> 
+<!-- gunakan Tailwind dari hasil build -->
+{{ $styles := slice $customStyle $highlightStyle | resources.Concat "css/main.css" | resources.Minify | resources.Fingerprint | resources.PostProcess }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" />
+{{ else }}
+
+<!-- gunakan Tailwind dari hasil build -->
+{{ $styles := slice $customStyle $mainStyle $highlightStyle | resources.Concat "css/main.css" | resources.Minify | resources.Fingerprint | resources.PostProcess }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" />
+{{ end }}
+
