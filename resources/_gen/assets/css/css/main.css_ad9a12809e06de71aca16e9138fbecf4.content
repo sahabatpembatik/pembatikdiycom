@@ -1571,6 +1571,10 @@ video {
 .rounded-xl {
   border-radius: 0.75rem;
 }
+.rounded-b {
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
 .border {
   border-width: 1px;
 }
@@ -1585,6 +1589,9 @@ video {
 }
 .border-t {
   border-top-width: 1px;
+}
+.border-t-4 {
+  border-top-width: 4px;
 }
 .border-dashed {
   border-style: dashed;
@@ -1731,6 +1738,10 @@ video {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1770,6 +1781,9 @@ video {
 }
 .text-center {
   text-align: center;
+}
+.text-justify {
+  text-align: justify;
 }
 .align-top {
   vertical-align: top;
