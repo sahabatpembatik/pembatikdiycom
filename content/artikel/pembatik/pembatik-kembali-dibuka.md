@@ -1,6 +1,6 @@
 ---
 title : "Saksikan Peluncuran PembaTIK dan Ki Hajar STEM: Dorong Inovasi Pembelajaran Digital untuk Implementasi Kurikulum Merdeka"
-description : 
+description : "Saksikan peluncuran program PembaTIK (Pembelajaran Berbasis TIK) dan Ki Hajar STEM (Kita Harus Belajar) 2024 yang diadakan oleh Kemendikbud. Acara ini bertujuan untuk mendorong inovasi pembelajaran digital dalam rangka implementasi Kurikulum Merdeka."
 date : 2024-06-12T19:25:05+07:00
 author : "21masbhe"
 featured : false
@@ -8,17 +8,18 @@ draft : false
 comment : true
 toc : false
 keywords : 
-  - 
-  - 
-  - 
-  - 
+  - PembaTIK 2024
+  - Ki Hajar STEM 2024
+  - Kemendikbud
+  - Inovasi Pembelajaran Digital
+  - Kurikulum Merdeka
+  - Belajar Online
+  - Pendidikan Indonesia
+  - Teknologi Pendidikan
 kategori : 
-  - 
+  - Artikel
 topik :
-  - 
-  - 
-seri : 
-  - 
+  - PembaTIK
 images : 
   - img/header/peluncuran-pembatik2024.webp
 tumbnail : 
@@ -45,6 +46,7 @@ Berbasis TIK (PembaTIK) yang diikuti oleh guru dan tenaga kependidikan, serta pr
 PembaTIK merupakan Program peningkatan kompetensi pendidik dalam kegiatan Belajar, Mengajar dan Berkarya untuk mendukung terciptanya Inovasi Pembelajaran dalam Implementasi Kurikulum Merdeka dengan mengedepankan Pemanfaatan Platform Teknologi. Peningkatan Kompetensi TIK guru ini mengacu pada standar kompetensi TIK yang terdiri dari 4 level, yakni level literasi, implementasi, kreasi, dan berbagi & berkolaborasi.
 
 ### Manfaat mengikuti PembaTIK 2024
+
 **Kompetensi Meningkat**
 
 Meningkatkan kompetensi literasi, implementasi, kreasi, serta berbagi dan berkolaborasi dalam lingkup Teknologi Informasi dan Komunikasi.
