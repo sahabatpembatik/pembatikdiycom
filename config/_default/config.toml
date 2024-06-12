@@ -62,7 +62,7 @@ pygmentsUseClasses = true
   kategori = "kategori"
 
 [permalinks]
-  artikel = '/:filename'
+  artikel = '/:slug'
 
 [sitemap]
   changeFreq = ''
