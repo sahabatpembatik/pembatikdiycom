@@ -1,5 +1,5 @@
 
-{{ with .Site.GetPage "section" "artikel" }}
+
   <div class="grid  grid-cols-1 lg:grid-cols-3 md:grid-cols-2 py-2 sm:grid-cols-1 gap-4" tabindex="0">
     
   {{- range .Paginator.Pages -}}
@@ -52,4 +52,4 @@
   {{- end -}}
   </div>
   {{- partial "pagination" . -}}
-  {{ end }}
+
