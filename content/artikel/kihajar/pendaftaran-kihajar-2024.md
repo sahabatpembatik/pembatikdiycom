@@ -32,6 +32,7 @@ tumbnail :
 ## Yuk… Ikuti Kita Harus Belajar (KIHAJAR) STEM 2024! Kembangkan Potensi Sains, Teknologi, Teknik, dan Matematika Generasi Muda Indonesia!
 Kemendikbudristek melalui Balai Layanan Platform Teknologi (BLPT) kembali menyelenggarakan program Kita Harus Belajar (KIHAJAR) STEM 2024. Program ini merupakan wadah bagi para siswa di seluruh Indonesia untuk mengembangkan potensi mereka dalam bidang sains, teknologi, teknik, dan matematika (STEM).
 
+KIHAJAR STEM 2024 terbuka bagi seluruh peserta didik SD, SMP, dan SMA di Indonesia maupun luar negeri yang memiliki ketertarikan pada STEM. Pendaftaran dibuka mulai tanggal 13 Juni hingga 9 Agustus 2024.
 
 **Mengapa Kamu harus mengikuti KIHAJAR STEM 2024?**
 
