@@ -20,6 +20,7 @@ keywords :
   - Gratis
 kategori : 
   - Artikel
+  - Informasi
 topik :
   - Kihajar
 images : 

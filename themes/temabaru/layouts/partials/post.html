@@ -7,7 +7,7 @@
     <h1 class="text-3xl md:text-4xl lg:text-5xl font-black mb-4 leading-tight tracking-tight">{{ partial "helpers/title"
       . }}</h1>
     <div class="mb-4 flex items-center justify-start gap-2 text-base">
-      {{ $author := index .Site.Data.author (.Params.author | default "default") }}
+      {{ $author := index .Site.Data.author (.Params.author | default "21masbhe") }}
 					{{- if $author -}}
 					<img class="rounded-full inline h-6 w-6" alt="{{ $author.name }}"
 						src="{{ absURL ($author.avatar) }}" loading="lazy" width="32" height="32"

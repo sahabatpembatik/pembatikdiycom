@@ -25,6 +25,26 @@
         {{- end -}}
       </section>
     </div>
+    <div class="grid grid-cols-2 mt-auto">
+		  <div class="flex items-center">
+      {{ $author := index .Site.Data.author ( .Params.author | default "21masbhe") }}
+					{{- if $author -}}
+					<img class="rounded-full inline h-6 w-6" alt="{{ $author.name }}"
+						src="{{ absURL ($author.avatar) }}" loading="lazy" width="32" height="32"
+						style="width: 32px;height: 32px">
+					<p class="text-sm"><a class="underline hover:text-primary" href="/about">{{ $author.name
+							}}</a></p>
+					{{ end }}
+		  </div>
+
+		  <div class="flex justify-end">
+			<p class="inline-block">
+			  <span class="text-sm">
+          {{ .Date.Format (default "2 January 2006" $.Site.Params.dateFormat) }}
+			  </span>
+			</p>
+		  </div>
+		</div>
   </div>
   {{- end -}}
   </div>

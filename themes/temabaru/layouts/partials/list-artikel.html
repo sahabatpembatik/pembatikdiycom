@@ -29,8 +29,7 @@
     </div>
     <div class="grid grid-cols-2 mt-auto">
 		  <div class="flex items-center">
-			
-      {{ $author := index .Site.Data.author ( $.Site.Params.author | default "19erna") }}
+      {{ $author := index .Site.Data.author ( .Params.author | default "21masbhe") }}
 					{{- if $author -}}
 					<img class="rounded-full inline h-6 w-6" alt="{{ $author.name }}"
 						src="{{ absURL ($author.avatar) }}" loading="lazy" width="32" height="32"

@@ -16,6 +16,7 @@ keywords :
   - Kemendikbudristek
 kategori : 
   - Artikel
+  - Informasi
 topik :
   - PembaTIK
 images : 

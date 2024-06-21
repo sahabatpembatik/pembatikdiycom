@@ -18,6 +18,7 @@ keywords :
   - Teknologi Pendidikan
 kategori : 
   - Artikel
+  - Informasi
 topik :
   - PembaTIK
 images : 
