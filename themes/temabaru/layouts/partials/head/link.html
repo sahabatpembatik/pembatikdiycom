@@ -19,6 +19,7 @@
 {{ $mainStyle := resources.Get "css/main.css" | postCSS }}
 {{- $highlightStyle := resources.Get "css/highlight.css" -}}
 {{- $customStyle := resources.Get "css/custom.css" -}}
+{{- $custom2Style := resources.Get "css/customs.css" -}}
 
 {{ if .Site.IsServer }}
 <!-- Gunakan Tailwind dari CDN -->
@@ -30,12 +31,12 @@
     }
   </script> 
 <!-- gunakan Tailwind dari hasil build -->
-{{ $styles := slice $customStyle $highlightStyle | resources.Concat "css/main.css" | resources.Minify | resources.Fingerprint | resources.PostProcess }}
+{{ $styles := slice $customStyle $custom2Style $highlightStyle | resources.Concat "css/main.css" | resources.Minify | resources.Fingerprint | resources.PostProcess }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" />
 {{ else }}
 
 <!-- gunakan Tailwind dari hasil build -->
-{{ $styles := slice $customStyle $mainStyle $highlightStyle | resources.Concat "css/main.css" | resources.Minify | resources.Fingerprint | resources.PostProcess }}
+{{ $styles := slice $customStyle $custom2Style $mainStyle $highlightStyle | resources.Concat "css/main.css" | resources.Minify | resources.Fingerprint | resources.PostProcess }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" />
 {{ end }}
 

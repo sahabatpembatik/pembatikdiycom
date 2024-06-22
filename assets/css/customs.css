@@ -1,0 +1,8 @@
+.bg-green-ok{
+    background-color: #154561;
+    color: white;
+}
+
+.bg-primary{
+    background: linear-gradient(98deg, rgba(135, 181, 236, 0.22) 0%, rgba(255, 255, 255, 0.00) 96.88%);
+}

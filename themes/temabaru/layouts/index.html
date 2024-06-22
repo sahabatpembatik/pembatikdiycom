@@ -1,13 +1,13 @@
 {{ define "section1" }}
-<header class=" bg-gradient-to-b from-blue-100/90 to-blue-200/90 dark:from-sky-900 dark:to-blue-900/85">
+<header class=" bg-green-ok text-slate-200 dark:from-sky-900 dark:to-blue-900/85">
   <div class="container mx-auto px-4 lg:max-w-7xl py-16 text-center">
-    <article class="max-w-full text-center prose dark:prose-invert">
+    <article class="max-w-full text-center text-neutral-200 prose dark:prose-invert">
 
       <a href="{{ .Site.BaseURL }}">
         <img class="mx-auto mb-2 rounded-full h-36 w-36 border-4 border-blue-500" width="144" height="144"
           alt="{{ .Site.Title }}" src="/logo/logo-sahabat-pembatik.svg" />
       </a>
-      <h1 class="mb-2 text-4xl font-extrabold text-neutral-800 dark:text-neutral-200">
+      <h1 class="mb-2 text-4xl font-extrabold text-neutral-200 dark:text-neutral-200">
         {{ .Site.Title }}
       </h1>
       <section class="text-base font-light max-w-1/2 md:text-xl lg:text-2xl">{{ .Content | emojify }}</section>
@@ -230,4 +230,34 @@
   </div>
 </div>
 </div>
+{{ end }}
+
+{{ define "section5" }}
+<section class="section platform-section">
+  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
+      <div class="pb-4">
+          <h3 class="mb-5 text-3xl font-bold tracking-tight">Platform Teknologi Kemendikbudristek Lainnya</h3>
+      </div>
+      <div class="grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 md:grid-cols-3 lg:grid-cols-6 dark:text-gray-400">
+          <a href="https://belajar.id" class="px-2 icon-platform" target="_blank">
+              <img src="/img/logo/belajarid.png" alt="Akun Belajar.Id" width="170" class="img-fluid">
+          </a>
+          <a href="https://guru.kemdikbud.go.id/" class="px-2 icon-platform" target="_blank">
+              <img src="/img/logo/pmm.png" alt="Merdeka Mengajar" width="170" class="img-fluid">
+          </a>
+          <a href="https://raporpendidikan.kemdikbud.go.id/" class="px-2 icon-platform" target="_blank">
+              <img src="https://belajar.kemdikbud.go.id/assets_landing/images/logo/rapor_pendidikan.png" alt="Rapor Pendidikan" width="170" class="img-fluid">
+          </a>
+          <a href="https://siplah.kemdikbud.go.id/" class="px-2 icon-platform" target="_blank">
+              <img src="https://belajar.kemdikbud.go.id/assets_landing/images/logo/siplah.png" alt="SIPLah" width="170" class="img-fluid">
+          </a>
+          <a href="https://arkas.kemdikbud.go.id/" class="px-2 icon-platform" target="_blank">
+              <img src="https://belajar.kemdikbud.go.id/assets_landing/images/logo/arkas.png" alt="ARKAS" width="170" class="img-fluid">
+          </a>
+          <a href="https://belajar.kemdikbud.go.id/" class="flex justify-center items-center" target="_blank">
+            <img src="/img/logo/rumahbelajar.png">
+        </a>
+      </div>
+  </div>
+</section>
 {{ end }}
