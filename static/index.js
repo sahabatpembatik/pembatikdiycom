@@ -22,9 +22,9 @@ filenames.forEach((file) => {
       position: sharp.strategy.entropy
     });
   } else if (fileFormat === 'png') {
-    sh = sh.png({ quality: 100 });
+    sh = sh.png({ quality: 80 });
     sh.resize({
-      width: 500,
+      width: 200,
       fit: sharp.fit.cover,
       position: sharp.strategy.entropy
     });
