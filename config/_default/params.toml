@@ -13,7 +13,7 @@ color = "light" # light, dark or dynamic. Default to dynamic.
 dateFormat = "2 Jan 2006"
 
 
-#googleAdsense = "ca-pub-8506473245826654"
+googleAdsense = "ca-pub-4490009413779724"
 
 googleAnalyticsUniversal = "G-H8PWTK6TMB"
 
