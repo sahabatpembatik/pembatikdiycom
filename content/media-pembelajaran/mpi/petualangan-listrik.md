@@ -4,7 +4,7 @@ description : "Media Pembelajaran Interaktif Petualangan Listrik untuk SMP mata 
 date : 2024-08-04T06:30:10+07:00
 author : "19erna"
 featured : false
-draft : true
+draft : false
 comment : true
 toc : false
 keywords : 
