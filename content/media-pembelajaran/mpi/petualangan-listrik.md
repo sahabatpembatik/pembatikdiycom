@@ -28,7 +28,7 @@ cover :
 ---
 
 {{< html >}}
-<embed type="text/html" src="https://mpi.nurerna.my.id/" class="w-full md:w-[700px] h-[300px] md:h-[450px]">
+<embed type="text/html" src="https://mpi.nurerna.my.id/" class="not-prose w-full md:w-[700px] h-[300px] md:h-[450px]">
 
 {{< /html >}}
 [MEDIA INTERAKTIF PETUALANGAN LISTRIK](https://mpi.nurerna.my.id/)
