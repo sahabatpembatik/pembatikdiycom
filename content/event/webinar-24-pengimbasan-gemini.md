@@ -42,6 +42,8 @@ Join di Grup Channel : https://whatsapp.com/channel/0029ValZrp7FHWq3NE64CI3u
 <iframe width="720" height="450" src="https://lookerstudio.google.com/embed/reporting/a9c37c19-1f44-47b7-83df-fde7793371a6/page/6Pg9D" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
 {{< /html >}}
 
+[https://pembatikdiy.com/pbgemini/](/pbgemini)
+
 **Link Rekaman Sesi 1**
 
 {{< youtube "aXB-ATyIaPg" >}}
