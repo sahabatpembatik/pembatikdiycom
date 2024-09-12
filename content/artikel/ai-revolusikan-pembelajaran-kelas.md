@@ -2,7 +2,7 @@
 title : "AI Revolusikan Pembelajaran di Kelas, Siswa SMP Jadi Lebih Aktif"
 description : "Seminar Nasional Pendidikan Paradigma Baru di Yogyakarta soroti potensi besar Kecerdasan Buatan (AI) dalam pembelajaran. Temukan bagaimana AI dapat personalisasi pembelajaran dan tingkatkan motivasi siswa."
 date : 2024-09-12T22:19:00+07:00
-author : "19erna"
+author : "21masbhe"
 featured : false
 draft : false
 comment : true
