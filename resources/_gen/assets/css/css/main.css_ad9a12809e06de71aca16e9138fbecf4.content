@@ -3633,6 +3633,10 @@ video {
     width: 1.5rem;
   }
 
+  .md\:w-64 {
+    width: 16rem;
+  }
+
   .md\:w-7\/12 {
     width: 58.333333%;
   }
