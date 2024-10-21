@@ -1,7 +1,7 @@
 ---
 title : "Tutor PembaTIK Level 4 DIY Gelar Sinkronus Daring, Dukung Sahabat Teknologi dalam Inovasi Pembelajaran"
 description : "Tim tutor PembaTIK level 4 Daerah Istimewa Yogyakarta yang terdiri atas Tim BLPT Pusdatin dan Duta Teknologi mengadakan kegiatan sinkronus PembaTIK dengan tema Ngulik bersama tutor PembaTIK level 4 berbagi dan berkolaborasi Jumat, 18 Oktober 2024 secara daring diikuti 30 peserta"
-date : 2024-10-21T12:08:44+07:00
+date : 2024-10-19T12:08:44+07:00
 author : "19erna"
 featured : false
 draft : false
