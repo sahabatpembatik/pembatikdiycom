@@ -9,6 +9,11 @@
   pre = '<img src="https://pembatik.kemdikbud.go.id/wp-content/uploads/2024/05/icon-pembatik-150x150.png" class="ml-2 w-4 h-4">'
   weight ='3'
   url = "https://pembatik.kemdikbud.go.id"
+[[main]]
+  name = "Tutorial"
+  pre = '🖌️'
+  weight ='3'
+  url = "/tutorial"
 
 [[footer]]
   name = "About"

@@ -5,9 +5,10 @@
 description = "Komunitas Sahabat PembaTIK DIY merupakan wadah bagi guru, tenaga kependidikan, dan pendidik lainnya untuk saling berbagi dan berkolaborasi terkait isu pendidikan terkini."
 deskripsisite = "Komunitas Sahabat PembaTIK DIY merupakan wadah bagi guru, tenaga kependidikan, dan pendidik lainnya untuk saling berbagi dan berkolaborasi terkait isu pendidikan terkini."
 keywords = "sinau, matematika, belajar, blog"
+brand = "PembaTIK DIY"
 # images = ["site-feature-image.jpg"]
 Logo = "/logo/logo-footer.png"
-COpyright = "Sahabat PembaTIK DIY cc Duta Teknologi"
+Copyright = "Sahabat PembaTIK DIY cc Duta Teknologi"
 color = "light" # light, dark or dynamic. Default to dynamic.
 
 dateFormat = "2 Jan 2006"

@@ -83,4 +83,4 @@ Sahabat PembaTIK, membuat blog sendiri tidak sesulit yang dibayangkan kan. Denga
 
 Sampai sini dulu ya, silahkan dipraktekan terlebih dahulu. Kalau sudah silahkan buat postingan di blogger. Bagaiamana caranya? baca tutorial berikut
 
-[Cara membuat postingan di blogger](/2-posting-blogger/)
+[Cara membuat postingan di blogger](/2-posting-blog/)

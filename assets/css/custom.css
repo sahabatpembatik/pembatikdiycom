@@ -19134,3 +19134,15 @@ html {
       opacity: 1
   }
 }
+
+@font-face {
+  font-family: 'nataksara';
+  src:  url('/fonts/nykNgayogyanNew.woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.pembatik {
+  font-family: 'nataksara';
+}
