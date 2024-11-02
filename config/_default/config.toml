@@ -63,6 +63,7 @@ pygmentsUseClasses = true
 
 [permalinks]
   artikel = '/:slug'
+  tutorial = '/:filename'
 
 [sitemap]
   changeFreq = ''

@@ -15,9 +15,8 @@ filenames.forEach((file) => {
 
   let sh = sharp('./input/' + file);
   if (fileFormat === 'jpg' || fileFormat === 'jpeg') {
-    sh = sh.jpeg({ quality: 80 });
+    sh = sh.jpeg({ quality: 70 });
     sh.resize({
-      width: 800,
       fit: sharp.fit.cover,
       position: sharp.strategy.entropy
     });
@@ -28,6 +27,8 @@ filenames.forEach((file) => {
       fit: sharp.fit.cover,
       position: sharp.strategy.entropy
     });
+  } else if (fileFormat === 'gif') {
+    sh = sh.gif({ quality: 70 });
   }
 
   sh.toFile('output/' + file, function (err, info) {

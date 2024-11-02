@@ -24,7 +24,7 @@ cover :
   - cover/pembatik.jpg
 ---
 
-Tim tutor PembaTIK level 4 Daerah Istimewa Yogyakarta yang terdiri atas Tim BLPT Pusdatin dan Duta Teknologi mengadakan kegiatan sinkronus PembaTIK dengan tema *"Ngulik bersama tutor PembaTIK level 4 berbagi dan berkolaborasi"*. Kegiatan yang seru ini dilaksanakan pada hari Selasa, 10 Oktober 2023 secara daring yang diikuti oleh 30 peserta PembaTIK Level 4 Daerah Istimewa Yogyakarta
+Tim tutor PembaTIK level 4 Daerah Istimewa Yogyakarta yang terdiri atas Tim BLPT Pusdatin dan Duta Teknologi mengadakan kegiatan sinkronus PembaTIK dengan tema *"Ngulik bersama tutor PembaTIK level 4 berbagi dan berkolaborasi"*. Kegiatan yang seru ini dilaksanakan pada hari Selasa, 10 Oktober 2023 secara daring yang diikuti oleh 30 peserta PembaTIK Level 4 Daerah Istimewa Yogyakarta.
 
 ![Kegiatan Sinkronus Pembatik](/images/pembatik/duta/foto-bersama.jpg)
 
