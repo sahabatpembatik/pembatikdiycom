@@ -6,7 +6,7 @@ author : "21masbhe"
 featured : false
 draft : false
 comment : true
-toc : false
+toc : true
 keywords : 
   - membuat blog gratis
   - blogger
