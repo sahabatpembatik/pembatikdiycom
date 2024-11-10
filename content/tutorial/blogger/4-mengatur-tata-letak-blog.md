@@ -1,7 +1,7 @@
 ---
 title : "4 Mengatur Tata Letak Blog"
 description : 
-date : 2024-11-05T18:54:19+07:00
+date : 2024-10-21T18:54:19+07:00
 author : 
 featured : false
 draft : true

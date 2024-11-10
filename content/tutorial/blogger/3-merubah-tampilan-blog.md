@@ -1,7 +1,7 @@
 ---
 title : "Cara Mengganti Tema Tampilan Blogger: Panduan Lengkap untuk Pemula"
 description : "Bosan dengan tampilan blog Blogger? Pelajari cara mudah mengubah tema, kustomisasi, dan tips memilih tema yang tepat untuk meningkatkan tampilan dan SEO blogmu"
-date : 2024-11-02T21:23:41+07:00
+date : 2024-10-21T21:23:41+07:00
 author : "21masbhe"
 featured : false
 draft : false
