@@ -17,6 +17,7 @@ filenames.forEach((file) => {
   if (fileFormat === 'jpg' || fileFormat === 'jpeg') {
     sh = sh.jpeg({ quality: 70 });
     sh.resize({
+      width: 600,
       fit: sharp.fit.cover,
       position: sharp.strategy.entropy
     });
