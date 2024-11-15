@@ -34,7 +34,7 @@ tumbnail :
 
 Dunia teknologi semakin berkembang pesat, dan coding menjadi salah satu keterampilan yang paling dicari. Tidak hanya untuk para profesional IT, coding juga penting untuk mengembangkan kemampuan berpikir logis dan kreatif. 
 
-Apalagi katanya menurut rumor yang beredar.. Coding dan AI akan menjadi mata pelajaran di sekolah. Bagi pemula????, mempelajari coding bisa terasa membingungkan. Untungnya, ada banyak aplikasi coding yang dirancang khusus untuk mempermudah proses belajar, bahkan untuk anak-anak. 
+**Apalagi katanya menurut rumor yang beredar.. Coding dan AI akan menjadi mata pelajaran di sekolah**. Bagi pemula????, mempelajari coding bisa terasa membingungkan. Untungnya, ada banyak aplikasi coding yang dirancang khusus untuk mempermudah proses belajar, bahkan untuk anak-anak. 
 
 Artikel ini akan membahas 9 aplikasi coding populer yang cocok untuk pemula, mulai dari yang berbasis blok visual hingga bahasa pemrograman teks. Setiap aplikasi memiliki kelebihan dan fitur unik yang dapat disesuaikan dengan minat dan gaya belajar Anda.
 
