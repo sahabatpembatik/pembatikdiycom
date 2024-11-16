@@ -4,7 +4,7 @@ description : "Ingin anak Anda belajar coding AI dengan cara yang menyenangkan? 
 date : 2024-11-15T23:47:48+07:00
 author : "19erna"
 featured : false
-draft : true
+draft : false
 comment : true
 toc : false
 keywords : 
@@ -25,11 +25,11 @@ kategori :
   - Artikel
 topik :
   - Pemrograman
-  - Coding
+  - AI
 images : 
-  - img/header/9-aplikasi-coding.webp
+  - img/header/9-aplikasi-ai-kids.webp
 tumbnail : 
-  - img/tumbnail/9-aplikasi-coding.webp
+  - img/tumbnail/9-aplikasi-ai-kids.webp
 ---
 
 Di era digital yang semakin maju, kecerdasan buatan (AI) telah menjadi bagian tak terpisahkan dari kehidupan kita. Anak-anak, sebagai generasi penerus, perlu dipersiapkan untuk menghadapi masa depan yang semakin kompleks. Salah satu cara yang efektif adalah dengan mengajarkan mereka dasar-dasar pemrograman AI sejak dini.
@@ -49,38 +49,56 @@ Berikut adalah beberapa platform coding AI yang sangat cocok untuk anak-anak pem
 
 1. **Teachable Machine Google** 
    
+   ![Teachable Machine Google](/images/artikel/app-aikids1.jpg)
+
    Platform ini memungkinkan anak-anak untuk melatih model AI mereka sendiri untuk mengenali berbagai hal, seperti wajah, suara, atau pose. 
     * Link: [https://teachablemachine.withgoogle.com](https://teachablemachine.withgoogle.com/)
 2. **Quickdraw by Google** 
    
+   ![Quickdraw by Google](/images/artikel/app-aikids2.jpg)
+
    Anak-anak dapat menggambar berbagai objek, dan Quickdraw akan mencoba menebak gambar tersebut. 
     * Link: [https://quickdraw.withgoogle.com/](https://quickdraw.withgoogle.com/)
 3. **AI Experiments by Google** 
    
+   ![AI Experiments by Google](/images/artikel/app-aikids3.jpg)
+
    Koleksi eksperimen AI yang interaktif dan menyenangkan, memungkinkan anak-anak untuk berinteraksi dengan berbagai konsep AI. 
     * Link: [https://experiments.withgoogle.com/](https://experiments.withgoogle.com/)
 4. **Generation AI** 
    
+   ![Generation AI](/images/artikel/app-aikids4.jpg)
+
    Platform ini menawarkan berbagai proyek AI yang dapat dikerjakan oleh anak-anak, mulai dari membuat chatbot sederhana hingga membuat generator teks. 
     * Link: [https://generation-ai.eu/](https://generation-ai.eu/)
 5. **Machine learning for kids** 
    
+   ![Machine learning for kids](/images/artikel/app-aikids5.jpg)
+
    Platform ini menyediakan tutorial dan proyek yang dirancang khusus untuk anak-anak, sehingga mereka dapat belajar konsep machine learning dengan mudah. 
     * Link: [https://machinelearningforkids.co.uk/](https://machinelearningforkids.co.uk/)
 6. **Code.org** 
    
+   ![Code.org](/images/artikel/app-aikids6.jpg)
+
    Platform ini menawarkan berbagai kursus coding gratis, termasuk kursus yang berfokus pada AI. 
     * Link: [https://code.org/](https://code.org/)
 7. **Tynker** 
    
+   ![Tynker](/images/artikel/app-aikids9.jpg)
+
    Platform ini menyediakan lingkungan visual yang menyenangkan untuk belajar coding, termasuk proyek-proyek yang berkaitan dengan AI. 
     * Link: [https://www.tynker.com/](https://www.tynker.com/)
 8. **Scratch**
    
+   ![Scratch](/images/artikel/app-aikids8.jpg)
+
    Platform ini memungkinkan anak-anak untuk membuat animasi, game, dan cerita interaktif dengan menggunakan blok coding. Meskipun tidak khusus untuk AI, Scratch dapat menjadi dasar yang baik untuk mempelajari konsep pemrograman. 
     * Link: [https://scratch.mit.edu/](https://scratch.mit.edu/)
-9.  **Creaticode: scratch + AI + 3D:** 
+9.  **Creaticode: Scratch + AI + 3D:** 
     
+    ![Creaticode](/images/artikel/app-aikids7.jpg)
+
     Platform ini menggabungkan Scratch dengan AI dan grafik 3D, sehingga anak-anak dapat membuat proyek yang lebih kompleks dan kreatif. 
     * Link: [https://www.creaticode.com/](https://www.creaticode.com/)
 
