@@ -24,7 +24,7 @@ filenames.forEach((file) => {
   } else if (fileFormat === 'png') {
     sh = sh.png({ quality: 80 });
     sh.resize({
-      width: 170,
+      width: 50,
       fit: sharp.fit.cover,
       position: sharp.strategy.entropy
     });
