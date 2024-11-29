@@ -6,7 +6,7 @@ author : "19erna"
 featured : false
 draft : false
 comment : true
-toc : false
+toc : true
 keywords : 
   - Anugerah Duta Teknologi 2024
   - Anugerah Ki Hajar 2024
