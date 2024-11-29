@@ -20,7 +20,7 @@
   <nav class="flex px-2 md:justify-start gap-2 md:gap-4 my-8" aria-label="Pagination">
     {{ if $paginator.HasPrev }}
 
-    <a href="{{ $paginator.First.URL }}"
+    <a href="{{ $paginator.First.URL }}" aria-label="First"
       class="inline-flex p-1 text-center items-center justify-center pt-1 font-semibold rounded-full h-8 w-8 text-gray-600 bg-slate-100 e dark:bg-slate-800 hover:bg-sky-500 dark:text-slate-100 hover:text-slate-100 dark:hover:bg-slate-700 dark:hover:text-sky-500">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
         class="w-4 h-4">
@@ -29,7 +29,7 @@
     </a>
 
 
-    <a href="{{ $paginator.Prev.URL }}"
+    <a href="{{ $paginator.Prev.URL }}" aria-label="Before"
       class="inline-flex p-1 text-center items-center justify-center pt-1 font-semibold rounded-full h-8 w-8 text-gray-600 bg-slate-100 e dark:bg-slate-800 hover:bg-sky-500 dark:text-slate-100 hover:text-slate-100 dark:hover:bg-slate-700 dark:hover:text-sky-500">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
         class="w-4 h-4">
@@ -95,7 +95,7 @@
         .PageNumber }}</span></button>
 
       {{ else }}
-    <a href="{{ .URL }}" type='button'
+    <a href="{{ .URL }}" type='button' 
         class="text-center justify-center pt-1 font-semibold rounded-full h-8 w-8 text-gray-600 bg-slate-100 e dark:bg-slate-800 hover:bg-sky-500 dark:text-slate-100 hover:text-slate-100 dark:hover:bg-slate-700 dark:hover:text-sky-500">{{.PageNumber }}</a>
 
       {{ end }}
@@ -106,7 +106,7 @@
 
       {{ if $paginator.HasNext }}
 
-      <a href="{{ $paginator.Next.URL }}" type="button"
+      <a href="{{ $paginator.Next.URL }}" type="button" aria-label="Next"
         class="inline-flex p-1 text-center items-center justify-center pt-1 font-semibold rounded-full h-8 w-8 text-gray-600 bg-slate-100 e dark:bg-slate-800 hover:bg-sky-500 dark:text-slate-100 hover:text-slate-100 dark:hover:bg-slate-700 dark:hover:text-sky-500">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
           class="w-4 h-4">
@@ -116,7 +116,7 @@
       </a>
 
 
-      <a href="{{ $paginator.Last.URL }}" type="button"
+      <a href="{{ $paginator.Last.URL }}" type="button" aria-label="End"
         class="inline-flex p-1 text-center items-center justify-center pt-1 font-semibold rounded-full h-8 w-8 text-gray-600 bg-slate-100 e dark:bg-slate-800 hover:bg-sky-500 dark:text-slate-100 hover:text-slate-100 dark:hover:bg-slate-700 dark:hover:text-sky-500">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
           class="w-4 h-4">
