@@ -81,7 +81,7 @@ one = "{{ .Count }}  total"
 other = "{{ .Count }}  total"
 
 [reading_time]
-other = "Baca {{ .ReadingTime }} menit"
+other = "Baca 📖 {{ .ReadingTime }} menit"
 
 [recent_posts]
 other = "Atrikel Terbaru"

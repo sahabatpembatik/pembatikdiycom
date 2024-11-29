@@ -1,23 +1,19 @@
-<div class="post-meta">
-  {{- if and (default true (default .Site.Params.postDate .Params.postDate)) -}}
-  {{- $dateParams := dict "createdOn" .Date.Local -}}
-  {{ if gt .Lastmod .Date }}
-    {{- $dateParams = merge $dateParams (dict "updatedOn" .Lastmod.Local) -}}
-  {{ end }}
-  <span class="post-date" title="{{ i18n "post_date" $dateParams }}">
-    {{ .Date | time.Format (default "Jan 2, 2006" $.Site.Params.dateFormat) }}
-  </span>
-  {{- end -}}
-  {{- if and (default true (default .Site.Params.readingTime .Params.readingTime)) -}}
-  <span class="post-reading-time">
-    {{ i18n "reading_time" . }}
-  </span>
-  {{- end -}}
-  <span class="post-taxonomies">
-  {{- range $key, $value := .Site.Taxonomies -}}
+<div class="text-sm text-neutral-500 dark:text-neutral-400">
+
+  <div class="flex flex-row flex-wrap items-center">
+    {{- range $key, $value := .Site.Taxonomies -}}
     {{- range ($.GetTerms $key) -}}
-    <a href="{{ .Permalink }}" class="badge rounded-pill post-taxonomy">{{ .Name }}</a>
+    <span class="flex"><a href="{{ .Permalink }}"
+        class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-600 ring-1 ring-inset ring-blue-500/10 mx-1">#{{
+        .Name }}</a></span>
     {{- end -}}
-  {{- end -}}
-  </span>
+    {{- end -}}
+  </div>
+  {{- if and (default true (default .Site.Params.readingTime .Params.readingTime)) -}}
+  <div class="flex flex-row flex-wrap items-center my-4">
+    <span class="post-reading-time">
+      {{ i18n "reading_time" . }}
+    </span>
+    {{- end -}}
+  </div>
 </div>

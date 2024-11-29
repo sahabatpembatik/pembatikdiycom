@@ -4,6 +4,7 @@
     
   {{- range .Paginator.Pages -}}
   <div class="ease-in duration-150 mx-auto rounded-lg shadow p-4 w-full h-full flex flex-col transform transition hover:scale-[1.01] shadow-lg p-4 rounded-lg bg-white dark:bg-slate-800 hover:shadow-md max-w-sm">
+    
     <a href="{{ .Permalink }}">
       {{ if .Params.Tumbnail }}
             <img class="w-full mx-auto object-cover lazyload center dark:brightness-75" alt="{{ partial "helpers/title" . }}" src="/img/placeholder.svg" onerror="this.src='/img/placeholder.svg'" data-src="{{ index .Params.Tumbnail 0 | absURL }}" loading="lazy" data-sizes="auto" height='180px'/>
@@ -12,21 +13,18 @@
            
           {{- end -}} 
     </a>
+    
     <div class="p-2">
       <h5 class="text-gray-900 dark:text-gray-100 hover:text-bluem-500 dark:hover:underline text-lg font-bold mb-2">
         <a href="{{ .Permalink }}">{{ partial "helpers/title" . }}</a>
       </h5>	
+      {{ partial "post/meta" . }}
       <p class="text-gray-500 text-sm mb-1">
         {{ partial "post/description" . }} 
       </p>
-      <section class="flex pb-2 gap-1 flex-wrap">
-        {{- range $key, $value := .Site.Taxonomies -}}
-          {{- range ($.GetTerms $key) -}}
-          <a rel="tag" class="p-1 px-1 rounded-md text-xs font-medium bg-sky-100 dark:bg-sky-700 dark:hover:bg-sky-600/25 hover:bg-sky-600/25" href="{{ .Permalink }}">#{{ .Name }}</a>
-          {{- end -}}
-        {{- end -}}
-      </section>
     </div>
+   
+      
     <div class="grid grid-cols-2 mt-auto">
 		  <div class="flex items-center">
       {{ $author := index .Site.Data.author ( .Params.author | default "21masbhe") }}
@@ -43,7 +41,7 @@
 			<p class="inline-block">
 			  <span class="text-sm">
           {{ .Date.Format (default "2 January 2006" $.Site.Params.dateFormat) }}
-			  </span>
+			  </span> 
 			</p>
 		  </div>
 		</div>
