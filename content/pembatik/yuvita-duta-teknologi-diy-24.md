@@ -1,5 +1,5 @@
 ---
-title : "Yuvita Dela Carolina SMAN 2 Wates Terpilih Jadi Duta Teknlogi 2024 "
+title : "Yuvita Dela Carolina Guru SMAN 2 Wates Terpilih sebagai Duta Teknologi 2024 pada Anugerah Ki Hajar"
 description : "Yuvita Dela Carolina, guru SMAN 2 Wates, terpilih sebagai Duta Teknologi 2024 pada Anugerah Ki Hajar. Terpilihnya Yuvita merupakan bagian dari proses seleksi akhir Program Pembatik yang mengapresiasi inovasi dan penggunaan teknologi dalam pembelajaran."
 date : 2024-11-25T18:28:35+07:00
 author : "21masbhe"
