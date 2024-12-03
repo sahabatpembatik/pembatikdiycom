@@ -1,5 +1,7 @@
 ---
-title : "Kolaborasi Balai Tekkomdik dengan Duta dan Sahabat Teknologi DIY: Wujudkan Sinergi untuk Jogja Smart School"
+title : "Kolaborasi Balai Tekkomdik dengan Duta dan Sahabat Teknologi DIY"
+aliases : 
+ - kolaborasi-balai-tekkomdik-duta-sahabat-teknologi
 description : "Kolaborasi Balai Tekkomdik DIY dengan Duta dan Sahabat Teknologi DIY bertujuan mewujudkan Jogja Smart School, meningkatkan literasi digital dan teknologi pendidikan di Yogyakarta."
 date : 2024-12-03T23:50:23+07:00
 author : "18sigit"
