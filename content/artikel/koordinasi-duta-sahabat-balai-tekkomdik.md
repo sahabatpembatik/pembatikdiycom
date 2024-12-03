@@ -31,9 +31,9 @@ cover :
 ---
 
 
-Balai Teknologi Komunikasi Pendidikan (Tekkomdik) DIY bersama Duta Teknologi dan Sahabat Teknologi DIY mengadakan koordinasi untuk memperkuat upaya mewujudkan _Jogja Smart School_, sebuah inisiatif besar dalam mengintegrasikan teknologi ke dalam sistem pendidikan di Yogyakarta.
+Balai Teknologi Komunikasi Pendidikan (Tekkomdik) DIY bersama Duta Teknologi dan Sahabat Teknologi DIY mengadakan koordinasi untuk memperkuat upaya mewujudkan _Jogja Smart School_, sebuah inisiatif besar dalam mengintegrasikan teknologi ke dalam sistem pendidikan di Yogyakarta. Kegiatan ini dilaksanakan pada Selasa, 3 Desember 2024. 
 
-Pertemuan yang diadakan di Aula Balai Tekkomdik ini bertujuan untuk membahas strategi implementasi teknologi pendidikan yang inovatif, serta mendorong peningkatan literasi digital di kalangan guru, siswa, dan masyarakat umum. Acara ini dihadiri oleh Kepala Balai Tekkomdik DIY, Duta Teknologi, dan Sahabat Teknologi DIY.
+Pertemuan yang diadakan di Aula Balai Tekkomdik ini bertujuan untuk membahas strategi implementasi teknologi pendidikan yang inovatif, serta mendorong peningkatan literasi digital di kalangan guru, siswa, dan masyarakat umum. Acara ini dihadiri oleh Kepala Balai Tekkomdik DIY, PTP Balai Tekkomdik, Duta Teknologi, dan Sahabat Teknologi DIY.
 
 Rudy Prakanto, S.Pd., M.Eng, Kepala Balai Tekkomdik DIY, dalam sambutannya mengatakan, "Melalui kolaborasi ini, kami ingin mencoba menjadikan _Jogja smart school_ untuk seluruh satuan pendidikan jenjang pendidikan TK SD SMP SMA SMK. Apa ruh besarnya? Ruh besarnya adalah Jogja smart profile, memunculkan dan menjadikan DIY sebagai provinsi yang smart. Kami berkomitmen untuk membuat Yogyakarta menjadi kota yang unggul dalam pemanfaatan teknologi di dunia pendidikan."
 
