@@ -14,6 +14,8 @@ keywords :
   - Penyelesaian masalah efisien
   - Konsep informatika
   - Pengenalan pola dan dekomposisi
+  - informatika kelas x
+  - informatika sma
 kategori : 
   - Informatika
 topik :
