@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Sertifikat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-shadow {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .search-animation {
+            transition: all 0.3s ease;
+        }
+        .search-animation:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        .certificate-item {
+            transition: all 0.3s ease;
+        }
+        .certificate-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        .download-btn {
+            background: linear-gradient(45deg, #10b981, #059669);
+            transition: all 0.3s ease;
+        }
+        .download-btn:hover {
+            background: linear-gradient(45deg, #059669, #047857);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="min-h-screen gradient-bg">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                📜 Download Sertifikat
+            </h1>
+            <p class="text-xl text-white/90 max-w-2xl mx-auto">
+                Masukkan email atau nama Anda untuk mencari dan mengunduh sertifikat
+            </p>
+        </div>
+
+        <!-- Search Section -->
+        <div class="max-w-2xl mx-auto mb-12">
+            <div class="bg-white rounded-2xl p-8 card-shadow">
+                <div class="relative">
+                    <input 
+                        type="text" 
+                        id="emailSearch" 
+                        placeholder="Masukkan alamat email atau nama Anda..."
+                        class="w-full px-6 py-4 text-lg border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none search-animation"
+                    >
+                    <button 
+                        onclick="searchCertificate()" 
+                        class="absolute right-2 top-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-all duration-300 hover:scale-105"
+                    >
+                        🔍 Cari
+                    </button>
+                </div>
+                <div id="searchStatus" class="mt-4 text-center text-gray-600"></div>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <div id="resultsSection" class="max-w-4xl mx-auto hidden">
+            <div class="bg-white rounded-2xl p-8 card-shadow">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">
+                    ✅ Sertifikat Ditemukan!
+                </h2>
+                <div id="certificateResult" class="space-y-4"></div>
+            </div>
+        </div>
+
+        <!-- All Certificates Section -->
+        <div class="max-w-6xl mx-auto mt-12">
+            <div class="bg-white rounded-2xl p-8 card-shadow">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">
+                    📋 Semua Sertifikat Tersedia
+                </h2>
+                <div class="text-center mb-6">
+                    <p class="text-gray-600">Total: <span class="font-semibold text-blue-600" id="totalCertificates">0</span> sertifikat</p>
+                </div>
+                <div id="allCertificates" class="grid gap-4 md:grid-cols-2 lg:grid-cols-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Data sertifikat
+        const certificates = [
+            {email: "anasusilowati49@guru.smp.belajar.id", name: "Ana Rini Susilowati, S.Kom", link: "https://drive.google.com/file/d/1SR7RDAz3U_wp6IIT5i1i7OQDadnLTIL8/view?usp=drivesdk"},
+            {email: "bayusaputra44@guru.smp.belajar.id", name: "Bayu Dyan Saputra", link: "https://drive.google.com/file/d/1Zl4mSkljcJelD3t_3ymv4JEm6qf5fWGW/view?usp=drivesdk"},
+            {email: "devisusanti1006@gmail.com", name: "Devi Susanti, S.Kom", link: "https://drive.google.com/file/d/1TO2ba3pZ8OfBUGAyDMeq1ZFrvd8zKbNP/view?usp=drivesdk"},
+            {email: "dewi.ayuashter@gmail.com", name: "Dewi Ayu Lestari, S.Kom", link: "https://drive.google.com/file/d/1J_Ozs45dqj8Wq1dHU-PGXWw4Pgyeq7dS/view?usp=drivesdk"},
+            {email: "drirahmanto@gmail.com", name: "Dri Rahmanto", link: "https://drive.google.com/file/d/1OHzPhMv60vf94ZPt-GaiILA-PhuV28GO/view?usp=drivesdk"},
+            {email: "hanungputranto44@guru.smp.belajar.id", name: "Hanung Putranto, S.Kom", link: "https://drive.google.com/file/d/11xU5u1tXi6Vvg7vZGhT_OaLisgTeTaSB/view?usp=drivesdk"},
+            {email: "henitriast@gmail.com", name: "Heni Triastuti, S.Kom.,M.Pd.", link: "https://drive.google.com/file/d/1wHYODgIMTyrls5T3WYWWNaRjIbYTN3_Q/view?usp=drivesdk"},
+            {email: "intan.ghanis27@gmail.com", name: "Intan Ghaniswari", link: "https://drive.google.com/file/d/1IJNYl5EF43Ne6pX0Lzj5AbLyugeOWsHU/view?usp=drivesdk"},
+            {email: "irwansatriajogja@gmail.com", name: "Irwan Susanto, S.Kom., Gr.", link: "https://drive.google.com/file/d/1uKCKDGr1C14pedzO8krxBh5oYai6LeIN/view?usp=drivesdk"},
+            {email: "hartaji@smpn2ngaglik.sch.id", name: "Iwan Hartaji, S.Pd.T", link: "https://drive.google.com/file/d/1cfCP8H4gN_DLT1HaS5IyBlGDGt24xR8Y/view?usp=drivesdk"},
+            {email: "iwanhartaji43@guru.smp.belajar.id", name: "Iwan Hartaji,.S.Pd.T", link: "https://drive.google.com/file/d/1A5kiLr2SP1wQlAQMxASrFDhrhCAj1gfK/view?usp=drivesdk"},
+            {email: "mm.muttaqien@gmail.com", name: "MACHMUT MUTTAQIIN", link: "https://drive.google.com/file/d/1pxSvSOWEeqe2gNekXFCx2S0lMYEkZCh-/view?usp=drivesdk"},
+            {email: "sudarmanmaman94@gmail.com", name: "Muhammad Arief Sudarman", link: "https://drive.google.com/file/d/18Yt1mu4wgmrWrBzD17eOnPmoOnMcSSYv/view?usp=drivesdk"},
+            {email: "muhammad2000003087@webmail.uad.ac.id", name: "MUHAMMAD KHOIRUN NASHRUDDIN", link: "https://drive.google.com/file/d/1LmS-65XZiAVc5fBl1nFFhK3Y9Ql3avoV/view?usp=drivesdk"},
+            {email: "nurmalakhoirunisa58@guru.smp.belajar.id", name: "Nurmala Khoirunisa", link: "https://drive.google.com/file/d/17wvstLgtMAxxWPvCYVN3EDeVIMBBxxPp/view?usp=drivesdk"},
+            {email: "nuynurul.kemenag@gmail.com", name: "Nurul Widyastuti, S.Pd", link: "https://drive.google.com/file/d/1H-lvrur_5y300CSqWomJlnxZHhy5hl2D/view?usp=drivesdk"},
+            {email: "retnayuliani07@guru.smp.belajar.id", name: "Retna Yuliani,S.Kom", link: "https://drive.google.com/file/d/15xCZuG1fwkrGKDoK2Ox7C11e5iKsDreD/view?usp=drivesdk"},
+            {email: "rinisetiyani1502@gmail.com", name: "RINI SETIYANI", link: "https://drive.google.com/file/d/14rwhk3W7c8wV8keP3F1J-hGy1qzKR53C/view?usp=drivesdk"},
+            {email: "riptamarjaka91@guru.smp.belajar.id", name: "Ripta Andi Marjaka", link: "https://drive.google.com/file/d/1aQ3Uetf4YdtRrtzA553RXKzLQkPFnqo5/view?usp=drivesdk"},
+            {email: "robertprabowo82@guru.smp.belajar.id", name: "Robert Iwan Prabowo, S.T.", link: "https://drive.google.com/file/d/13byFJMAS9x0BJDu228pBQGMkEaTJAmC3/view?usp=drivesdk"},
+            {email: "rofirhyana@gmail.com", name: "Rofi Rhyana Dwi Anggraini", link: "https://drive.google.com/file/d/1OK-EPxSe_MIUBmrthy9qSc74ZKHibv7p/view?usp=drivesdk"},
+            {email: "setiyopamungkas69@guru.smp.belajar.id", name: "Setiyo Pamungkas", link: "https://drive.google.com/file/d/1nGt1UtRROJLHgdv4tGk7Cv2nS5jpOmmr/view?usp=drivesdk"},
+            {email: "sitisuprihatun96@guru.smp.belajar.id", name: "Siti Arbaroni Suprihatun", link: "https://drive.google.com/file/d/1zo78i1Ofr4fINIAaxqIU-2x8cL7LZTIm/view?usp=drivesdk"},
+            {email: "wahyucloud1@gmail.com", name: "Sri Wahyuningsih, S.Kom", link: "https://drive.google.com/file/d/1PO9xhc9tFmTz8R6zL3K6lBa7CZ5avOpJ/view?usp=drivesdk"},
+            {email: "sriwidarti81@guru.smp.belajar.id", name: "Sri Widarti, S.Pd", link: "https://drive.google.com/file/d/1qtr_hKYTO9fjex8zmxAprB01Kq6q3uGE/view?usp=drivesdk"},
+            {email: "suharni.8125@guru.smp.belajar.id", name: "Suharni", link: "https://drive.google.com/file/d/1AR5wEpPcyEvxVuMh2EBYaz0VdKBL_XZm/view?usp=drivesdk"},
+            {email: "sulistianingsih74@guru.smp.belajar.id", name: "Sulistianingsih, S. Kom.", link: "https://drive.google.com/file/d/1zt4Hb05MT2t1yfVaXbPamwCRm03Imbq8/view?usp=drivesdk"},
+            {email: "suparyanto92@guru.smp.belajar.id", name: "Suparyanto", link: "https://drive.google.com/file/d/1BLcBgpHxoQK150zZcQxxlPIPYD2EXC2Y/view?usp=drivesdk"}
+        ];
+
+        // Fungsi untuk mengkonversi Google Drive link ke direct download
+        function convertToDirectLink(driveLink) {
+            const fileId = driveLink.match(/\/d\/([a-zA-Z0-9-_]+)/);
+            if (fileId) {
+                return `https://drive.google.com/uc?export=download&id=${fileId[1]}`;
+            }
+            return driveLink;
+        }
+
+        // Fungsi pencarian sertifikat
+        function searchCertificate() {
+            const searchTerm = document.getElementById('emailSearch').value.toLowerCase().trim();
+            const statusDiv = document.getElementById('searchStatus');
+            const resultsSection = document.getElementById('resultsSection');
+            const resultDiv = document.getElementById('certificateResult');
+
+            if (!searchTerm) {
+                statusDiv.innerHTML = '<p class="text-red-500">⚠️ Silakan masukkan alamat email atau nama</p>';
+                return;
+            }
+
+            statusDiv.innerHTML = '<p class="text-blue-500">🔍 Mencari sertifikat...</p>';
+
+            // Simulasi delay pencarian
+            setTimeout(() => {
+                // Cari berdasarkan email atau nama
+                const found = certificates.find(cert => 
+                    cert.email.toLowerCase().includes(searchTerm) || 
+                    cert.name.toLowerCase().includes(searchTerm)
+                );
+
+                if (found) {
+                    statusDiv.innerHTML = '<p class="text-green-500">✅ Sertifikat ditemukan!</p>';
+                    resultsSection.classList.remove('hidden');
+                    
+                    resultDiv.innerHTML = `
+                        <div class="certificate-item bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-xl border-2 border-green-200">
+                            <div class="flex items-center justify-between flex-wrap gap-4">
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">👤 ${found.name}</h3>
+                                    <p class="text-gray-600 mb-1">📧 ${found.email}</p>
+                                    <p class="text-sm text-green-600 font-medium">📜 Sertifikat tersedia untuk diunduh</p>
+                                </div>
+                                <div class="flex gap-3">
+                                    <a href="${found.link}" target="_blank" 
+                                       class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105 flex items-center gap-2">
+                                        👁️ Lihat
+                                    </a>
+                                    <a href="${convertToDirectLink(found.link)}" 
+                                       class="download-btn text-white px-6 py-3 rounded-lg flex items-center gap-2">
+                                        ⬇️ Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    statusDiv.innerHTML = '<p class="text-red-500">❌ Sertifikat tidak ditemukan. Periksa kembali alamat email atau nama Anda.</p>';
+                    resultsSection.classList.add('hidden');
+                }
+            }, 1000);
+        }
+
+        // Fungsi untuk menampilkan semua sertifikat
+        function displayAllCertificates() {
+            const container = document.getElementById('allCertificates');
+            const totalElement = document.getElementById('totalCertificates');
+            
+            totalElement.textContent = certificates.length;
+
+            container.innerHTML = certificates.map(cert => `
+                <div class="certificate-item bg-gray-50 p-4 rounded-xl border border-gray-200">
+                    <div class="mb-3">
+                        <h4 class="font-semibold text-gray-800 text-sm mb-1">${cert.name}</h4>
+                        <p class="text-xs text-gray-600 break-all">${cert.email}</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <a href="${cert.link}" target="_blank" 
+                           class="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded text-xs text-center transition-all duration-300">
+                            👁️ Lihat
+                        </a>
+                        <a href="${convertToDirectLink(cert.link)}" 
+                           class="flex-1 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded text-xs text-center transition-all duration-300">
+                            ⬇️ Download
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Event listener untuk Enter key
+        document.getElementById('emailSearch').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchCertificate();
+            }
+        });
+
+        // Inisialisasi halaman
+        document.addEventListener('DOMContentLoaded', function() {
+            displayAllCertificates();
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96a6848fe155fdbc',t:'MTc1NDM5OTI1MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
