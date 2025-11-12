@@ -13,7 +13,7 @@
         <options>
           <option name="title_enabled" value="false">
             <options>
-              <option name="title_text" value="MPI PENJELAJAH TUBUH" />
+              <option name="title_text" value="MPI PENJELAJAH TUBUH FASE D" />
             </options>
           </option>
           <option name="logo_enabled" value="false">
@@ -1289,6 +1289,7 @@
         <slidelink slideid="_player.6FL8VrJzheD" displaytext="START" expand="true" type="slide">
           <links>
             <slidelink slideid="_player.6FL8VrJzheD.6FULt3wfYBB" displaytext="Start Page" expand="false" type="slide" />
+            <slidelink slideid="_player.6FL8VrJzheD.6I7NvCQnTpl" displaytext="Untitled Slide" expand="false" type="slide" />
           </links>
         </slidelink>
         <slidelink slideid="_player.5VD0Ze8xvAA" displaytext="Pengembang Daftar Pustaka" expand="true" type="slide">
