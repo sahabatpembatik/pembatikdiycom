@@ -1,5 +1,5 @@
 ---
-title : "Tutorial Hugo (Part 2): Cara Membuat Project Baru dan Pasang Tema PaperMod"
+title : "Tutorial Hugo (Part 2): Cara Membuat Project Baru dan Pasang Tema"
 description : "Langkah demi langkah membuat website dengan Hugo. Mulai dari perintah hugo new site, struktur folder, instalasi tema PaperMod, hingga menjalankannya di localhost."
 date : 2026-01-12T21:55:53+07:00
 author : "21masbhe"
@@ -19,10 +19,6 @@ kategori :
 topik :
   - Hugo
   - Web Development
-images :
-  - img/header/membuat-project-hugo.webp
-tumbnail :
-  - img/tumbnail/membuat-project-hugo.webp
 ---
 
 Halo calon blogger modern! Kembali lagi di seri **"Tutorial Membuat Blog dengan Hugo"**.

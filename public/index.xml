@@ -8,7 +8,29 @@
     <copyright>© {year} | Sahabat PembaTIK DIY</copyright>
     <lastBuildDate>Sun, 01 Jan 2023 08:00:00 -0700</lastBuildDate><atom:link href="https://pembatikdiy.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Tutorial Hugo (Part 2): Cara Membuat Project Baru dan Pasang Tema PaperMod</title>
+      <title>Tutorial Hugo (Part 4): Cara Deploy Website ke Internet Gratis</title>
+      <link>https://pembatikdiy.com/4-deploy-hugo/</link>
+      <pubDate>Mon, 12 Jan 2026 21:57:53 +0700</pubDate>
+      
+      <guid>https://pembatikdiy.com/4-deploy-hugo/</guid>
+      <description>Tutorial Hugo (Part 4): Cara Deploy Website Hugo Anda Secara Gratis Selamat! Anda sudah berhasil membuat project Hugo, memasang tema, dan membuat artikel pertama Anda. Sekarang, saatnya menunjukkan hasil kerja keras Anda kepada dunia dengan melakukan Deployment.
+Di Part 4 ini, kita akan belajar cara mempublikasikan website Hugo Anda secara gratis menggunakan dua platform populer: GitHub Pages dan Netlify.
+Memahami Proses Build Hugo Sebelum deploy, Anda perlu tahu bahwa Hugo tidak langsung mengupload file .</description>
+    </item>
+    
+    <item>
+      <title>Tutorial Hugo (Part 3): Membuat Postingan dan Menu Navigasi</title>
+      <link>https://pembatikdiy.com/3-konfigurasi-dasar-hugo/</link>
+      <pubDate>Mon, 12 Jan 2026 21:56:53 +0700</pubDate>
+      
+      <guid>https://pembatikdiy.com/3-konfigurasi-dasar-hugo/</guid>
+      <description>Halo! Di Part 2, kita sudah berhasil membuat project Hugo dan memasang tema (baik itu PaperMod atau tema simpel lainnya).
+Sekarang, website Anda masih kosong melompong. Di Part 3 ini, kita akan belajar cara &amp;ldquo;mengisi&amp;rdquo; rumah kosong tersebut dengan artikel, memahami apa itu Markdown, dan mengatur menu navigasi agar website terlihat profesional.
+1. Membuat File Postingan Baru Di Hugo, Anda tidak membuat file HTML secara manual. Kita menggunakan perintah CLI (Command Line) untuk membuat kerangka artikel.</description>
+    </item>
+    
+    <item>
+      <title>Tutorial Hugo (Part 2): Cara Membuat Project Baru dan Pasang Tema</title>
       <link>https://pembatikdiy.com/2-membuat-proyek-dengan-hugo/</link>
       <pubDate>Mon, 12 Jan 2026 21:55:53 +0700</pubDate>
       
