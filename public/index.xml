@@ -8,6 +8,29 @@
     <copyright>© {year} | Sahabat PembaTIK DIY</copyright>
     <lastBuildDate>Sun, 01 Jan 2023 08:00:00 -0700</lastBuildDate><atom:link href="https://pembatikdiy.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Tutorial Hugo (Part 2): Cara Membuat Project Baru dan Pasang Tema PaperMod</title>
+      <link>https://pembatikdiy.com/2-membuat-proyek-dengan-hugo/</link>
+      <pubDate>Mon, 12 Jan 2026 21:55:53 +0700</pubDate>
+      
+      <guid>https://pembatikdiy.com/2-membuat-proyek-dengan-hugo/</guid>
+      <description>Halo calon blogger modern! Kembali lagi di seri &amp;ldquo;Tutorial Membuat Blog dengan Hugo&amp;rdquo;.
+Di Part 1 kemarin↝, kita sudah bersusah payah menyiapkan &amp;ldquo;dapur&amp;quot;nya. Kita sudah menginstal VS Code, Git, dan Hugo Extended. Sekarang, alat-alat tempur itu sudah siap digunakan.
+Di Part 2 ini, kita akan masuk ke bagian yang paling seru: Praktek!
+Kita akan menyulap folder kosong menjadi sebuah website yang utuh dalam hitungan detik. Kita juga akan memasang &amp;ldquo;baju&amp;rdquo; (tema) agar blog Anda terlihat ganteng.</description>
+    </item>
+    
+    <item>
+      <title>Tutorial Hugo (Part 1): Cara Membuat Blog Super Cepat untuk Pemula</title>
+      <link>https://pembatikdiy.com/1-persiapan-instalasi-alat-hugo/</link>
+      <pubDate>Mon, 12 Jan 2026 21:53:53 +0700</pubDate>
+      
+      <guid>https://pembatikdiy.com/1-persiapan-instalasi-alat-hugo/</guid>
+      <description>Pernahkah Anda membuka sebuah website, lalu harus menunggu 5 hingga 10 detik hanya agar tulisan muncul? Kesal, bukan? Di era internet yang serba sat-set ini, kecepatan adalah segalanya. Pengunjung tidak suka menunggu, dan yang lebih penting: Google membenci website lambat.
+Jika Anda ingin memiliki blog pribadi, portofolio, atau situs dokumentasi yang kecepatannya ngebut, aman dari serangan hacker, dan biaya hostingnya gratis, maka Anda berada di tempat yang tepat.
+Lupakan WordPress yang berat.</description>
+    </item>
+    
+    <item>
       <title>Sertifikat Webinar Belajar Kekinian Bersama Assemblr Edu</title>
       <link>https://pembatikdiy.com/sertifikat/wb2506/</link>
       <pubDate>Sat, 09 Aug 2025 23:58:02 +0700</pubDate>

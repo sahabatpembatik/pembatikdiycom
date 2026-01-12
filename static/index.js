@@ -32,7 +32,7 @@ filenames.forEach((file) => {
     sh = sh.gif({ quality: 70 });
   }
 
-  sh.toFile('output/' + file, function (err, info) {
+  sh.toFile('img/tutorial/' + file, function (err, info) {
     console.log(info);
     if (err) {
       console.log('error in image optimization');
