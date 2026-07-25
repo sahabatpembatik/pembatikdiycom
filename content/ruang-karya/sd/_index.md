@@ -1,6 +1,6 @@
 ---
 title: "Karya SD"
-description: "Wadah karya media pembelajaran SD peserta bimtek berbasis H5P"
+description: "Wadah karya media pembelajaran SD berbasis H5P"
 date: 2026-07-25T12:30:38+07:00
 author: "19erna"
 featured: false
@@ -21,12 +21,12 @@ cascade:
   type: ruang-karya
   jenjang: "SD"
   pembuat:
-    nama: "Catur Budi Argo, S.Pd."
-    sekolah: "SD Negeri 2 Giripurwo"
+    nama: ""
+    sekolah: ""
     kelas: ""
     bimtek: ""
 ---
 
-Kumpulan karya ini dibuat khusus untuk menampilkan hasil karya SD peserta bimtek.
+Kumpulan karya ini dibuat khusus untuk menampilkan hasil karya media pembelajaran interaktif SD.
 
-Setiap karya dapat berisi media interaktif H5P, deskripsi tujuan pembelajaran, dan petunjuk penggunaan untuk guru maupun siswa.
+Setiap karya berisi media interaktif, deskripsi tujuan pembelajaran, dan petunjuk penggunaan untuk guru maupun siswa.
