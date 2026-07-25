@@ -1,0 +1,83 @@
+{{ define "main" }}
+<section class="container mx-auto px-3 lg:px-4 lg:max-w-7xl my-8 lg:my-12">
+  {{ partial "breadcrumb" . }}
+
+  <div class="rounded-2xl bg-gradient-to-r from-sky-700 to-cyan-600 p-6 text-white shadow-lg">
+    <p class="text-xs uppercase tracking-[0.2em] text-cyan-100">Ruang Karya</p>
+    <h1 class="mt-1 text-3xl font-black tracking-tight lg:text-5xl">{{ .Title }}</h1>
+    <p class="mt-3 max-w-3xl text-base text-cyan-50 lg:text-lg">
+      {{ .Params.description | default "Kumpulan karya pembelajaran berbasis jenjang." }}
+    </p>
+  </div>
+
+  {{ if .Content }}
+  <div class="prose mt-6 max-w-none lg:prose-lg prose-p:text-justify dark:prose-invert">
+    {{ .Content }}
+  </div>
+  {{ end }}
+
+  {{ if gt (len .Sections) 0 }}
+  <div class="mt-8">
+    <h2 class="text-2xl font-bold tracking-tight">Pilih Jenjang</h2>
+    <div class="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
+      {{ range sort .Sections ".Title" "asc" }}
+      <a href="{{ .Permalink }}" class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-700 dark:bg-slate-800">
+        <p class="text-xs font-semibold uppercase tracking-wide text-sky-700 dark:text-sky-300">Jenjang</p>
+        <h3 class="mt-1 text-2xl font-black tracking-tight text-slate-900 dark:text-slate-100">{{ .Title }}</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">{{ .Params.description | default "Lihat koleksi karya pada jenjang ini." }}</p>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  {{ $pages := where .RegularPagesRecursive "Draft" false }}
+  {{ if gt (len $pages) 0 }}
+  {{ $paginator := .Paginate ($pages.ByDate.Reverse) 12 }}
+  <div class="mt-10">
+    <h2 class="text-2xl font-bold tracking-tight">Karya Terbaru</h2>
+    <div class="mt-4 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+      {{ range $paginator.Pages }}
+      <article class="flex h-full flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-700 dark:bg-slate-800">
+        <a href="{{ .Permalink }}" class="block">
+          {{ if .Params.tumbnail }}
+          <img class="h-48 w-full object-cover" src="{{ index .Params.tumbnail 0 | absURL }}" alt="{{ .Title }}" loading="lazy">
+          {{ else }}
+          <div class="flex h-48 items-center justify-center bg-slate-100 text-slate-500 dark:bg-slate-700 dark:text-slate-300">Ruang Karya</div>
+          {{ end }}
+        </a>
+
+        <div class="flex flex-1 flex-col p-4">
+          {{ with .Params.jenjang }}
+          <p class="mb-2 text-xs font-semibold uppercase tracking-wide text-sky-700 dark:text-sky-300">{{ . }}</p>
+          {{ end }}
+          <h3 class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">{{ .Params.description | default "Media pembelajaran interaktif." }}</p>
+
+          {{ with .Params.pembuat }}
+          <div class="mt-3 space-y-1 text-xs text-slate-500 dark:text-slate-400">
+            {{ with .nama }}<p><span class="font-semibold text-slate-700 dark:text-slate-200">Pembuat:</span> {{ . }}</p>{{ end }}
+            {{ with .sekolah }}<p>{{ . }}</p>{{ end }}
+            {{ with .bimtek }}<p>{{ . }}</p>{{ end }}
+          </div>
+          {{ end }}
+
+          {{ with .Params.sasaran_kelas }}
+          <div class="mt-2 text-xs font-medium text-cyan-700 dark:text-cyan-300">
+            Sasaran: {{ . }}
+          </div>
+          {{ end }}
+
+          <div class="mt-4 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+            <span>{{ .Date.Format (default "2 Jan 2006" $.Site.Params.dateFormat) }}</span>
+            <a href="{{ .Permalink }}" class="font-semibold text-sky-700 hover:underline dark:text-sky-300">Lihat Karya</a>
+          </div>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+  <div class="mt-8">{{ partial "pagination" . }}</div>
+  {{ end }}
+</section>
+{{ end }}

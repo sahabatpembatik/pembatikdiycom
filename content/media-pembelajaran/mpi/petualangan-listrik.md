@@ -25,10 +25,9 @@ tumbnail :
   - img/tumbnail/mpi-listrik.webp
 cover : 
   - cover/*.jpg
+h5p_url : "https://mpi.nurerna.my.id/"
 ---
 
-{{< html >}}
-<embed type="text/html" src="https://mpi.nurerna.my.id/" class="not-prose w-full md:w-[700px] h-[300px] md:h-[450px]">
+{{< h5p title="Media Interaktif Petualangan Listrik" ratio="64%" >}}
 
-{{< /html >}}
 [MEDIA INTERAKTIF PETUALANGAN LISTRIK](https://mpi.nurerna.my.id/)
