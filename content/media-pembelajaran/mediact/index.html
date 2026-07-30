@@ -1,0 +1,259 @@
+---
+title: "Algoritma: Memasak Nasi Goreng"
+description: "Mari belajar berpikir komputasional dengan menyusun algoritma memasak nasi goreng. Urutkan langkah-langkahnya agar robot chef dapat memasak dengan benar!"
+date: 2026-07-30T00:00:00+07:00
+draft: false
+layout: single-full
+---
+
+<!doctype html>
+<html lang="id"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260730-05-6814160","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Broken Glyph":"YADZ-exUkv0,0","Canva Sans":"YAFdJjTk5UU,0","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Ghost Mono":"YAHO2EIdDP0,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YADy3sAhvXQ,0","Oleo Script":"YACgEQQ14jI,0","Playfair Display":"YAFdJhem5V8,1","Poppins":"YAE5fPSY9qM,0","Press Start 2P":"YAFyGr-8pmQ,0","Source Sans 3":"YAG4lO1Mj10,0","Space Grotesk":"YAHO2sjPCSM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Trebuchet MS":"YAFcfrglpVA,0","Verdana":"YAGzXTctYtQ,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0"}}');</script><script src="/_sdk/a27874207e105461.telemetry_sdk.js" integrity="sha512-wgI5N9F7oA2h3vH+benMYIv4wGqTct4nKWakqgvfgRyBLmfYq8q/fi6gkfWKd2hMsyN+VQ/qOAOpxybwkcoxlA=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>🍳 Memasak Nasi Goreng</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&amp;display=swap" rel="stylesheet">
+  <script src="/_sdk/b23f1f6ec78e9bd4.editing_sdk.js" integrity="sha512-WFdQutvUZzxrmcHkL8cbfuFDTeF8Cn8Bt3yqX/a/OdiqPz/t9UcjsIsZK7D+tMTmC2JTwhwRJNyfcHmIWhG8Wg=="></script>
+  <style>
+        * { font-family: 'Poppins', sans-serif; user-select: none; -webkit-user-select: none; }
+        body, html { height: 100%; height: calc(100 * min(var(--vh, 1vh), 1vh)); overflow: hidden; touch-action: manipulation; }
+
+        .grid-card { transition: transform 0.2s cubic-bezier(0.2,0,0,1), box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease; cursor: grab; }
+        .grid-card:active { cursor: grabbing; }
+        .grid-card.dragging { opacity: 0.35; transform: scale(0.95); border-style: dashed !important; }
+        .grid-card.drag-over { transform: scale(1.03); border-color: #2563eb !important; background-color: #eff6ff !important; box-shadow: 0 10px 25px -5px rgba(37,99,235,0.3); }
+        .grid-card.selected { border-color: #1e3a5f !important; background-color: #e8f0fe !important; box-shadow: 0 0 0 3px rgba(30,58,95,0.4); animation: pulseSelect 1.2s infinite alternate; }
+        @keyframes pulseSelect { 0%{transform:scale(1)} 100%{transform:scale(1.02)} }
+
+        .shake-modal { animation: glitchShake 0.4s cubic-bezier(.36,.07,.19,.97) both; }
+        @keyframes glitchShake { 10%,90%{transform:translate3d(-2px,0,0)} 20%,80%{transform:translate3d(4px,0,0)} 30%,50%,70%{transform:translate3d(-8px,0,0)} 40%,60%{transform:translate3d(8px,0,0)} }
+        @keyframes bounceSlow { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+        .animate-bounce-slow { animation: bounceSlow 2s infinite ease-in-out; }
+
+        /* Toast */
+        #toast-container { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 100; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; pointer-events: none; width: min(90vw, 30rem); }
+        .toast-item { pointer-events: auto; padding: 0.75rem 1.25rem; border-radius: 0.75rem; font-weight: 700; font-size: 0.8rem; color: #fff; box-shadow: 0 4px 14px rgba(0,0,0,0.15); animation: slideIn 0.3s ease forwards; }
+        .toast-item.removing { animation: slideOut 0.3s ease forwards; }
+        @keyframes slideIn { from{opacity:0;transform:translateX(100%)} to{opacity:1;transform:translateX(0)} }
+        @keyframes slideOut { from{opacity:1;transform:translateX(0)} to{opacity:0;transform:translateX(100%)} }
+    </style>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <script src="/_sdk/935a53bc2e11fb8d.data_sdk.js" type="text/javascript" integrity="sha512-qr2oyPnEys1WebcOABaRh6hG77r5PWpqeWW6JTKbRJqly/INsfBi31CVNlTmHqjgeLpkVmmHZJUdxSx/32tOFQ=="></script>
+  <script src="/_sdk/6030e540d4419216.resizing_sdk.js" type="text/javascript" integrity="sha512-b5KWzyoXsbWP4smq4sftIi6Kts4YVBpBsz0BwCViwbBJkK64a3/Z6ZMdWA+qnplNcXw4mhZeqvQi3mOosiRJdA=="></script>
+ </head>
+ <body data-template-id="__page-root" class="w-full h-screen flex flex-col justify-between p-3 md:p-5 overflow-hidden" style="background: linear-gradient(135deg, rgb(224, 236, 248), rgb(199, 218, 240), rgb(219, 233, 247));">
+  <div id="toast-container"></div>
+  <header class="flex-none text-center max-w-4xl mx-auto w-full">
+   <div class="inline-flex items-center gap-2 bg-blue-900/10 border border-blue-800/30 text-blue-900 px-3 py-1 rounded-full text-xs md:text-sm font-bold uppercase tracking-wider mb-1">
+    <span>🤖</span> <span data-template-id="header-badge" class="canva-tag" style="color: rgb(30, 58, 95); font-weight: 700; font-style: normal; font-size: 16px;">Berpikir Komputasional</span>
+   </div>
+   <h1 data-template-id="page-title" class="canva-text text-xl md:text-3xl font-extrabold leading-tight" style="color: rgb(15, 39, 68); font-weight: 800; font-style: normal; font-size: 32px;">🍳 Memasak Nasi Goreng</h1>
+   <p data-template-id="page-subtitle" class="canva-text text-xs md:text-sm font-semibold mt-0.5" style="color: rgb(30, 58, 95); font-weight: 500; font-style: normal; font-size: 16px;">Tarik &amp; Lepas (Drag &amp; Drop) atau Tap 2 kartu untuk menukar urutan langkah!</p>
+  </header>
+  <main class="flex-1 max-w-5xl w-full mx-auto my-2 flex flex-col justify-center min-h-0">
+   <div id="gridContainer" class="grid grid-cols-2 md:grid-cols-4 gap-2.5 md:gap-3.5 h-full max-h-[520px] w-full"></div>
+  </main>
+  <footer class="flex-none max-w-4xl w-full mx-auto flex flex-col items-center justify-center gap-1.5">
+   <button data-template-id="btn-execute" id="btnExecute" class="canva-button w-full sm:w-auto font-extrabold text-base md:text-lg px-8 py-3 rounded-2xl shadow-lg hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2 border border-blue-700" style="background: linear-gradient(135deg, rgb(30, 58, 95), rgb(37, 99, 235)); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">🚀 Jalankan Program Memasak</button>
+   <p data-template-id="tip-text" class="canva-text text-[11px] md:text-xs font-medium text-center" style="color: rgb(100, 116, 139); font-weight: 500; font-style: normal; font-size: 16px;">💡 Tips: Urutkan kotak dari nomor 1 hingga 8 secara runtut &amp; logis.</p>
+  </footer><!-- SUCCESS MODAL -->
+  <div id="modalSuccess" class="fixed inset-0 bg-slate-900/80 backdrop-blur-md z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
+   <canvas id="confettiCanvas" class="absolute inset-0 pointer-events-none"></canvas>
+   <div class="bg-white border-4 border-emerald-400 rounded-3xl p-6 md:p-8 max-w-md w-full text-center shadow-2xl relative z-10 scale-90 transition-transform duration-300" id="successBox">
+    <div class="text-6xl mb-3 animate-bounce-slow">
+     🤖🍳
+    </div>
+    <h2 data-template-id="success-title" class="canva-text text-2xl md:text-3xl font-extrabold mb-2" style="color: rgb(6, 95, 70); font-weight: 800; font-style: normal; font-size: 24px;">Robot Berhasil Memasak!</h2>
+    <p data-template-id="success-desc" class="canva-text text-sm md:text-base leading-relaxed mb-6" style="color: rgb(71, 85, 105); font-weight: 600; font-style: normal; font-size: 16px;">Selamat! 🎉 Robot Chef berhasil menjalankan algoritma grid Anda tanpa kesalahan. Nasi goreng lezat siap disajikan!</p><button data-template-id="btn-restart" id="btnRestart" class="canva-button w-full font-bold py-3 px-6 rounded-xl shadow-lg hover:scale-105 active:scale-95 transition-all" style="background: linear-gradient(135deg, rgb(30, 58, 95), rgb(59, 130, 246)); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">🔄 Main Lagi</button>
+   </div>
+  </div><!-- ERROR MODAL -->
+  <div id="modalError" class="fixed inset-0 bg-red-950/85 backdrop-blur-md z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
+   <div id="errorBox" class="bg-slate-950 border-2 border-red-500 rounded-3xl p-6 md:p-8 max-w-md w-full text-center shadow-2xl shadow-red-900/50 relative z-10 scale-90 transition-transform duration-300">
+    <div class="text-5xl mb-2 animate-pulse">
+     🐞
+    </div>
+    <h2 data-template-id="error-title" class="canva-text text-xl md:text-2xl font-mono font-extrabold tracking-wide mb-3" style="color: rgb(248, 113, 113); font-weight: 800; font-style: normal; font-size: 24px;">SYSTEM ERROR DETECTED</h2>
+    <div class="bg-red-950/60 border border-red-800/60 rounded-2xl p-4 mb-6 text-left">
+     <div id="bugCodeTitle" class="text-red-400 font-mono font-bold text-sm mb-1"></div>
+     <div id="bugCodeDesc" class="text-red-200 font-medium text-xs md:text-sm leading-relaxed"></div>
+    </div><button data-template-id="btn-fix" id="btnFix" class="canva-button w-full font-bold py-3 px-6 rounded-xl shadow-lg hover:scale-105 active:scale-95 transition-all" style="background: linear-gradient(135deg, rgb(220, 38, 38), rgb(225, 29, 72)); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">🔧 Perbaiki Algoritma</button>
+   </div>
+  </div>
+  <script>
+        const CORRECT_STEPS = [
+            { id:'step-1', icon:'🧰', text:'Siapkan alat & bahan (wajan, nasi, bumbu)', code:'PREPARE' },
+            { id:'step-2', icon:'🪔', text:'Tuangkan minyak goreng ke wajan', code:'POUR_OIL' },
+            { id:'step-3', icon:'🔥', text:'Nyalakan kompor gas', code:'IGNITE_STOVE' },
+            { id:'step-4', icon:'🧄', text:'Tumis bumbu hingga harum', code:'SAUTE_SPICES' },
+            { id:'step-5', icon:'🍚', text:'Masukkan nasi putih & bumbu', code:'ADD_RICE' },
+            { id:'step-6', icon:'🥢', text:'Aduk & bumbui hingga matang', code:'STIR_STIR' },
+            { id:'step-7', icon:'🛑', text:'Matikan kompor gas', code:'TURN_OFF_STOVE' },
+            { id:'step-8', icon:'🍽️', text:'Sajikan nasi goreng ke piring', code:'SERVE' }
+        ];
+
+        let currentSteps = [];
+        let selectedIndexForTap = null;
+        let draggedIndex = null;
+
+        const gridContainer = document.getElementById('gridContainer');
+        const btnExecute = document.getElementById('btnExecute');
+        const modalSuccess = document.getElementById('modalSuccess');
+        const successBox = document.getElementById('successBox');
+        const modalError = document.getElementById('modalError');
+        const errorBox = document.getElementById('errorBox');
+        const bugCodeTitle = document.getElementById('bugCodeTitle');
+        const bugCodeDesc = document.getElementById('bugCodeDesc');
+        const btnRestart = document.getElementById('btnRestart');
+        const btnFix = document.getElementById('btnFix');
+
+        let audioContext;
+        function playSound(type) {
+            audioContext = audioContext || new (window.AudioContext || window.webkitAudioContext)();
+            if (audioContext.state === 'suspended') audioContext.resume();
+            const now = audioContext.currentTime;
+            const master = audioContext.createGain();
+            const compressor = audioContext.createDynamicsCompressor();
+            master.gain.setValueAtTime(0.0001, now);
+            master.gain.exponentialRampToValueAtTime(type === 'info' ? 0.12 : 0.2, now + 0.015);
+            master.gain.exponentialRampToValueAtTime(0.0001, now + (type === 'error' ? 0.65 : 0.9));
+            compressor.threshold.value = -18;
+            compressor.knee.value = 12;
+            compressor.ratio.value = 8;
+            master.connect(compressor).connect(audioContext.destination);
+
+            if (type === 'success') {
+                const notes = [523.25, 659.25, 783.99, 1046.5];
+                notes.forEach((frequency, index) => {
+                    const oscillator = audioContext.createOscillator();
+                    const noteGain = audioContext.createGain();
+                    const start = now + index * 0.13;
+                    oscillator.type = index === 3 ? 'triangle' : 'sine';
+                    oscillator.frequency.setValueAtTime(frequency, start);
+                    noteGain.gain.setValueAtTime(0.0001, start);
+                    noteGain.gain.exponentialRampToValueAtTime(index === 3 ? 0.24 : 0.16, start + 0.02);
+                    noteGain.gain.exponentialRampToValueAtTime(0.0001, start + 0.28);
+                    oscillator.connect(noteGain).connect(master);
+                    oscillator.start(start);
+                    oscillator.stop(start + 0.3);
+                });
+            } else if (type === 'error') {
+                const oscillator = audioContext.createOscillator();
+                const noteGain = audioContext.createGain();
+                oscillator.type = 'sawtooth';
+                oscillator.frequency.setValueAtTime(180, now);
+                oscillator.frequency.exponentialRampToValueAtTime(62, now + 0.48);
+                noteGain.gain.setValueAtTime(0.0001, now);
+                noteGain.gain.exponentialRampToValueAtTime(0.28, now + 0.025);
+                noteGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.58);
+                oscillator.connect(noteGain).connect(master);
+                oscillator.start(now);
+                oscillator.stop(now + 0.6);
+            } else {
+                const oscillator = audioContext.createOscillator();
+                oscillator.type = 'sine';
+                oscillator.frequency.setValueAtTime(392, now);
+                oscillator.frequency.linearRampToValueAtTime(523.25, now + 0.12);
+                oscillator.connect(master);
+                oscillator.start(now);
+                oscillator.stop(now + 0.2);
+            }
+        }
+
+        function showToast(msg, type) {
+            playSound(type);
+            const container = document.getElementById('toast-container');
+            const t = document.createElement('div');
+            t.className = 'toast-item';
+            t.style.background = type === 'success' ? 'linear-gradient(135deg,#059669,#10b981)' : type === 'error' ? 'linear-gradient(135deg,#dc2626,#ef4444)' : 'linear-gradient(135deg,#1e3a5f,#2563eb)';
+            t.textContent = msg;
+            container.appendChild(t);
+            setTimeout(() => { t.classList.add('removing'); setTimeout(() => t.remove(), 300); }, 2500);
+        }
+
+        function isOrderCorrect(steps) { return steps.every((s,i) => s.id === CORRECT_STEPS[i].id); }
+
+        function shuffleSteps() {
+            do { currentSteps = [...CORRECT_STEPS].sort(() => Math.random() - 0.5); } while (isOrderCorrect(currentSteps));
+            selectedIndexForTap = null;
+        }
+
+        function renderGrid() {
+            gridContainer.innerHTML = '';
+            currentSteps.forEach((step, index) => {
+                const card = document.createElement('div');
+                const isSelected = selectedIndexForTap === index;
+                card.className = `grid-card relative bg-white border-2 border-slate-200 rounded-2xl p-3 md:p-4 flex flex-col items-center justify-between text-center shadow-md hover:shadow-lg ${isSelected ? 'selected' : ''}`;
+                card.setAttribute('draggable', 'true');
+                card.setAttribute('data-index', index);
+                card.innerHTML = `
+                    <span class="absolute top-2 left-2 w-7 h-7 md:w-8 md:h-8 rounded-full bg-gradient-to-br from-blue-800 to-blue-950 text-white font-black text-xs md:text-sm flex items-center justify-center shadow-sm">${index + 1}</span>
+                    <div class="my-auto py-1 flex flex-col items-center justify-center gap-1.5">
+                        <span class="text-3xl md:text-4xl my-1 transform hover:scale-110 transition-transform">${step.icon}</span>
+                        <div class="text-xs md:text-base font-extrabold text-slate-800 leading-tight">${step.text}</div>
+                    </div>
+                    <div class="text-[10px] md:text-xs text-slate-400 font-bold mt-auto flex items-center justify-center gap-1"><span>⋮⋮ geser / tap</span></div>`;
+                card.addEventListener('dragstart', function(e) { draggedIndex = index; this.classList.add('dragging'); e.dataTransfer.effectAllowed = 'move'; });
+                card.addEventListener('dragover', e => e.preventDefault());
+                card.addEventListener('dragenter', function(e) { e.preventDefault(); this.classList.add('drag-over'); });
+                card.addEventListener('dragleave', function() { this.classList.remove('drag-over'); });
+                card.addEventListener('drop', function(e) { e.preventDefault(); this.classList.remove('drag-over'); const ti = parseInt(this.getAttribute('data-index')); if (draggedIndex !== null && draggedIndex !== ti) { [currentSteps[draggedIndex], currentSteps[ti]] = [currentSteps[ti], currentSteps[draggedIndex]]; selectedIndexForTap = null; showToast('🔄 Kartu ditukar!', 'info'); renderGrid(); } });
+                card.addEventListener('dragend', function() { this.classList.remove('dragging'); document.querySelectorAll('.grid-card').forEach(c => c.classList.remove('drag-over')); draggedIndex = null; });
+                card.addEventListener('click', () => handleCardClick(index));
+                gridContainer.appendChild(card);
+            });
+        }
+
+        function handleCardClick(index) {
+            if (selectedIndexForTap === null) { selectedIndexForTap = index; renderGrid(); }
+            else if (selectedIndexForTap === index) { selectedIndexForTap = null; renderGrid(); }
+            else { [currentSteps[selectedIndexForTap], currentSteps[index]] = [currentSteps[index], currentSteps[selectedIndexForTap]]; selectedIndexForTap = null; showToast('🔄 Kartu ditukar!', 'info'); renderGrid(); }
+        }
+
+        function analyzeBugMessage() {
+            const firstStep = currentSteps[0];
+            const oilIdx = currentSteps.findIndex(s => s.code === 'POUR_OIL');
+            const stoveIdx = currentSteps.findIndex(s => s.code === 'IGNITE_STOVE');
+            const sauteIdx = currentSteps.findIndex(s => s.code === 'SAUTE_SPICES');
+            const riceIdx = currentSteps.findIndex(s => s.code === 'ADD_RICE');
+            const turnOffIdx = currentSteps.findIndex(s => s.code === 'TURN_OFF_STOVE');
+            const serveIdx = currentSteps.findIndex(s => s.code === 'SERVE');
+            if (firstStep.code !== 'PREPARE') return { code:'🚨 BUG #001', desc:'Robot bingung mencari wajan & spatula! Instruksi "Siapkan alat & bahan" harus dilakukan di posisi 1.' };
+            if (oilIdx > sauteIdx) return { code:'🚨 BUG #002', desc:'Robot menumis bumbu di atas wajan kering tanpa minyak goreng!' };
+            if (riceIdx < sauteIdx) return { code:'🚨 BUG #003', desc:'Robot memasukkan nasi sebelum bumbu ditumis! Nasi gorengnya jadi hambar.' };
+            if (serveIdx < turnOffIdx) return { code:'🚨 BUG #004', desc:'Bahaya! Robot menyajikan nasi goreng tetapi kompor gas masih menyala.' };
+            if (serveIdx < riceIdx) return { code:'🚨 BUG #005', desc:'Robot menyajikan piring kosong ke meja makan karena nasi belum dimasukkan!' };
+            return { code:'🚨 BUG #006', desc:'Urutan instruksi belum runtut! Periksa kembali alur logika dari awal hingga akhir.' };
+        }
+
+        btnExecute.addEventListener('click', () => {
+            if (isOrderCorrect(currentSteps)) {
+                showToast('✅ Algoritma benar! Robot berhasil memasak!', 'success');
+                modalSuccess.classList.remove('opacity-0','pointer-events-none'); modalSuccess.classList.add('opacity-100','pointer-events-auto');
+                successBox.classList.remove('scale-90'); successBox.classList.add('scale-100');
+                startConfetti();
+            } else {
+                const bugInfo = analyzeBugMessage();
+                bugCodeTitle.textContent = bugInfo.code; bugCodeDesc.textContent = bugInfo.desc;
+                showToast('❌ Error ditemukan! Perbaiki urutannya.', 'error');
+                modalError.classList.remove('opacity-0','pointer-events-none'); modalError.classList.add('opacity-100','pointer-events-auto');
+                errorBox.classList.remove('scale-90'); errorBox.classList.add('scale-100');
+                errorBox.classList.add('shake-modal'); setTimeout(() => errorBox.classList.remove('shake-modal'), 450);
+            }
+        });
+
+        btnFix.addEventListener('click', () => { modalError.classList.add('opacity-0','pointer-events-none'); modalError.classList.remove('opacity-100','pointer-events-auto'); errorBox.classList.add('scale-90'); errorBox.classList.remove('scale-100'); });
+        btnRestart.addEventListener('click', () => { modalSuccess.classList.add('opacity-0','pointer-events-none'); modalSuccess.classList.remove('opacity-100','pointer-events-auto'); successBox.classList.add('scale-90'); successBox.classList.remove('scale-100'); stopConfetti(); shuffleSteps(); renderGrid(); });
+
+        const canvas = document.getElementById('confettiCanvas');
+        const ctx = canvas.getContext('2d');
+        let confettiParticles = [], animationFrameId = null;
+        function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+        window.addEventListener('resize', resizeCanvas); resizeCanvas();
+        function startConfetti() { confettiParticles = []; const colors = ['#1e3a5f','#3b82f6','#22c55e','#ec4899','#a855f7','#f59e0b']; for(let i=0;i<90;i++) confettiParticles.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height-canvas.height,size:Math.random()*8+4,color:colors[Math.floor(Math.random()*colors.length)],speedY:Math.random()*3+2,speedX:Math.random()*2-1,rotation:Math.random()*360,rotSpeed:Math.random()*6-3}); drawConfetti(); }
+        function drawConfetti() { ctx.clearRect(0,0,canvas.width,canvas.height); confettiParticles.forEach(p=>{p.y+=p.speedY;p.x+=p.speedX;p.rotation+=p.rotSpeed;if(p.y>canvas.height){p.y=-10;p.x=Math.random()*canvas.width;}ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.rotation*Math.PI/180);ctx.fillStyle=p.color;ctx.fillRect(-p.size/2,-p.size/2,p.size,p.size);ctx.restore();}); animationFrameId=requestAnimationFrame(drawConfetti); }
+        function stopConfetti() { if(animationFrameId) cancelAnimationFrame(animationFrameId); ctx.clearRect(0,0,canvas.width,canvas.height); }
+
+        window.onload = function() { shuffleSteps(); renderGrid(); };
+    </script>
+ 
+</body></html>
