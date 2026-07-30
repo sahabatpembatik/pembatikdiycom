@@ -1,0 +1,690 @@
+---
+title: "AI Fruit Lab"
+description: "Media interaktif belajar bagaimana komputer memahami data"
+date: 2026-07-30T00:00:00+07:00
+draft: false
+layout: single-full
+---
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Fruit Lab - Media Interaktif Belajar Data AI (16:9 Light)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        game: {
+                            bg: '#f0f9ff',
+                            card: '#ffffff',
+                            accent: '#0284c7',
+                            emerald: '#059669',
+                            amber: '#d97706',
+                            rose: '#e11d48'
+                        }
+                    },
+                    aspectRatio: {
+                        '16/9': '16 / 9',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, #e0f2fe 0%, #f0fdf4 50%, #eef2ff 100%);
+            color: #0f172a;
+            user-select: none;
+        }
+
+        .game-viewport {
+            aspect-ratio: 16 / 9;
+            width: 100%;
+            max-width: 1320px;
+        }
+
+        @media (max-aspect-ratio: 16/9) and (max-width: 768px) {
+            .game-viewport {
+                aspect-ratio: auto;
+                min-height: 100vh;
+            }
+        }
+
+        @keyframes scan-animation {
+            0% { top: 0%; opacity: 0.8; }
+            50% { top: 85%; opacity: 1; }
+            100% { top: 0%; opacity: 0.8; }
+        }
+        .animate-scan {
+            animation: scan-animation 2s ease-in-out infinite;
+        }
+
+        @keyframes subtle-float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+        }
+        .animate-float {
+            animation: subtle-float 3s ease-in-out infinite;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(241, 245, 249, 0.8);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0284c7;
+        }
+    </style>
+<body class="min-h-screen bg-gradient-to-br from-indigo-200 via-sky-200 to-teal-200 flex flex-col items-center justify-center p-2 sm:p-5 selection:bg-cyan-600 selection:text-white">
+
+    <main class="game-viewport bg-white border-2 border-slate-300 rounded-3xl shadow-2xl shadow-sky-950/15 overflow-hidden flex flex-col relative w-full my-auto">
+        
+        <header class="bg-slate-100/95 backdrop-blur-md border-b-2 border-slate-300 px-5 sm:px-8 py-3.5 flex items-center justify-between shrink-0">
+            <div class="flex items-center gap-3.5">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-sky-600 to-blue-700 flex items-center justify-center text-white text-2xl font-black shadow-lg shadow-sky-600/30 animate-float">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <div>
+                    <h1 class="font-black text-lg sm:text-xl text-slate-900 leading-tight flex items-center gap-2">
+                        AI FRUIT LAB </h1>
+                    <p class="text-xs text-slate-700 hidden sm:block font-bold">Media Edukasi: Belajar Bagaimana Komputer Memahami Data</p>
+                </div>
+            </div>
+
+            <nav class="flex bg-slate-300/80 p-1.5 rounded-2xl border-2 border-slate-400/80 gap-2">
+                <button onclick="switchMenu('latih')" id="btn-nav-latih" class="nav-tab px-5 sm:px-7 py-2.5 rounded-xl font-black text-xs sm:text-sm transition-all duration-300 flex items-center gap-2 bg-gradient-to-r from-sky-600 to-blue-700 text-white shadow-md shadow-sky-600/30">
+                    <i class="fa-solid fa-brain text-amber-300"></i>
+                    <span>1. LATIH AI</span>
+                </button>
+                <button onclick="switchMenu('uji')" id="btn-nav-uji" class="nav-tab px-5 sm:px-7 py-2.5 rounded-xl font-black text-xs sm:text-sm transition-all duration-300 flex items-center gap-2 text-slate-800 hover:text-slate-950 hover:bg-white">
+                    <i class="fa-solid fa-magnifying-glass text-emerald-600"></i>
+                    <span>2. UJI AI</span>
+                </button>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-4">
+                <div class="text-right">
+                    <div class="text-[10px] text-slate-600 uppercase tracking-widest font-black">Memori AI</div>
+                    <div class="text-sm font-black text-sky-800" id="ai-memory-counter">0 / 10 Data</div>
+                </div>
+                <button onclick="toggleSound()" id="sound-btn" class="w-10 h-10 rounded-2xl bg-white hover:bg-slate-200 border-2 border-slate-300 flex items-center justify-center text-slate-800 shadow-sm transition">
+                    <i class="fa-solid fa-volume-high text-sm"></i>
+                </button>
+            </div>
+        </header>
+
+        <div class="flex-grow relative overflow-hidden bg-slate-50/80 p-5 sm:p-7 flex flex-col justify-between">
+            <section id="menu-latih" class="menu-content h-full flex flex-col justify-between gap-5">
+                <div class="bg-sky-100/90 border-2 border-sky-300 rounded-2xl p-3.5 sm:px-6 flex items-center justify-between gap-4 shadow-sm">
+                    <div class="flex items-center gap-3.5">
+                        <span class="text-3xl">📥</span>
+                        <div>
+                            <h2 class="text-xs sm:text-sm font-black text-sky-950">Langkah 1: Masukkan Data Buah ke Memori AI</h2>
+                            <p class="text-xs text-sky-900 font-semibold">Pilih buah di bawah untuk mengajari AI mengenali ciri visualnya (warna, bentuk, dan tekstur)!</p>
+                        </div>
+                    </div>
+                    <button onclick="trainAllFruits()" class="hidden sm:flex px-4 py-2.5 bg-sky-700 hover:bg-sky-800 text-white font-black text-xs rounded-xl shadow-md shadow-sky-800/25 transition items-center gap-2 shrink-0">
+                        <i class="fa-solid fa-bolt text-amber-300"></i> Latih Semua Sekaligus
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-5 flex-grow items-center">
+                    <div class="md:col-span-7 bg-white border-2 border-slate-300 rounded-2xl p-4 flex flex-col justify-between h-full shadow-sm overflow-hidden">
+                        <div class="flex items-center justify-between mb-3 px-1">
+                            <span class="text-xs font-black text-slate-800 uppercase tracking-wider flex items-center gap-2">
+                                <i class="fa-solid fa-apple-whole text-sky-600 text-sm"></i> Set 10 Buah Vector Flat (Rasio 1:1)
+                            </span>
+                            <span class="text-xs font-black text-sky-950 bg-sky-100 px-3 py-1 rounded-full border-2 border-sky-300" id="trained-status-count">0 Terlatih</span>
+                        </div>
+                        <div class="grid grid-cols-5 gap-3 overflow-y-auto max-h-[240px] sm:max-h-none p-1" id="train-fruit-grid"></div>
+                    </div>
+
+                    <div class="md:col-span-5 bg-white border-2 border-slate-300 rounded-2xl p-5 flex flex-col items-center justify-between h-full relative overflow-hidden shadow-sm">
+                        <div class="relative w-32 h-32 sm:w-44 sm:h-44 bg-slate-100 rounded-2xl p-3 shadow-inner border-2 border-slate-300 flex items-center justify-center shrink-0">
+                            <div id="train-svg-preview" class="w-full h-full flex items-center justify-center"></div>
+                            <span id="train-status-badge" class="absolute -top-2.5 -right-2.5 bg-slate-200 text-slate-800 text-[11px] font-black px-3 py-1 rounded-full border-2 border-slate-400 shadow-sm">
+                                Belum
+                            </span>
+                        </div>
+
+                        <div class="w-full bg-slate-100 rounded-xl p-3.5 border-2 border-slate-300 text-xs space-y-2 my-2">
+                            <div class="flex justify-between"><span class="text-slate-700 font-bold">Nama Buah:</span> <span id="trait-name" class="font-black text-slate-950">-</span></div>
+                            <div class="flex justify-between"><span class="text-slate-700 font-bold">Warna Data:</span> <span id="trait-color" class="font-black text-sky-800">-</span></div>
+                            <div class="flex justify-between"><span class="text-slate-700 font-bold">Bentuk Bentang:</span> <span id="trait-shape" class="font-black text-amber-800">-</span></div>
+                        </div>
+
+                        <button onclick="trainSelectedFruit()" id="btn-do-train" class="w-full py-3.5 px-5 bg-gradient-to-r from-sky-600 to-blue-700 hover:from-sky-700 hover:to-blue-800 text-white font-black text-xs sm:text-sm rounded-xl shadow-lg shadow-sky-600/30 transition transform active:scale-95 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-brain text-amber-300 text-base"></i> Masukkan ke Memori AI
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="menu-uji" class="menu-content hidden h-full flex flex-col justify-between gap-5">
+                <div class="bg-emerald-100/90 border-2 border-emerald-300 rounded-2xl p-3.5 sm:px-6 flex items-center justify-between gap-4 shadow-sm">
+                    <div class="flex items-center gap-3.5">
+                        <span class="text-3xl">🔍</span>
+                        <div>
+                            <h2 class="text-xs sm:text-sm font-black text-emerald-950">Langkah 2: Uji Kemampuan Pengetahuan AI!</h2>
+                            <p class="text-xs text-emerald-900 font-semibold">Pilih buah untuk diuji, lalu tanyakan pada Komputer AI: "Buah Apakah Ini?"</p>
+                        </div>
+                    </div>
+                    <button onclick="resetAILearning()" class="px-4 py-2.5 bg-white hover:bg-slate-100 text-slate-900 border-2 border-slate-300 font-black text-xs rounded-xl shadow-sm transition flex items-center gap-2 shrink-0">
+                        <i class="fa-solid fa-arrow-rotate-left text-amber-600"></i> Reset Memori
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-5 flex-grow items-center">
+                    <div class="md:col-span-5 bg-white border-2 border-slate-300 rounded-2xl p-4 flex flex-col justify-between h-full shadow-sm">
+                        <div class="text-xs font-black text-slate-800 uppercase tracking-wider mb-2.5 flex items-center justify-between">
+                            <span>Pilih Buah Untuk Diuji:</span>
+                            <span class="text-[11px] text-emerald-950 font-black bg-emerald-100 px-2.5 py-0.5 rounded-full border border-emerald-300">Klik salah satu buah</span>
+                        </div>
+                        <div class="grid grid-cols-5 gap-2.5 overflow-y-auto p-1" id="test-fruit-grid"></div>
+                        <div class="mt-3 pt-3 border-t-2 border-slate-200 text-center">
+                            <p class="text-[11px] text-slate-700 font-bold italic">"Jika buah belum pernah dilatih, AI akan ragu atau salah menebak!"</p>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-7 bg-white border-2 border-slate-300 rounded-2xl p-5 flex flex-col items-center justify-between h-full relative overflow-hidden shadow-sm">
+                        <div class="w-full flex items-center justify-between gap-5">
+                            <div class="relative w-36 h-36 sm:w-44 sm:h-44 bg-slate-100 rounded-2xl p-3 border-2 border-slate-300 shadow-inner flex items-center justify-center shrink-0 overflow-hidden">
+                                <div id="quiz-svg-preview" class="w-full h-full flex items-center justify-center"></div>
+                                <div id="scanner-laser" class="absolute left-0 right-0 h-2.5 bg-gradient-to-r from-emerald-500 via-sky-400 to-emerald-500 shadow-[0_0_18px_#10b981] animate-scan hidden pointer-events-none"></div>
+                            </div>
+
+                            <div class="flex-grow bg-slate-100 border-2 border-slate-300 rounded-2xl p-4 sm:p-5 flex flex-col justify-between h-36 sm:h-44 relative">
+                                <div class="flex items-center gap-2 mb-1">
+                                    <span class="text-2xl">🤖</span>
+                                    <span class="text-xs font-black text-slate-700 uppercase tracking-wider">Jawaban Komputer AI:</span>
+                                </div>
+
+                                <div id="ai-response-content" class="my-auto">
+                                    <div id="ai-answer-title" class="text-base sm:text-lg font-black text-slate-900 leading-tight">
+                                        "Tekan tombol 'Tanya AI'..."
+                                    </div>
+                                    <div id="ai-answer-desc" class="text-xs text-slate-700 mt-1 font-bold line-clamp-2">
+                                        AI siap menganalisis fitur visual dari data memori.
+                                    </div>
+                                </div>
+
+                                <div id="confidence-container" class="opacity-40 transition-opacity">
+                                    <div class="flex justify-between text-xs font-black text-slate-700 mb-1">
+                                        <span>Tingkat Keyakinan AI:</span>
+                                        <span id="confidence-text">0%</span>
+                                    </div>
+                                    <div class="w-full h-2.5 bg-slate-300 rounded-full overflow-hidden border border-slate-400/50">
+                                        <div id="confidence-bar" class="h-full bg-sky-600 w-0 transition-all duration-500"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button onclick="askAIToIdentify()" id="btn-ask-ai" class="w-full mt-4 py-3.5 px-6 bg-gradient-to-r from-emerald-600 to-teal-700 hover:from-emerald-700 hover:to-teal-800 text-white font-black text-sm sm:text-base rounded-xl shadow-lg shadow-emerald-600/30 transition transform active:scale-95 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-magnifying-glass text-amber-300 text-lg"></i> TANYA AI: "BUAH APA INI?"
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        const FRUITS_DATA = [
+            {
+                id: 'apel',
+                name: 'Apel Merah',
+                color: 'Merah Terang',
+                shape: 'Bulat Lekuk',
+                texture: 'Tangkai & Daun Hijau',
+                svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="400" height="400" fill="#ffffff"/>
+                    <path d="M210 110 C 230 70, 280 80, 260 120 C 230 130, 200 110, 210 110 Z" fill="#22c55e"/>
+                    <path d="M195 160 Q 205 110 220 90" fill="none" stroke="#78350f" stroke-width="12" stroke-linecap="round"/>
+                    <path d="M200 150 C 130 120, 80 180, 90 260 C 100 330, 170 360, 200 330 C 230 360, 300 330, 310 260 C 320 180, 270 120, 200 150 Z" fill="#ef4444"/>
+                    <path d="M130 180 C 110 210, 110 250, 120 280 C 112 250, 115 210, 135 185 Z" fill="#ffffff" opacity="0.3"/>
+                </svg>`
+            },
+            {
+                id: 'pisang',
+                name: 'Pisang',
+                color: 'Kuning Cerah',
+                shape: 'Lengkung Silinder',
+                texture: 'Ujung Kecokelatan',
+                svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="400" height="400" fill="#ffffff"/>
+                    <path d="M100 110 C 150 130, 320 160, 300 290 C 280 230, 170 180, 85 130 Z" fill="#eab308"/>
+                    <path d="M100 110 C 150 145, 300 185, 300 290 C 275 220, 160 165, 85 130 Z" fill="#facc15"/>
+                    <path d="M85 130 L 70 115 C 65 110, 75 100, 85 105 L 100 110 Z" fill="#65a30d"/>
+                    <path d="M300 290 C 305 298, 308 305, 305 310 C 298 312, 292 300, 290 290 Z" fill="#78350f"/>
+                </svg>`
+            },
+            {
+                id: 'jeruk',
+                name: 'Jeruk',
+                color: 'Oranye Segar',
+                shape: 'Bulat Sempurna',
+                texture: 'Bintik Pori & Daun',
+                svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="400" height="400" fill="#ffffff"/>
+                    <path d="M200 120 C 230 80, 280 90, 270 130 C 230 140, 200 120, 200 120 Z" fill="#16a34a"/>
+                    <circle cx="200" cy="230" r="110" fill="#f97316"/>
+                    <path d="M200 120 A 110 110 0 0 1 310 230 A 110 110 0 0 1 200 340 Z" fill="#ea580c" opacity="0.15"/>
+                    <circle cx="150" cy="180" r="14" fill="#ffffff" opacity="0.3"/>
+                    <circle cx="230" cy="200" r="3" fill="#c2410c" opacity="0.5"/>
+                    <circle cx="250" cy="240" r="3.5" fill="#c2410c" opacity="0.5"/>
+                    <circle cx="210" cy="270" r="3" fill="#c2410c" opacity="0.5"/>
+                </svg>`
+            },
+            {
+                id: 'anggur',
+                name: 'Anggur Ungu',
+                color: 'Ungu Tua',
+                shape: 'Kumpulan Lingkaran',
+                texture: 'Tangkai Sulur',
+                svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="400" height="400" fill="#ffffff"/>
+                    <path d="M200 80 Q 200 130 190 160" fill="none" stroke="#65a30d" stroke-width="10" stroke-linecap="round"/>
+                    <path d="M200 90 Q 240 70 250 90" fill="none" stroke="#65a30d" stroke-width="6" stroke-linecap="round"/>
+                    <g fill="#7e22ce">
+                        <circle cx="160" cy="160" r="35"/>
+                        <circle cx="220" cy="160" r="35"/>
+                        <circle cx="130" cy="210" r="35"/>
+                        <circle cx="190" cy="210" r="35"/>
+                        <circle cx="250" cy="210" r="35"/>
+                        <circle cx="160" cy="260" r="35"/>
+                        <circle cx="220" cy="260" r="35"/>
+                        <circle cx="190" cy="310" r="32"/>
+                    </g>
+                    <g fill="#ffffff" opacity="0.25">
+                        <circle cx="150" cy="150" r="8"/>
+                        <circle cx="210" cy="150" r="8"/>
+                        <circle cx="120" cy="200" r="8"/>
+                        <circle cx="180" cy="200" r="8"/>
+                        <circle cx="240" cy="200" r="8"/>
+                        <circle cx="150" cy="250" r="8"/>
+                        <circle cx="210" cy="250" r="8"/>
+                        <circle cx="180" cy="300" r="7"/>
+                    </g>
+                </svg>`
+            },
+            {
+                id: 'mangga',
+                name: 'Mangga',
+                color: 'Kuning-Oranye-Hijau',
+                shape: 'Asimetris Lonjong',
+                texture: 'Gradasi Halus',
+                svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="400" height="400" fill="#ffffff"/>
+                    <path d="M180 120 Q 170 80 150 70" fill="none" stroke="#78350f" stroke-width="10" stroke-linecap="round"/>
+                    <path d="M175 95 C 220 80, 240 110, 220 120 C 190 130, 175 95, 175 95 Z" fill="#15803d"/>
+                    <path d="M180 120 C 270 120, 310 200, 280 280 C 250 350, 150 340, 120 280 C 90 210, 120 120, 180 120 Z" fill="#eab308"/>
+                    <path d="M210 130 C 280 150, 300 220, 270 280 C 250 320, 210 130, 210 130 Z" fill="#f97316" opacity="0.8"/>
+                    <path d="M180 120 C 140 120, 120 160, 120 210 C 140 150, 170 130, 180 120 Z" fill="#84cc16"/>
+                </svg>`
+            },
+            {
+                id: 'semangka',
+                name: 'Semangka',
+                color: 'Merah & Kulit Hijau',
+                shape: 'Potongan Segitiga',
+                texture: 'Biji Hitam',
+                svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="400" height="400" fill="#ffffff"/>
+                    <path d="M70 120 L 330 120 C 320 290, 80 290, 70 120 Z" fill="#15803d"/>
+                    <path d="M82 130 L 318 130 C 308 275, 92 275, 82 130 Z" fill="#86efac"/>
+                    <path d="M92 140 L 308 140 C 298 260, 102 260, 92 140 Z" fill="#ef4444"/>
+                    <g fill="#1e293b">
+                        <ellipse cx="150" cy="170" rx="6" ry="10" transform="rotate(-15 150 170)"/>
+                        <ellipse cx="200" cy="180" rx="6" ry="10"/>
+                        <ellipse cx="250" cy="170" rx="6" ry="10" transform="rotate(15 250 170)"/>
+                        <ellipse cx="175" cy="210" rx="6" ry="10" transform="rotate(-10 175 210)"/>
+                        <ellipse cx="225" cy="210" rx="6" ry="10" transform="rotate(10 225 210)"/>
+                    </g>
+                </svg>`
+            },
+            {
+                id: 'stroberi',
+                name: 'Stroberi',
+                color: 'Merah Bintik Kuning',
+                shape: 'Kerucut Hati',
+                texture: 'Mahkota Hijau',
+                svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="400" height="400" fill="#ffffff"/>
+                    <path d="M200 340 C 110 260, 90 170, 120 130 C 150 90, 250 90, 280 130 C 310 170, 290 260, 200 340 Z" fill="#dc2626"/>
+                    <path d="M200 130 C 180 90, 130 100, 130 100 C 150 120, 170 125, 200 130 Z" fill="#16a34a"/>
+                    <path d="M200 130 C 220 90, 270 100, 270 100 C 250 120, 230 125, 200 130 Z" fill="#16a34a"/>
+                    <path d="M200 130 C 200 80, 200 80, 200 80 C 190 110, 195 120, 200 130 Z" fill="#22c55e"/>
+                    <path d="M200 85 Q 205 65 215 60" fill="none" stroke="#15803d" stroke-width="8" stroke-linecap="round"/>
+                    <g fill="#fde047">
+                        <ellipse cx="160" cy="160" rx="3" ry="5"/>
+                        <ellipse cx="200" cy="160" rx="3" ry="5"/>
+                        <ellipse cx="240" cy="160" rx="3" ry="5"/>
+                        <ellipse cx="140" cy="200" rx="3" ry="5"/>
+                        <ellipse cx="180" cy="200" rx="3" ry="5"/>
+                        <ellipse cx="220" cy="200" rx="3" ry="5"/>
+                        <ellipse cx="260" cy="200" rx="3" ry="5"/>
+                        <ellipse cx="160" cy="240" rx="3" ry="5"/>
+                        <ellipse cx="200" cy="240" rx="3" ry="5"/>
+                        <ellipse cx="240" cy="240" rx="3" ry="5"/>
+                        <ellipse cx="180" cy="280" rx="3" ry="5"/>
+                        <ellipse cx="220" cy="280" rx="3" ry="5"/>
+                    </g>
+                </svg>`
+            },
+            {
+                id: 'pir',
+                name: 'Pir',
+                color: 'Hijau Muda',
+                shape: 'Tetes Air',
+                texture: 'Tangkai Tunggal',
+                svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="400" height="400" fill="#ffffff"/>
+                    <path d="M205 110 C 235 80, 275 100, 255 130 C 225 135, 205 110, 205 110 Z" fill="#22c55e"/>
+                    <path d="M195 150 Q 200 100 215 85" fill="none" stroke="#78350f" stroke-width="9" stroke-linecap="round"/>
+                    <path d="M200 140 C 160 140, 150 190, 120 240 C 90 290, 130 350, 200 350 C 270 350, 310 290, 280 240 C 250 190, 240 140, 200 140 Z" fill="#84cc16"/>
+                    <path d="M200 140 C 240 140, 250 190, 280 240 C 310 290, 270 350, 200 350 Z" fill="#a3e635" opacity="0.4"/>
+                </svg>`
+            },
+            {
+                id: 'alpukat',
+                name: 'Alpukat',
+                color: 'Hijau Tua & Mentega',
+                shape: 'Oval Terbelah',
+                texture: 'Biji Cokelat Besar',
+                svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="400" height="400" fill="#ffffff"/>
+                    <path d="M200 80 C 140 80, 90 150, 90 240 C 90 320, 140 360, 200 360 C 260 360, 310 320, 310 240 C 310 150, 260 80, 200 80 Z" fill="#14532d"/>
+                    <path d="M200 95 C 150 95, 105 160, 105 240 C 105 310, 150 345, 200 345 C 250 345, 295 310, 295 240 C 295 160, 250 95, 200 95 Z" fill="#fef08a"/>
+                    <path d="M200 95 C 150 95, 105 160, 105 240 C 105 310, 150 345, 200 345 C 250 345, 295 310, 295 240 C 295 160, 250 95, 200 95 Z" stroke="#84cc16" stroke-width="16" fill="none"/>
+                    <circle cx="200" cy="265" r="50" fill="#78350f"/>
+                    <circle cx="180" cy="245" r="10" fill="#ffffff" opacity="0.25"/>
+                </svg>`
+            },
+            {
+                id: 'nanas',
+                name: 'Nanas',
+                color: 'Kuning Cokelat',
+                shape: 'Oval Bersisik',
+                texture: 'Mahkota Hijau',
+                svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="400" height="400" fill="#ffffff"/>
+                    <g fill="#15803d">
+                        <path d="M200 170 C 170 100, 130 70, 120 60 C 150 80, 180 120, 200 170 Z"/>
+                        <path d="M200 170 C 180 90, 170 50, 160 30 C 180 60, 190 110, 200 170 Z"/>
+                        <path d="M200 170 C 200 80, 200 40, 200 20 C 200 60, 200 110, 200 170 Z"/>
+                        <path d="M200 170 C 220 90, 230 50, 240 30 C 220 60, 210 110, 200 170 Z"/>
+                        <path d="M200 170 C 230 100, 270 70, 280 60 C 250 80, 220 120, 200 170 Z"/>
+                    </g>
+                    <ellipse cx="200" cy="255" rx="90" ry="110" fill="#eab308"/>
+                    <path d="M130 190 L 270 320 M 115 230 L 280 280 M 115 280 L 280 230 M 130 320 L 270 190 M 160 160 L 240 340 M 240 160 L 160 340" stroke="#ca8a04" stroke-width="5" stroke-linecap="round"/>
+                </svg>`
+            }
+        ];
+
+        let currentMenu = 'latih';
+        let learnedFruits = new Set();
+        let selectedTrainFruit = FRUITS_DATA[0];
+        let selectedTestFruit = FRUITS_DATA[0];
+        let soundEnabled = true;
+
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+        function playSound(type) {
+            if (!soundEnabled || !audioCtx) return;
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            if (type === 'beep') {
+                osc.frequency.setValueAtTime(440, audioCtx.currentTime);
+                osc.frequency.exponentialRampToValueAtTime(880, audioCtx.currentTime + 0.1);
+                gain.gain.setValueAtTime(0.12, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.1);
+            } else if (type === 'train') {
+                osc.type = 'triangle';
+                osc.frequency.setValueAtTime(300, audioCtx.currentTime);
+                osc.frequency.exponentialRampToValueAtTime(600, audioCtx.currentTime + 0.2);
+                gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.2);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.2);
+            } else if (type === 'success') {
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(523.25, audioCtx.currentTime);
+                osc.frequency.setValueAtTime(659.25, audioCtx.currentTime + 0.1);
+                osc.frequency.setValueAtTime(783.99, audioCtx.currentTime + 0.2);
+                gain.gain.setValueAtTime(0.18, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.35);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.35);
+            } else if (type === 'fail') {
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(250, audioCtx.currentTime);
+                osc.frequency.exponentialRampToValueAtTime(120, audioCtx.currentTime + 0.3);
+                gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.3);
+            }
+        }
+
+        function toggleSound() {
+            soundEnabled = !soundEnabled;
+            const btn = document.getElementById('sound-btn');
+            btn.innerHTML = soundEnabled ? `<i class="fa-solid fa-volume-high text-sm text-slate-600"></i>` : `<i class="fa-solid fa-volume-xmark text-sm text-rose-500"></i>`;
+        }
+
+        window.onload = function() {
+            renderTrainGrid();
+            renderTestGrid();
+            selectTrainFruit(FRUITS_DATA[0].id);
+            selectTestFruit(FRUITS_DATA[0].id);
+            updateAIMemoryCounter();
+        };
+
+        function switchMenu(menuName) {
+            currentMenu = menuName;
+            playSound('beep');
+
+            document.querySelectorAll('.menu-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.nav-tab').forEach(btn => {
+                btn.className = "nav-tab px-5 sm:px-7 py-2.5 rounded-xl font-black text-xs sm:text-sm transition-all duration-300 flex items-center gap-2 text-slate-800 hover:text-slate-950 hover:bg-white";
+            });
+
+            document.getElementById(`menu-${menuName}`).classList.remove('hidden');
+            const activeBtn = document.getElementById(`btn-nav-${menuName}`);
+
+            if(menuName === 'latih') {
+                activeBtn.className = "nav-tab px-5 sm:px-7 py-2.5 rounded-xl font-black text-xs sm:text-sm transition-all duration-300 flex items-center gap-2 bg-gradient-to-r from-sky-600 to-blue-700 text-white shadow-md shadow-sky-600/30";
+            } else {
+                activeBtn.className = "nav-tab px-5 sm:px-7 py-2.5 rounded-xl font-black text-xs sm:text-sm transition-all duration-300 flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-teal-700 text-white shadow-md shadow-emerald-600/30";
+            }
+        }
+
+        function renderTrainGrid() {
+            const container = document.getElementById('train-fruit-grid');
+            container.innerHTML = '';
+
+            FRUITS_DATA.forEach(fruit => {
+                const isLearned = learnedFruits.has(fruit.id);
+                const isSelected = selectedTrainFruit.id === fruit.id;
+                
+                const card = document.createElement('div');
+                card.onclick = () => selectTrainFruit(fruit.id);
+                card.className = `aspect-square bg-white rounded-2xl p-1.5 flex flex-col items-center justify-center cursor-pointer relative border-2 transition transform active:scale-95 shadow-sm ${isSelected ? 'border-sky-600 ring-2 ring-sky-400 shadow-md scale-105' : 'border-slate-300 hover:border-slate-400'}`;
+                
+                card.innerHTML = `
+                    <div class="w-full h-full p-1 flex items-center justify-center">${fruit.svg}</div>
+                    ${isLearned ? '<span class="absolute top-1 right-1 bg-emerald-600 text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center shadow-md font-black"><i class="fa-solid fa-check"></i></span>' : ''}
+                `;
+                container.appendChild(card);
+            });
+
+            document.getElementById('trained-status-count').innerText = `${learnedFruits.size} / 10 Terlatih`;
+        }
+
+        function selectTrainFruit(fruitId) {
+            playSound('beep');
+            selectedTrainFruit = FRUITS_DATA.find(f => f.id === fruitId);
+            
+            document.getElementById('train-svg-preview').innerHTML = selectedTrainFruit.svg;
+            document.getElementById('trait-name').innerText = selectedTrainFruit.name;
+            document.getElementById('trait-color').innerText = selectedTrainFruit.color;
+            document.getElementById('trait-shape').innerText = selectedTrainFruit.shape;
+
+            const badge = document.getElementById('train-status-badge');
+            const isLearned = learnedFruits.has(selectedTrainFruit.id);
+            if(isLearned) {
+                badge.innerText = "Sudah Ada";
+                badge.className = "absolute -top-2.5 -right-2.5 bg-emerald-600 text-white text-[11px] font-black px-3 py-1 rounded-full border-2 border-emerald-400 shadow-sm";
+            } else {
+                badge.innerText = "Belum Ada";
+                badge.className = "absolute -top-2.5 -right-2.5 bg-slate-200 text-slate-800 text-[11px] font-black px-3 py-1 rounded-full border-2 border-slate-400 shadow-sm";
+            }
+
+            renderTrainGrid();
+        }
+
+        function trainSelectedFruit() {
+            playSound('train');
+            learnedFruits.add(selectedTrainFruit.id);
+            
+            const btn = document.getElementById('btn-do-train');
+            btn.innerHTML = `<i class="fa-solid fa-check text-white text-base"></i> Berhasil Dipelajari!`;
+            btn.classList.add('bg-emerald-600');
+
+            setTimeout(() => {
+                btn.innerHTML = `<i class="fa-solid fa-brain text-amber-300 text-base"></i> Masukkan ke Memori AI`;
+                btn.classList.remove('bg-emerald-600');
+            }, 1000);
+
+            selectTrainFruit(selectedTrainFruit.id);
+            updateAIMemoryCounter();
+        }
+
+        function trainAllFruits() {
+            playSound('train');
+            FRUITS_DATA.forEach(f => learnedFruits.add(f.id));
+            selectTrainFruit(selectedTrainFruit.id);
+            updateAIMemoryCounter();
+        }
+
+        function updateAIMemoryCounter() {
+            document.getElementById('ai-memory-counter').innerText = `${learnedFruits.size} / 10 Data`;
+        }
+
+        function renderTestGrid() {
+            const container = document.getElementById('test-fruit-grid');
+            container.innerHTML = '';
+
+            FRUITS_DATA.forEach(fruit => {
+                const isSelected = selectedTestFruit.id === fruit.id;
+                
+                const card = document.createElement('div');
+                card.onclick = () => selectTestFruit(fruit.id);
+                card.className = `aspect-square bg-white rounded-2xl p-1.5 flex flex-col items-center justify-center cursor-pointer relative border-2 transition transform active:scale-95 shadow-sm ${isSelected ? 'border-emerald-600 ring-2 ring-emerald-400 shadow-md scale-105' : 'border-slate-300 hover:border-slate-400'}`;
+                
+                card.innerHTML = `<div class="w-full h-full p-1 flex items-center justify-center">${fruit.svg}</div>`;
+                container.appendChild(card);
+            });
+        }
+
+        function selectTestFruit(fruitId) {
+            playSound('beep');
+            selectedTestFruit = FRUITS_DATA.find(f => f.id === fruitId);
+            document.getElementById('quiz-svg-preview').innerHTML = selectedTestFruit.svg;
+            
+            document.getElementById('ai-answer-title').innerText = `"Klik tombol 'Tanya AI' di bawah..."`;
+            document.getElementById('ai-answer-desc').innerText = `Uji apakah AI dapat mengenali ${selectedTestFruit.name}`;
+            document.getElementById('confidence-container').style.opacity = '0.4';
+            document.getElementById('confidence-bar').style.width = '0%';
+            document.getElementById('confidence-text').innerText = '0%';
+
+            renderTestGrid();
+        }
+
+        function askAIToIdentify() {
+            const laser = document.getElementById('scanner-laser');
+            laser.classList.remove('hidden');
+            playSound('train');
+
+            const btn = document.getElementById('btn-ask-ai');
+            btn.disabled = true;
+            btn.classList.add('opacity-50');
+
+            document.getElementById('ai-answer-title').innerText = `"Sedang Menganalisis Pola..."`;
+            document.getElementById('ai-answer-desc').innerText = `Mencocokkan warna & bentuk dengan dataset memori...`;
+
+            setTimeout(() => {
+                laser.classList.add('hidden');
+                btn.disabled = false;
+                btn.classList.remove('opacity-50');
+
+                const isLearned = learnedFruits.has(selectedTestFruit.id);
+                const confMeter = document.getElementById('confidence-container');
+                confMeter.style.opacity = '1';
+
+                const confText = document.getElementById('confidence-text');
+                const confBar = document.getElementById('confidence-bar');
+
+                if (isLearned) {
+                    playSound('success');
+                    const confidence = 88 + Math.floor(Math.random() * 12);
+                    
+                    document.getElementById('ai-answer-title').innerHTML = `<span class="text-emerald-700"><i class="fa-solid fa-circle-check"></i> Ini Adalah ${selectedTestFruit.name}!</span>`;
+                    document.getElementById('ai-answer-desc').innerText = `AI ingat! Memori mencatat warna (${selectedTestFruit.color}) & bentuk (${selectedTestFruit.shape}).`;
+                    
+                    confText.innerText = `${confidence}% (Sangat Yakin)`;
+                    confText.className = "text-emerald-700 font-black";
+                    confBar.style.width = `${confidence}%`;
+                    confBar.className = "h-full bg-emerald-600 transition-all duration-500";
+                } else {
+                    playSound('fail');
+                    const confidence = 10 + Math.floor(Math.random() * 25);
+                    const otherFruits = FRUITS_DATA.filter(f => f.id !== selectedTestFruit.id);
+                    const randomWrong = otherFruits[Math.floor(Math.random() * otherFruits.length)];
+
+                    document.getElementById('ai-answer-title').innerHTML = `<span class="text-rose-700"><i class="fa-solid fa-circle-xmark"></i> AI Bingung: Mungkin ${randomWrong.name}?</span>`;
+                    document.getElementById('ai-answer-desc').innerText = `AI Belum Pernah Dilatih ${selectedTestFruit.name}! Masukkan data di menu 'Latih AI' terlebih dahulu.`;
+                    
+                    confText.innerText = `${confidence}% (Sangat Ragu/Salah)`;
+                    confText.className = "text-rose-700 font-black";
+                    confBar.style.width = `${confidence}%`;
+                    confBar.className = "h-full bg-rose-600 transition-all duration-500";
+                }
+            }, 1200);
+        }
+
+        function resetAILearning() {
+            playSound('fail');
+            learnedFruits.clear();
+            updateAIMemoryCounter();
+            selectTrainFruit(selectedTrainFruit.id);
+            selectTestFruit(selectedTestFruit.id);
+        }
+    </script>
+</body>
+</html>
