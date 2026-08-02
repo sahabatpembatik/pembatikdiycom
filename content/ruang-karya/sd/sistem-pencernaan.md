@@ -27,7 +27,7 @@ pembuat:
   bimtek: "Dikpora Kulon Progo-SD"
 ---
 
-{{< h5p title="Sistem Pencernaan" caption="Media interaktif berbasis Lumi (HTML lokal)." >}}
+{{< h5p title="Sistem Pencernaan" caption="Sistem Pencernaan SD" >}}
 
 Media ini dapat digunakan untuk membantu murid memahami organ pencernaan, fungsi tiap organ, dan alur proses pencernaan melalui aktivitas interaktif.
 

@@ -27,7 +27,7 @@ pembuat:
   bimtek: "Dikpora Kulon Progo-SD"
 ---
 
-{{< h5p title="Media IPAS Puspita" caption="Media interaktif berbasis Lumi (HTML lokal)." >}}
+{{< h5p title="Media IPAS Puspita" caption="Media interaktif Perjalanan makananku." >}}
 
 Media ini dapat digunakan untuk mendukung pembelajaran IPAS di SD untuk mengidentifikasi organ pencernaan manusia dan memahami fungsinya dalam mengolah makanan melalui simulasi interaktif..
 

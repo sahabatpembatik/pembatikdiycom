@@ -27,7 +27,7 @@ pembuat:
   bimtek: "Dikpora Kulon Progo-SD"
 ---
 
-{{< h5p title="Detektif Perubahan Energi" caption="Karya SD peserta bimtek berbasis H5P." >}}
+{{< h5p title="Detektif Perubahan Energi" caption="Detektif Perubahan Energi." >}}
 
 Media ini dapat digunakan untuk membantu siswa mengidentifikasi bentuk energi dan menganalisis transformasinya melalui representasi data visual (piktogram)
 
