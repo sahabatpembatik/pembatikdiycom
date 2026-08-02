@@ -11,7 +11,6 @@ kategori:
   - Karya SD
 topik:
   - H5P
-  - Peserta Bimtek
   - SD
 images:
   - img/header/sd_kancil.webp
