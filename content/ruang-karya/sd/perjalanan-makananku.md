@@ -1,6 +1,6 @@
 ﻿---
 title: "Perjalanan Makananku"
-description: "Media pembelajaran interaktif SD berbasis Lumi"
+description: "Media pembelajaran interaktif IPAS Kelas 5 SD tentang organ pencernaan manusia dan proses pencernaan makanan."
 date: 2026-08-02T10:15:00+07:00
 author: "administrator"
 draft: false

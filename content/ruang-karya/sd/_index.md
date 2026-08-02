@@ -1,6 +1,6 @@
 ﻿---
 title: "Karya SD"
-description: "Wadah karya media pembelajaran SD berbasis H5P"
+description: "Kumpulan karya media pembelajaran interaktif SD berbasis H5P dan Lumi dari peserta bimtek, lengkap dengan sasaran kelas."
 date: 2026-07-25T12:30:38+07:00
 author: "administrator"
 featured: false

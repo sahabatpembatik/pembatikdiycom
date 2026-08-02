@@ -1,5 +1,5 @@
 
-<meta name="Description" content="{{ if .IsPage }}{{ .Description }}{{ else }}{{ $.Site.Params.description }}{{ end }}">
+<meta name="description" content="{{- if .Description -}}{{ .Description | plainify }}{{- else if .IsPage -}}{{ .Summary | plainify | truncate 160 }}{{- else -}}{{ $.Site.Params.description | plainify }}{{- end -}}">
 
 {{- template "_internal/opengraph.html" . -}}
 {{- template "_internal/twitter_cards.html" . -}}

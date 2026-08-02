@@ -1,6 +1,6 @@
 ﻿---
 title: "Petualangan Piktogram: Detektif Perubahan Energi"
-description: "Media pembelajaran interaktif Kelas IV SD - IPAS Energi"
+description: "Media pembelajaran interaktif IPAS Kelas 4 SD tentang bentuk energi dan perubahan energi melalui aktivitas piktogram."
 date: 2026-07-25T12:55:23+07:00
 author: "administrator"
 draft: false

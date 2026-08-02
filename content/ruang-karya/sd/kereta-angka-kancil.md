@@ -1,6 +1,6 @@
 ﻿---
 title: "Kereta Angka Kancil"
-description: "Media pembelajaran interaktif kelas IV Matematika Bilangan"
+description: "Media pembelajaran interaktif Matematika Kelas 4 SD tentang nilai tempat dan bilangan cacah hingga 10.000."
 date: 2026-07-25T12:55:23+07:00
 author: "administrator"
 draft: false

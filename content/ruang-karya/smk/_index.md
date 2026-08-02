@@ -1,6 +1,6 @@
 ﻿---
 title: "Karya SMK"
-description: "Wadah karya media pembelajaran SMK peserta bimtek"
+description: "Kumpulan karya media pembelajaran interaktif SMK dari peserta bimtek untuk penguatan materi vokasi dan literasi digital."
 date: 2026-07-25T14:10:00+07:00
 author: "administrator"
 featured: false

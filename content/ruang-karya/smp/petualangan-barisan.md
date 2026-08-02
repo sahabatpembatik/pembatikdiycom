@@ -1,6 +1,6 @@
 ﻿---
-title: "Petualangan Barisan"
-description: "Media pembelajaran interaktif Kelas VIII SMP - Matematika Barisan"
+title: "Petualangan Barisan Aritmetika dan Geometri"
+description: "Media pembelajaran interaktif Matematika Kelas 8 SMP tentang konsep dan pola barisan aritmetika serta geometri."
 date: 2026-08-02T12:55:23+07:00
 author: "administrator"
 draft: false

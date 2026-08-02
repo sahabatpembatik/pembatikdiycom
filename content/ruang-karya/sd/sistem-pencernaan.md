@@ -1,6 +1,6 @@
 ﻿---
-title: "Sistem Pencernaan"
-description: "Media pembelajaran interaktif SD tentang sistem pencernaan"
+title: "Sistem Pencernaan Manusia"
+description: "Media pembelajaran interaktif IPAS Kelas 5 SD tentang organ, fungsi, dan proses sistem pencernaan manusia."
 date: 2026-08-02T10:00:00+07:00
 author: "administrator"
 draft: false

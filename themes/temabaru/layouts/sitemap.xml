@@ -1,9 +1,9 @@
 {{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-<!-- exclude index taxonomy -->
-  {{ $pages := where $.Site.RegularPages ".Params.sitemap_exclude" "!=" true }}
-<!-- end -->
+  {{ $regularPages := where $.Site.RegularPages ".Params.sitemap_exclude" "!=" true }}
+  {{ $sectionPages := where (where $.Site.Pages "Kind" "section") ".Params.sitemap_exclude" "!=" true }}
+  {{ $pages := union $regularPages $sectionPages }}
   {{ range $pages }}
     {{- if .Permalink -}}
   <url>

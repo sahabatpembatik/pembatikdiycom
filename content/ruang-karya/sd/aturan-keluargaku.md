@@ -1,6 +1,6 @@
 ﻿---
 title: "Aturan dalam Keluargaku"
-description: "Media pembelajaran interaktif Kelas I SD - PPKn Patuh pada Aturan"
+description: "Media pembelajaran interaktif PPKn Kelas 1 SD tentang patuh aturan di rumah untuk melatih disiplin dan tanggung jawab."
 date: 2026-07-25T12:55:23+07:00
 author: "administrator"
 draft: false

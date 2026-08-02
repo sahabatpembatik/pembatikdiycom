@@ -1,6 +1,6 @@
 ﻿---
 title: "Petualangan Pejuang Pubertas"
-description: "Media pembelajaran interaktif Kelas IV SD - IPAS Energi"
+description: "Media pembelajaran interaktif Kelas 6 SD tentang pubertas, perubahan diri, dan kesehatan reproduksi."
 date: 2026-07-25T12:55:23+07:00
 author: "administrator"
 draft: false
