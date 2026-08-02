@@ -1,8 +1,8 @@
----
+﻿---
 title: "Karya SMA"
 description: "Wadah karya media pembelajaran SMA peserta bimtek"
 date: 2026-07-25T14:10:00+07:00
-author: "19erna"
+author: "administrator"
 featured: false
 draft: false
 comment: false
@@ -28,3 +28,4 @@ cascade:
 ---
 
 Kumpulan karya peserta bimtek untuk jenjang SMA.
+

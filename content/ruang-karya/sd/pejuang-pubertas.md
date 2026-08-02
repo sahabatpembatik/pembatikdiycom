@@ -1,8 +1,8 @@
----
+﻿---
 title: "Petualangan Pejuang Pubertas"
 description: "Media pembelajaran interaktif Kelas IV SD - IPAS Energi"
 date: 2026-07-25T12:55:23+07:00
-author: "19erna"
+author: "administrator"
 draft: false
 comment: true
 toc: false
@@ -30,3 +30,4 @@ pembuat:
 {{< h5p title="Pejuang Pubertas" caption="Sikapi perubahan diri saat pubertas" >}}
 
 Media ini dapat digunakan untuk membantu murid menyikapi perubahan diri saat pubertas secara positif dan menjaga kesehatan reproduksi dengan bertanggung jawab
+

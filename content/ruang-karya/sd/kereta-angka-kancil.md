@@ -1,8 +1,8 @@
----
+﻿---
 title: "Kereta Angka Kancil"
 description: "Media pembelajaran interaktif kelas IV Matematika Bilangan"
 date: 2026-07-25T12:55:23+07:00
-author: "19erna"
+author: "administrator"
 draft: false
 comment: true
 toc: false
@@ -30,3 +30,4 @@ pembuat:
 {{< h5p title="Kereta Angka Kancil" caption="Karya SD peserta bimtek berbasis H5P." >}}
 
 Media ini dapat digunakan untuk memahami konsep nilai tempat, membaca, membandingkan, serta melakukan komposisi dan dekomposisi bilangan cacah sampai 10.000 melalui simulasi kereta api yang interaktif.
+

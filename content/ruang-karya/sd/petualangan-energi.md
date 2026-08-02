@@ -1,8 +1,8 @@
----
+﻿---
 title: "Petualangan Piktogram: Detektif Perubahan Energi"
 description: "Media pembelajaran interaktif Kelas IV SD - IPAS Energi"
 date: 2026-07-25T12:55:23+07:00
-author: "19erna"
+author: "administrator"
 draft: false
 comment: true
 toc: false
@@ -30,3 +30,4 @@ pembuat:
 {{< h5p title="Detektif Perubahan Energi" caption="Karya SD peserta bimtek berbasis H5P." >}}
 
 Media ini dapat digunakan untuk membantu siswa mengidentifikasi bentuk energi dan menganalisis transformasinya melalui representasi data visual (piktogram)
+

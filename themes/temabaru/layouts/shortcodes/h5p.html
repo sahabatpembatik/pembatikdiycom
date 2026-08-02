@@ -1,10 +1,14 @@
 {{- $src := .Get "url" | default .Page.Params.h5p_url -}}
-{{- $link := .Get "link" | default .Page.Params.h5p_link -}}
+{{- $link := .Get "link" | default .Page.Params.h5p_link | default $src -}}
 {{- $title := .Get "title" | default .Page.Title -}}
 {{- $ratio := .Get "ratio" | default "56.25%" -}}
 {{- $caption := .Get "caption" | default "Media pembelajaran interaktif berbasis H5P." -}}
 {{- $embedID := printf "h5p-embed-%s-%d" .Page.File.UniqueID .Ordinal -}}
 {{- $useResizer := or (in $src "app.lumi.education") (in $src "/lumi/") -}}
+{{- $frameSrc := $src -}}
+{{- if and (in $src "app.lumi.education") $link -}}
+  {{- $frameSrc = $link -}}
+{{- end -}}
 
 {{- if not $src -}}
 <div class="not-prose my-6 rounded-lg border border-red-300 bg-red-50 p-4 text-sm text-red-700">
@@ -15,23 +19,25 @@
 <div class="not-prose my-6 rounded-xl border border-slate-200 bg-white p-3 shadow-sm dark:border-slate-700 dark:bg-slate-900">
   <div class="mb-2 text-sm font-semibold text-slate-700 dark:text-slate-200">{{ $title }}</div>
 
-  <div id="{{ $embedID }}" data-h5p-ratio="{{ $ratio }}" data-h5p-mode="{{ if $useResizer }}resizer{{ else }}ratio{{ end }}" style="position: relative; width: 100%;">
+{{- if $useResizer -}}
+  <iframe
+    src="{{ $src | safeURL }}"
+    width="1088"
+    height="720"
+    frameborder="0"
+    loading="lazy"
+    style="width: 100%; max-width: 1088px; height: 720px; border: 0; display: block; margin: 0 auto;"
+    allow="geolocation *; microphone *; camera *; midi *; encrypted-media *; fullscreen *"
+    allowfullscreen="allowfullscreen"
+    title="{{ $title }}">
+  </iframe>
+  <script src="https://app.lumi.education/api/v1/h5p/core/js/h5p-resizer.js" charset="UTF-8"></script>
+{{- else -}}
+  <div id="{{ $embedID }}" data-h5p-ratio="{{ $ratio }}" data-h5p-mode="ratio" style="position: relative; width: 100%;">
     <div data-h5p-loader style="position: absolute; inset: 0; z-index: 2; display: flex; flex-direction: column; gap: 10px; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.92); color: #334155; font-size: 0.9rem; transition: opacity 0.25s ease;">
       <div style="width: 34px; height: 34px; border: 4px solid #cbd5e1; border-top-color: #0284c7; border-radius: 9999px; animation: h5pLoaderSpin 0.85s linear infinite;"></div>
       <span>Memuat media interaktif...</span>
     </div>
-{{- if $useResizer -}}
-    <iframe
-      style="position: relative; width: 100%; min-height: 420px; height: 720px; border: 0; display: block;"
-      frameborder="0"
-      src="{{ $src | safeURL }}"
-      title="{{ $title }}"
-      loading="lazy"
-      scrolling="no"
-      allow="fullscreen *; geolocation *; microphone *; camera *; midi *; encrypted-media *"
-      allowfullscreen="allowfullscreen">
-    </iframe>
-{{- else -}}
     <iframe
       style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"
       frameborder="0"
@@ -42,18 +48,12 @@
       allow="fullscreen *; geolocation *; microphone *; camera *; midi *; encrypted-media *"
       allowfullscreen="allowfullscreen">
     </iframe>
-{{- end -}}
   </div>
   <script>
     (function () {
       var container = document.getElementById('{{ $embedID }}');
       if (!container) return;
-      var mode = container.getAttribute('data-h5p-mode');
-      if (mode === 'ratio') {
-        container.style.paddingTop = container.getAttribute('data-h5p-ratio') || '56.25%';
-      } else {
-        container.style.paddingTop = '0';
-      }
+      container.style.paddingTop = container.getAttribute('data-h5p-ratio') || '56.25%';
 
       var loader = container.querySelector('[data-h5p-loader]');
       var frame = container.querySelector('iframe');
@@ -73,14 +73,12 @@
       window.setTimeout(hideLoader, 12000);
     })();
   </script>
+{{- end -}}
   <style>
     @keyframes h5pLoaderSpin {
       to { transform: rotate(360deg); }
     }
   </style>
-{{- if $useResizer -}}
-  <script src="https://app.lumi.education/api/v1/h5p/core/js/h5p-resizer.js" charset="UTF-8"></script>
-  {{- end -}}
   <p class="mt-3 text-xs text-slate-600 dark:text-slate-300">{{ $caption }}</p>
   <a class="inline-block mt-1 text-sm font-medium text-sky-700 hover:underline dark:text-sky-400" href="{{ $link | safeURL }}" target="_blank" rel="noopener noreferrer">
     Buka media di tab baru

@@ -1,8 +1,8 @@
----
+﻿---
 title: "Aturan dalam Keluargaku"
 description: "Media pembelajaran interaktif Kelas I SD - PPKn Patuh pada Aturan"
 date: 2026-07-25T12:55:23+07:00
-author: "19erna"
+author: "administrator"
 draft: false
 comment: true
 toc: false
@@ -30,3 +30,4 @@ pembuat:
 {{< h5p title="Aturan Keluarga" caption="aturan membuat hidup kita tertib, aman, dan nyaman" >}}
 
 Media ini dapat digunakan untuk membantu murid mampu mengenal, mengidentifikasi, dan menunjukkan perilaku patuh pada aturan di rumah melalui aktivitas interaktif
+
