@@ -5,10 +5,6 @@
 {{- $caption := .Get "caption" | default "Media pembelajaran interaktif berbasis H5P." -}}
 {{- $embedID := printf "h5p-embed-%s-%d" .Page.File.UniqueID .Ordinal -}}
 {{- $useResizer := or (in $src "app.lumi.education") (in $src "/lumi/") -}}
-{{- $frameSrc := $src -}}
-{{- if and (in $src "app.lumi.education") $link -}}
-  {{- $frameSrc = $link -}}
-{{- end -}}
 
 {{- if not $src -}}
 <div class="not-prose my-6 rounded-lg border border-red-300 bg-red-50 p-4 text-sm text-red-700">
@@ -30,7 +26,7 @@
     </div>
 {{- if $useResizer -}}
     <iframe
-      src="{{ $frameSrc | safeURL }}"
+      src="{{ $src | safeURL }}"
       width="1088"
       height="720"
       frameborder="0"
