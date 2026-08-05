@@ -5,10 +5,10 @@
   url = "/event"
 
 [[main]]
-  name = "PembaTIK 2024"
-  pre = '<img src="/img/logo/icon-pembatik-50x50.png" alt="P" class="ml-2 w-4 h-4">'
+  name = "Ruang Karya"
+  pre = '✨'
   weight ='3'
-  url = "https://pembatik.kemdikbud.go.id"
+  url = "/ruang-karya"
 [[main]]
   name = "Tutorial"
   pre = '🖌️'
