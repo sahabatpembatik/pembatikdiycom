@@ -1,6 +1,6 @@
 ﻿---
 title: "Ruang Karya"
-description: "Kumpulan karya media pembelajaran interaktif berbasis H5P dan Lumi untuk SD, SMP, SMA, dan SMK dari peserta bimtek."
+description: "Kumpulan karya media pembelajaran interaktif untuk SD, SMP, SMA, dan SMK dari peserta bimtek."
 date: 2026-07-25T12:30:38+07:00
 author: "administrator"
 featured: false
@@ -10,7 +10,6 @@ toc: false
 kategori:
   - Ruang Karya
 topik:
-  - Peserta Bimtek
   - SD
   - SMP
   - SMA

@@ -1,6 +1,6 @@
 ﻿---
 title: "Karya SMA"
-description: "Kumpulan karya media pembelajaran interaktif SMA dari peserta bimtek untuk mendukung pembelajaran berbasis digital."
+description: "Kumpulan karya media pembelajaran interaktif SMA untuk mendukung pembelajaran berbasis digital."
 date: 2026-07-25T14:10:00+07:00
 author: "administrator"
 featured: false

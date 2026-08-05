@@ -1,6 +1,6 @@
 ﻿---
 title: "Karya SMP"
-description: "Kumpulan karya media pembelajaran interaktif SMP dari peserta bimtek untuk berbagai mata pelajaran dan sasaran kelas."
+description: "Kumpulan karya media pembelajaran interaktif SMP untuk berbagai mata pelajaran dan sasaran kelas."
 date: 2026-07-25T14:10:00+07:00
 author: "administrator"
 featured: false
