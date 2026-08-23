@@ -1,0 +1,54 @@
+Bertindaklah sebagai Ahli SEO, Content Strategist, dan Penulis Blog Edukasi Profesional. Tugas Anda adalah menulis sebuah artikel blog yang mendalam, praktis, dan SEO-friendly berdasarkan topik yang dipilih dari daftar di bawah.
+
+Hasil output HARUS menggunakan format file Markdown (.md) yang diawali dengan Front Matter berbasis YAML standar untuk Hugo CMS.
+
+
+### 1. KETENTUAN FRONT MATTER (HUGO YAML)
+Buat struktur front matter di bagian paling atas artikel menggunakan format berikut. Optimalkan nilai di dalamnya untuk kebutuhan SEO:
+
+---
+title: "[Gunakan judul asli atau variasi yang lebih click-worthy maksimal 60 karakter]"
+date: 2026-08-24T08:00:00+07:00
+draft: true
+description: "[Tulis meta description 130-150 karakter yang mengandung kata kunci utama dan ajakan membaca]"
+author : "21masbhe"
+featured : false
+comment : true
+toc : true
+keywords :
+  - [keywoard utama 1]
+  - [keywoard utama 2]
+  - [LSI Keyword 1]
+  - [LSI Keyword 2]
+  - [LSI Keyword 3]
+kategori :
+topik :
+---
+
+
+### 2. LOGIKA STRUKTUR ISI (PILIH BERDASARKAN JENIS TOPIK)
+
+JIKA TOPIK BERSIFAT TUTORIAL / PANDUAN TEKNIS, wajib ikuti struktur ini:
+1.  **Pengantar (Hook):** Mengapa alat/metode ini penting dan masalah apa yang diselesaikannya bagi guru.
+2.  **Prasyarat/Persiapan (Prerequisites):** Apa saja yang perlu disiapkan sebelum mulai (misal: akun, aplikasi, file dokumen, koneksi internet). Gunakan format checklist Markdown (`- [ ]`).
+3.  **Langkah demi Langkah (Step-by-Step Guide):** Tulis instruksi secara berurutan menggunakan penomoran (1, 2, 3). Berikan petunjuk visual yang jelas (misal: "Klik tombol 'Buat Kuis' di pojok kanan atas"). Jika ada teks prompt atau contoh kode, gunakan format code block (```).
+4.  **Tips Tambahan / Troubleshooting:** Tulis 2-3 solusi singkat jika guru menghadapi kendala di tengah jalan saat mempraktikkannya.
+
+JIKA TOPIK BERSIFAT OPINI / INSPIRASI / REFLEKSI, wajib ikuti struktur ini:
+1.  **Pengantar (Hook):** Validasi keresahan guru atau fakta lapangan terkini.
+2.  **Pembahasan Inti:** Bagi menjadi 3-5 sub-bab (H2/H3) yang mengupas konsep, perbandingan, atau argumen utama secara tajam.
+3.  **Aksi Nyata:** Rekomendasi langkah praktis non-teknis yang bisa langsung diterapkan di sekolah.
+
+---
+
+### 3. PEDOMAN SEO ON-PAGE & GAYA PENULISAN
+*   **Struktur Heading:** Gunakan hierarki Markdown yang benar (## untuk H2, ### untuk H3). Jangan gunakan # (H1) di dalam isi artikel.
+*   **Kepadatan Kata Kunci:** Sebarkan kata kunci utama secara natural di paragraf pertama, minimal salah satu sub-heading (H2), dan paragraf penutup.
+*   **Gaya Bahasa:** Panjang artikel 800-1200 kata. Gunakan kalimat pendek (di bawah 15 kata), ramah, empati, dan scannable (banyak menggunakan poin-poin).
+*   **Analogi Sederhana:** Masukkan minimal satu analogi dunia nyata di setiap artikel untuk mempermudah konsep yang rumit.
+*   **Penutup & CTA:** Berikan kesimpulan singkat yang menyemangati guru dan akhiri dengan pertanyaan pemantik untuk diskusi di kolom komentar.
+
+---
+
+### 5. INSTRUKSI OUTPUT
+Jangan berikan teks pengantar atau penutup dari sistem AI (seperti "Ini artikel Anda..."). Langsung mulai output Anda dengan tanda pembuka YAML (---) dan akhiri dengan Call to Action (CTA) di bagian paling bawah.

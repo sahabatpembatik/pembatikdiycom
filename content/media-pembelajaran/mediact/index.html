@@ -1,65 +1,122 @@
 ---
 title: "Algoritma: Memasak Nasi Goreng"
-description: "Mari belajar berpikir komputasional dengan menyusun algoritma memasak nasi goreng. Urutkan langkah-langkahnya agar robot chef dapat memasak dengan benar!"
+description: "Mari belajar berpikir komputasional dengan menyusun algoritma memasak nasi goreng. Urutkan
+langkah-langkahnya agar robot chef dapat memasak dengan benar!"
 date: 2026-07-30T00:00:00+07:00
 draft: false
 layout: single-full
-images : 
-  - img/header/ct-nasi-goreng.webp
-tumbnail : 
-  - img/tumbnail/ct-nasi-goreng.webp
+images :
+- img/header/ct-nasi-goreng.webp
+tumbnail :
+- img/tumbnail/ct-nasi-goreng.webp
 ---
 
 <!doctype html>
-<html lang="id"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Algoritma Memasak Nasi Goreng | Belajar Berpikir Komputasional</title>
-  <meta name="description" content="Belajar berpikir komputasional dengan menyusun algoritma memasak nasi goreng. Latihan interaktif urutkan langkah-langkah agar robot chef bisa memasak dengan benar.">
-  <meta name="keywords" content="algoritma, berpikir komputasional, memasak nasi goreng, robot chef, pembelajaran interaktif, pendidikan, belajar">
-  <meta name="author" content="Pembatik DIY">
-  <meta name="robots" content="index,follow">
-  <meta name="theme-color" content="#e0ecf8">
-  <link rel="canonical" href="https://pembatikdiy.com/media-pembelajaran/mediact/">
-  <meta property="og:title" content="Algoritma Memasak Nasi Goreng | Belajar Berpikir Komputasional">
-  <meta property="og:description" content="Belajar berpikir komputasional dengan menyusun algoritma memasak nasi goreng. Latihan interaktif urutkan langkah-langkah agar robot chef bisa memasak dengan benar.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://pembatikdiy.com/media-pembelajaran/mediact/">
-  <meta property="og:site_name" content="Pembatik DIY">
-  <meta property="og:image" content="https://pembatikdiy.com/img/header/ct-nasi-goreng.webp">
-  <meta property="og:image:alt" content="Ilustrasi permainan algoritma memasak nasi goreng">
-  <meta property="article:published_time" content="2026-07-30T00:00:00+07:00">
-  <meta property="article:author" content="Pembatik DIY">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Algoritma Memasak Nasi Goreng | Belajar Berpikir Komputasional">
-  <meta name="twitter:description" content="Belajar berpikir komputasional dengan menyusun algoritma memasak nasi goreng. Latihan interaktif urutkan langkah-langkah agar robot chef bisa memasak dengan benar.">
-  <meta name="twitter:image" content="https://pembatikdiy.com/img/header/ct-nasi-goreng.webp">
-  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&amp;display=swap" rel="stylesheet">
-  <style>
-        * { font-family: 'Poppins', sans-serif; user-select: none; -webkit-user-select: none; }
-        body, html { height: 100%; height: calc(100 * min(var(--vh, 1vh), 1vh)); overflow: hidden; touch-action: manipulation; }
+<html lang="id">
 
-        .grid-card { transition: transform 0.2s cubic-bezier(0.2,0,0,1), box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease; cursor: grab; }
-        .grid-card:active { cursor: grabbing; }
-        .grid-card.dragging { opacity: 0.35; transform: scale(0.95); border-style: dashed !important; }
-        .grid-card.drag-over { transform: scale(1.03); border-color: #2563eb !important; background-color: #eff6ff !important; box-shadow: 0 10px 25px -5px rgba(37,99,235,0.3); }
-        .grid-card.selected { border-color: #1e3a5f !important; background-color: #e8f0fe !important; box-shadow: 0 0 0 3px rgba(30,58,95,0.4); animation: pulseSelect 1.2s infinite alternate; }
-        @keyframes pulseSelect { 0%{transform:scale(1)} 100%{transform:scale(1.02)} }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Algoritma Memasak Nasi Goreng | Belajar Berpikir Komputasional</title>
+    <meta name="description"
+        content="Belajar berpikir komputasional dengan menyusun algoritma memasak nasi goreng. Latihan interaktif urutkan langkah-langkah agar robot chef bisa memasak dengan benar.">
+    <meta name="keywords"
+        content="algoritma, berpikir komputasional, memasak nasi goreng, robot chef, pembelajaran interaktif, pendidikan, belajar">
+    <meta name="author" content="Pembatik DIY">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#e0ecf8">
+    <link rel="canonical" href="https://pembatikdiy.com/media-pembelajaran/mediact/">
+    <meta property="og:title" content="Algoritma Memasak Nasi Goreng | Belajar Berpikir Komputasional">
+    <meta property="og:description"
+        content="Belajar berpikir komputasional dengan menyusun algoritma memasak nasi goreng. Latihan interaktif urutkan langkah-langkah agar robot chef bisa memasak dengan benar.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://pembatikdiy.com/media-pembelajaran/mediact/">
+    <meta property="og:site_name" content="Pembatik DIY">
+    <meta property="og:image" content="https://pembatikdiy.com/img/header/ct-nasi-goreng.webp">
+    <meta property="og:image:alt" content="Ilustrasi permainan algoritma memasak nasi goreng">
+    <meta property="article:published_time" content="2026-07-30T00:00:00+07:00">
+    <meta property="article:author" content="Pembatik DIY">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Algoritma Memasak Nasi Goreng | Belajar Berpikir Komputasional">
+    <meta name="twitter:description"
+        content="Belajar berpikir komputasional dengan menyusun algoritma memasak nasi goreng. Latihan interaktif urutkan langkah-langkah agar robot chef bisa memasak dengan benar.">
+    <meta name="twitter:image" content="https://pembatikdiy.com/img/header/ct-nasi-goreng.webp">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            bg: '#dbe7f6',
+                            card: '#ffffff',
+                            badge: '#1e3a8a',
+                            btn: '#2563eb',
+                            btnHover: '#1d4ed8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #dbe7f6;
+            color: #1e293b;
+            user-select: none;
+            -webkit-user-select: none;
+        }
 
-        .shake-modal { animation: glitchShake 0.4s cubic-bezier(.36,.07,.19,.97) both; }
-        @keyframes glitchShake { 10%,90%{transform:translate3d(-2px,0,0)} 20%,80%{transform:translate3d(4px,0,0)} 30%,50%,70%{transform:translate3d(-8px,0,0)} 40%,60%{transform:translate3d(8px,0,0)} }
-        @keyframes bounceSlow { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
-        .animate-bounce-slow { animation: bounceSlow 2s infinite ease-in-out; }
+        .step-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            touch-action: manipulation;
+        }
 
-        /* Toast */
-        #toast-container { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 100; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; pointer-events: none; width: min(90vw, 30rem); }
-        .toast-item { pointer-events: auto; padding: 0.75rem 1.25rem; border-radius: 0.75rem; font-weight: 700; font-size: 0.8rem; color: #fff; box-shadow: 0 4px 14px rgba(0,0,0,0.15); animation: slideIn 0.3s ease forwards; }
-        .toast-item.removing { animation: slideOut 0.3s ease forwards; }
-        @keyframes slideIn { from{opacity:0;transform:translateX(100%)} to{opacity:1;transform:translateX(0)} }
-        @keyframes slideOut { from{opacity:1;transform:translateX(0)} to{opacity:0;transform:translateX(100%)} }
+        .step-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(30, 58, 138, 0.12);
+        }
+
+        .step-card.selected {
+            border-color: #2563eb !important;
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.3) !important;
+            transform: scale(1.02);
+        }
+
+        .step-card.dragging {
+            opacity: 0.4;
+            transform: scale(0.95);
+        }
+
+        .drag-over {
+            border-color: #f59e0b !important;
+            background-color: #fef3c7 !important;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #dbe7f6;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            border-radius: 3px;
+        }
     </style>
-  <script type="application/ld+json">
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -81,220 +138,846 @@ tumbnail :
     "learningResourceType": "Interactive educational game"
   }
   </script>
- </head>
- <body data-template-id="__page-root" class="w-full h-screen flex flex-col justify-between p-3 md:p-5 overflow-hidden" style="background: linear-gradient(135deg, rgb(224, 236, 248), rgb(199, 218, 240), rgb(219, 233, 247));">
-  <div id="toast-container"></div>
-  <header class="flex-none text-center max-w-4xl mx-auto w-full">
-   <div class="inline-flex items-center gap-2 bg-blue-900/10 border border-blue-800/30 text-blue-900 px-3 py-1 rounded-full text-xs md:text-sm font-bold uppercase tracking-wider mb-1">
-    <span>🤖</span> <span data-template-id="header-badge" class="canva-tag" style="color: rgb(30, 58, 95); font-weight: 700; font-style: normal; font-size: 16px;">Berpikir Komputasional</span>
-   </div>
-   <h1 data-template-id="page-title" class="canva-text text-xl md:text-3xl font-extrabold leading-tight" style="color: rgb(15, 39, 68); font-weight: 800; font-style: normal; font-size: 32px;">🍳 Memasak Nasi Goreng</h1>
-   <p data-template-id="page-subtitle" class="canva-text text-xs md:text-sm font-semibold mt-0.5" style="color: rgb(30, 58, 95); font-weight: 500; font-style: normal; font-size: 16px;">Tarik &amp; Lepas (Drag &amp; Drop) atau Tap 2 kartu untuk menukar urutan langkah!</p>
-  </header>
-  <main class="flex-1 max-w-5xl w-full mx-auto my-2 flex flex-col justify-center min-h-0">
-   <div id="gridContainer" class="grid grid-cols-2 md:grid-cols-4 gap-2.5 md:gap-3.5 h-full max-h-[520px] w-full"></div>
-  </main>
-  <footer class="flex-none max-w-4xl w-full mx-auto flex flex-col items-center justify-center gap-1.5">
-   <button data-template-id="btn-execute" id="btnExecute" class="canva-button w-full sm:w-auto font-extrabold text-base md:text-lg px-8 py-3 rounded-2xl shadow-lg hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2 border border-blue-700" style="background: linear-gradient(135deg, rgb(30, 58, 95), rgb(37, 99, 235)); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">🚀 Jalankan Program Memasak</button>
-   <p data-template-id="tip-text" class="canva-text text-[11px] md:text-xs font-medium text-center" style="color: rgb(100, 116, 139); font-weight: 500; font-style: normal; font-size: 16px;">💡 Tips: Urutkan kotak dari nomor 1 hingga 8 secara runtut &amp; logis.</p>
-  </footer><!-- SUCCESS MODAL -->
-  <div id="modalSuccess" class="fixed inset-0 bg-slate-900/80 backdrop-blur-md z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
-   <canvas id="confettiCanvas" class="absolute inset-0 pointer-events-none"></canvas>
-   <div class="bg-white border-4 border-emerald-400 rounded-3xl p-6 md:p-8 max-w-md w-full text-center shadow-2xl relative z-10 scale-90 transition-transform duration-300" id="successBox">
-    <div class="text-6xl mb-3 animate-bounce-slow">
-     🤖🍳
+</head>
+
+<body class="min-h-screen flex flex-col justify-between items-center p-3 md:p-6 relative overflow-x-hidden">
+
+    <!-- Top Header Container -->
+    <header class="w-full max-w-6xl text-center flex flex-col items-center mt-2 mb-4">
+        <!-- Top Navigation & Action Bar for Bimtek -->
+        <div class="w-full flex justify-between items-center mb-2 px-2">
+            <!-- Audio Toggle & Level Switcher -->
+            <div class="flex items-center gap-2">
+                <button id="sound-btn" onclick="toggleSound()" class="px-3 py-1.5 rounded-full bg-white/80 hover:bg-white text-slate-700 font-bold text-xs shadow-sm flex items-center gap-1.5 border border-slate-300">
+                    <span id="sound-icon">🔊</span> <span class="hidden sm:inline">Suara</span>
+                </button>
+                
+                <select id="level-select" onchange="changeLevel(this.value)" class="px-3 py-1.5 rounded-full bg-white text-slate-800 font-bold text-xs shadow-sm border border-slate-300 focus:outline-none cursor-pointer">
+                    <option value="1">Level 1: Algoritma Sekuensial</option>
+                    <option value="2">Level 2: Algoritma + Percabangan (IF-ELSE)</option>
+                </select>
+            </div>
+
+            <!-- CT Guidance & LKPD Button -->
+            <button onclick="openCtGuide()" class="px-3.5 py-1.5 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white font-extrabold text-xs shadow-md transition-all flex items-center gap-1.5">
+                📘 <span class="hidden sm:inline">Panduan CT & LKPD</span><span class="sm:hidden">LKPD</span>
+            </button>
+        </div>
+
+        <!-- Top Pill Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-200/70 border border-blue-300 text-blue-900 text-xs font-extrabold uppercase tracking-wider mb-2 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-blue-700 animate-pulse"></span>
+            BERPIKIR KOMPUTASIONAL
+        </div>
+
+        <!-- Main Title -->
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 flex items-center justify-center gap-2">
+            <span>🍳</span> Memasak Nasi Goreng
+        </h1>
+
+        <!-- Subtitle Instructions -->
+        <div class="flex items-center justify-center gap-2 mt-1 px-2">
+            <p class="text-xs sm:text-sm md:text-base font-semibold text-slate-600 max-w-2xl">
+                Tarik & Lepas (Drag & Drop) atau Tap 2 kartu untuk menukar urutan langkah!
+            </p>
+            <button onclick="speakInstruction()" title="Dengarkan Petunjuk Suara" class="px-2.5 py-1 rounded-full bg-blue-100 hover:bg-blue-200 text-blue-800 text-xs font-bold transition-all flex items-center gap-1 shrink-0 shadow-sm active:scale-95">
+                🔊 <span class="hidden sm:inline">Dengarkan Petunjuk</span><span class="sm:hidden">Baca</span>
+            </button>
+        </div>
+
+        <!-- Conditional Rule Panel (Visible for Level 2) -->
+        <div id="level2-panel" class="hidden mt-3 p-3 bg-amber-50 border border-amber-300 rounded-2xl text-xs sm:text-sm font-bold text-amber-900 flex flex-wrap justify-center items-center gap-4 max-w-2xl shadow-sm">
+            <span class="flex items-center gap-1">🔀 <strong>Kondisi Percabangan (IF-ELSE):</strong></span>
+            <label class="flex items-center gap-1.5 cursor-pointer bg-white px-3 py-1 rounded-full border border-amber-300 shadow-sm">
+                <input type="checkbox" id="cond-spicy" onchange="toggleCondition()" class="w-4 h-4 rounded text-blue-600">
+                <span>Ingin Pedas (IF Pedas == Ya) &rarr; <strong class="text-rose-600">Munculkan Kartu Cabai 🌶️</strong></span>
+            </label>
+        </div>
+    </header>
+
+    <!-- Main Interactive Card Grid (2x4 Desktop / Responsive Mobile) -->
+    <main class="w-full max-w-6xl my-auto py-2">
+        <div id="card-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 md:gap-5">
+            <!-- Cards rendered dynamically via JavaScript -->
+        </div>
+    </main>
+
+    <!-- Bottom Execution Controls & Tips -->
+    <footer class="w-full max-w-4xl flex flex-col items-center gap-3 mt-4 mb-2">
+        <!-- Action Button -->
+        <div class="flex items-center gap-3">
+            <button id="reset-btn" onclick="resetToInitial()" class="px-4 py-3 rounded-full bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 font-bold text-xs sm:text-sm shadow-md transition-all flex items-center gap-1.5" title="Acak Ulang Kartu">
+                <i class="fa-solid fa-rotate-right"></i> Reset
+            </button>
+
+            <button id="run-btn" onclick="runCookingProgram()" class="px-7 sm:px-10 py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white font-extrabold text-sm sm:text-base md:text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0 transition-all flex items-center gap-2">
+                🚀 Jalankan Program Memasak
+            </button>
+        </div>
+
+        <!-- Helpful Tip -->
+        <p class="text-xs sm:text-sm font-semibold text-slate-600 flex items-center gap-1.5 text-center px-4">
+            <span>💡</span> <span><strong>Tips:</strong> Urutkan kotak dari nomor 1 hingga 8 secara runtut & logis.</span>
+        </p>
+
+        <!-- Page Number / Footer Marker -->
+        <div class="w-full flex justify-end text-slate-500 font-bold text-xs sm:text-sm pr-2 pt-1">
+            6
+        </div>
+    </footer>
+
+    <!-- Modal Panduan CT & LKPD Bimtek -->
+    <div id="ct-guide-modal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-md z-50 hidden flex items-center justify-center p-3 md:p-6 overflow-y-auto">
+        <div class="bg-white border border-slate-200 rounded-3xl max-w-3xl w-full p-5 sm:p-7 shadow-2xl flex flex-col gap-4 relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeCtGuide()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center font-bold text-lg transition-all z-10">✕</button>
+
+            <div class="text-center border-b border-slate-200 pb-3">
+                <span class="px-3 py-1 rounded-full text-xs font-extrabold uppercase bg-indigo-100 text-indigo-800">Panduan Pengguna</span>
+                <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 mt-1">Implementasi 4 Pilar Computational Thinking</h2>
+            </div>
+
+            <!-- 4 CT Pillars Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+                <div class="p-3.5 bg-blue-50 border border-blue-200 rounded-2xl">
+                    <h3 class="font-extrabold text-blue-900 flex items-center gap-1.5 mb-1"><i class="fa-solid fa-puzzle-piece"></i> 1. Dekomposisi</h3>
+                    <p class="text-slate-600">Memecah proses besar pembuatan nasi goreng menjadi modul/langkah instruksi terkecil yang independen.</p>
+                </div>
+                <div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-2xl">
+                    <h3 class="font-extrabold text-emerald-900 flex items-center gap-1.5 mb-1"><i class="fa-solid fa-shapes"></i> 2. Pengenalan Pola</h3>
+                    <p class="text-slate-600">Menemukan tata urutan umum memasak: <em>Persiapan Alat & Bahan &rarr; Pemanasan &rarr; Pengolahan &rarr; Penyajian</em>.</p>
+                </div>
+                <div class="p-3.5 bg-purple-50 border border-purple-200 rounded-2xl">
+                    <h3 class="font-extrabold text-purple-900 flex items-center gap-1.5 mb-1"><i class="fa-solid fa-filter"></i> 3. Abstraksi</h3>
+                    <p class="text-slate-600">Mengabaikan detail non-esensial (seperti merk wajan, jenis kompor, warna baju chef) dan berfokus murni pada logika proses.</p>
+                </div>
+                <div class="p-3.5 bg-amber-50 border border-amber-200 rounded-2xl">
+                    <h3 class="font-extrabold text-amber-900 flex items-center gap-1.5 mb-1"><i class="fa-solid fa-code"></i> 4. Desain Algoritma</h3>
+                    <p class="text-slate-600">Menyusun deretan instruksi logis, runtut (Sekuensial), dan percabangan (Kondisional) agar program dapat dieksekusi komputer/AI tanpa error.</p>
+                </div>
+            </div>
+
+            <!-- Reflection Form for Bimtek Participants -->
+            <div class="mt-2 bg-slate-50 p-4 border border-slate-200 rounded-2xl">
+                <h3 class="font-bold text-slate-900 text-xs sm:text-sm mb-2 flex items-center gap-1.5">📝 Lembar Refleksi & Rencana</h3>
+                <textarea id="teacher-reflection" rows="3" class="w-full p-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none" placeholder="Tuliskan gagasan Anda: Bagaimana Anda akan menerapkan analogi CT ini dalam kasus Anda?"></textarea>
+                <div id="reflection-msg" class="hidden text-xs font-bold text-emerald-600 mt-1"></div>
+                <div class="flex justify-end gap-2 mt-2">
+                    <button onclick="copyReflection()" class="px-4 py-2 bg-slate-800 hover:bg-slate-900 text-white font-bold text-xs rounded-xl shadow-sm">📋 Salin Catatan Refleksi</button>
+                </div>
+            </div>
+        </div>
     </div>
-    <h2 data-template-id="success-title" class="canva-text text-2xl md:text-3xl font-extrabold mb-2" style="color: rgb(6, 95, 70); font-weight: 800; font-style: normal; font-size: 24px;">Robot Berhasil Memasak!</h2>
-    <p data-template-id="success-desc" class="canva-text text-sm md:text-base leading-relaxed mb-6" style="color: rgb(71, 85, 105); font-weight: 600; font-style: normal; font-size: 16px;">Selamat! 🎉 Robot Chef berhasil menjalankan algoritma grid Anda tanpa kesalahan. Nasi goreng lezat siap disajikan!</p><button data-template-id="btn-restart" id="btnRestart" class="canva-button w-full font-bold py-3 px-6 rounded-xl shadow-lg hover:scale-105 active:scale-95 transition-all" style="background: linear-gradient(135deg, rgb(30, 58, 95), rgb(59, 130, 246)); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">🔄 Main Lagi</button>
-   </div>
-  </div><!-- ERROR MODAL -->
-  <div id="modalError" class="fixed inset-0 bg-red-950/85 backdrop-blur-md z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
-   <div id="errorBox" class="bg-slate-950 border-2 border-red-500 rounded-3xl p-6 md:p-8 max-w-md w-full text-center shadow-2xl shadow-red-900/50 relative z-10 scale-90 transition-transform duration-300">
-    <div class="text-5xl mb-2 animate-pulse">
-     🐞
+
+    <!-- Simulation & Feedback Modal -->
+    <div id="simulation-modal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-md z-50 hidden flex items-center justify-center p-3 md:p-6">
+        <div class="bg-white border border-slate-200 rounded-3xl max-w-2xl w-full p-5 sm:p-6 shadow-2xl flex flex-col items-center gap-4 relative overflow-hidden">
+            
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center font-bold text-lg transition-all z-10">
+                ✕
+            </button>
+
+            <!-- Modal Header -->
+            <div class="text-center flex flex-col items-center gap-1">
+                <div class="flex items-center gap-2">
+                    <span id="modal-status-badge" class="px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider bg-blue-100 text-blue-800">
+                        Eksekusi Algoritma
+                    </span>
+                    <button onclick="speakFeedback()" title="Bacakan Ulang Feedback" class="px-3 py-1 rounded-full bg-indigo-100 hover:bg-indigo-200 text-indigo-800 font-bold text-xs flex items-center gap-1 transition-all shadow-sm">
+                        🔊 <span>Bacakan Feedback</span>
+                    </button>
+                </div>
+                <h2 id="modal-title" class="text-xl sm:text-2xl font-extrabold text-slate-900 mt-1">
+                    Simulasi Memasak Nasi Goreng
+                </h2>
+            </div>
+
+            <!-- Canvas Container -->
+            <div class="w-full aspect-video bg-slate-950 rounded-2xl overflow-hidden relative border border-slate-800 flex items-center justify-center shadow-inner">
+                <canvas id="simCanvas" class="w-full h-full block"></canvas>
+                
+                <!-- Live Step Subtitle Overlay -->
+                <div id="sim-subtitle" class="absolute bottom-3 left-3 right-3 bg-slate-900/90 text-amber-300 border border-slate-700 px-3 py-2 rounded-xl text-xs sm:text-sm font-bold text-center backdrop-blur-sm">
+                    Menyiapkan simulasi...
+                </div>
+            </div>
+
+            <!-- CT Pedagogical Explanation Box -->
+            <div id="pedagogical-box" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                <!-- Dynamic feedback content -->
+            </div>
+
+            <!-- Action Modal Footer -->
+            <div class="w-full flex justify-end gap-3 pt-1">
+                <button onclick="closeModal()" class="px-6 py-2.5 rounded-full font-extrabold text-xs sm:text-sm bg-blue-600 hover:bg-blue-700 text-white shadow-md transition-all">
+                    Tutup & Coba Lagi
+                </button>
+            </div>
+        </div>
     </div>
-    <h2 data-template-id="error-title" class="canva-text text-xl md:text-2xl font-mono font-extrabold tracking-wide mb-3" style="color: rgb(248, 113, 113); font-weight: 800; font-style: normal; font-size: 24px;">SYSTEM ERROR DETECTED</h2>
-    <div class="bg-red-950/60 border border-red-800/60 rounded-2xl p-4 mb-6 text-left">
-     <div id="bugCodeTitle" class="text-red-400 font-mono font-bold text-sm mb-1"></div>
-     <div id="bugCodeDesc" class="text-red-200 font-medium text-xs md:text-sm leading-relaxed"></div>
-    </div><button data-template-id="btn-fix" id="btnFix" class="canva-button w-full font-bold py-3 px-6 rounded-xl shadow-lg hover:scale-105 active:scale-95 transition-all" style="background: linear-gradient(135deg, rgb(220, 38, 38), rgb(225, 29, 72)); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">🔧 Perbaiki Algoritma</button>
-   </div>
-  </div>
-  <script>
-        const CORRECT_STEPS = [
-            { id:'step-1', icon:'🧰', text:'Siapkan alat & bahan (wajan, nasi, bumbu)', code:'PREPARE' },
-            { id:'step-2', icon:'🪔', text:'Tuangkan minyak goreng ke wajan', code:'POUR_OIL' },
-            { id:'step-3', icon:'🔥', text:'Nyalakan kompor gas', code:'IGNITE_STOVE' },
-            { id:'step-4', icon:'🧄', text:'Tumis bumbu hingga harum', code:'SAUTE_SPICES' },
-            { id:'step-5', icon:'🍚', text:'Masukkan nasi putih & bumbu', code:'ADD_RICE' },
-            { id:'step-6', icon:'🥢', text:'Aduk & bumbui hingga matang', code:'STIR_STIR' },
-            { id:'step-7', icon:'🛑', text:'Matikan kompor gas', code:'TURN_OFF_STOVE' },
-            { id:'step-8', icon:'🍽️', text:'Sajikan nasi goreng ke piring', code:'SERVE' }
-        ];
 
-        let currentSteps = [];
-        let selectedIndexForTap = null;
-        let draggedIndex = null;
+    <script>
+        // Sound System using Web Audio API
+        let audioCtx = null;
+        let soundEnabled = true;
+        let dragSourceIndex = null;
+        let selectedIndex = null;
+        let simCanvas = null;
+        let simCtx = null;
+        let animFrameId = null;
 
-        const gridContainer = document.getElementById('gridContainer');
-        const btnExecute = document.getElementById('btnExecute');
-        const modalSuccess = document.getElementById('modalSuccess');
-        const successBox = document.getElementById('successBox');
-        const modalError = document.getElementById('modalError');
-        const errorBox = document.getElementById('errorBox');
-        const bugCodeTitle = document.getElementById('bugCodeTitle');
-        const bugCodeDesc = document.getElementById('bugCodeDesc');
-        const btnRestart = document.getElementById('btnRestart');
-        const btnFix = document.getElementById('btnFix');
+        // Text-to-Speech (TTS) Voice System
+        function speakText(text) {
+            if (!soundEnabled || !('speechSynthesis' in window)) return;
+            
+            window.speechSynthesis.cancel(); // Stop active speech
+            
+            // Remove HTML tags for clean reading
+            const cleanText = text.replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ').trim();
+            if (!cleanText) return;
 
-        let audioContext;
+            const utterance = new SpeechSynthesisUtterance(cleanText);
+            utterance.lang = 'id-ID';
+            utterance.rate = 0.95;
+            utterance.pitch = 1.0;
+
+            const voices = window.speechSynthesis.getVoices();
+            const idVoice = voices.find(v => v.lang && (v.lang.includes('id') || v.lang.includes('ID')));
+            if (idVoice) utterance.voice = idVoice;
+
+            window.speechSynthesis.speak(utterance);
+        }
+
+        function speakInstruction() {
+            playSound('click');
+            const msg = "Petunjuk: Tarik dan Lepas atau Tap 2 kartu untuk menukar urutan langkah! Urutkan kotak dari nomor 1 hingga 8 secara runtut dan logis.";
+            speakText(msg);
+        }
+
+        function speakFeedback() {
+            playSound('click');
+            const titleText = document.getElementById('modal-title').innerText;
+            const feedbackText = document.getElementById('pedagogical-box').innerText;
+            speakText(`${titleText}. ${feedbackText}`);
+        }
+
         function playSound(type) {
-            audioContext = audioContext || new (window.AudioContext || window.webkitAudioContext)();
-            if (audioContext.state === 'suspended') audioContext.resume();
-            const now = audioContext.currentTime;
-            const master = audioContext.createGain();
-            const compressor = audioContext.createDynamicsCompressor();
-            master.gain.setValueAtTime(0.0001, now);
-            master.gain.exponentialRampToValueAtTime(type === 'info' ? 0.12 : 0.2, now + 0.015);
-            master.gain.exponentialRampToValueAtTime(0.0001, now + (type === 'error' ? 0.65 : 0.9));
-            compressor.threshold.value = -18;
-            compressor.knee.value = 12;
-            compressor.ratio.value = 8;
-            master.connect(compressor).connect(audioContext.destination);
+            if (!soundEnabled) return;
+            try {
+                if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
 
-            if (type === 'success') {
-                const notes = [523.25, 659.25, 783.99, 1046.5];
-                notes.forEach((frequency, index) => {
-                    const oscillator = audioContext.createOscillator();
-                    const noteGain = audioContext.createGain();
-                    const start = now + index * 0.13;
-                    oscillator.type = index === 3 ? 'triangle' : 'sine';
-                    oscillator.frequency.setValueAtTime(frequency, start);
-                    noteGain.gain.setValueAtTime(0.0001, start);
-                    noteGain.gain.exponentialRampToValueAtTime(index === 3 ? 0.24 : 0.16, start + 0.02);
-                    noteGain.gain.exponentialRampToValueAtTime(0.0001, start + 0.28);
-                    oscillator.connect(noteGain).connect(master);
-                    oscillator.start(start);
-                    oscillator.stop(start + 0.3);
-                });
-            } else if (type === 'error') {
-                const oscillator = audioContext.createOscillator();
-                const noteGain = audioContext.createGain();
-                oscillator.type = 'sawtooth';
-                oscillator.frequency.setValueAtTime(180, now);
-                oscillator.frequency.exponentialRampToValueAtTime(62, now + 0.48);
-                noteGain.gain.setValueAtTime(0.0001, now);
-                noteGain.gain.exponentialRampToValueAtTime(0.28, now + 0.025);
-                noteGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.58);
-                oscillator.connect(noteGain).connect(master);
-                oscillator.start(now);
-                oscillator.stop(now + 0.6);
+                const now = audioCtx.currentTime;
+                if (type === 'click') {
+                    osc.frequency.setValueAtTime(400, now);
+                    gain.gain.setValueAtTime(0.1, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.05);
+                    osc.start(now); osc.stop(now + 0.05);
+                } else if (type === 'swap') {
+                    osc.frequency.setValueAtTime(300, now);
+                    osc.frequency.exponentialRampToValueAtTime(600, now + 0.1);
+                    gain.gain.setValueAtTime(0.15, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.1);
+                    osc.start(now); osc.stop(now + 0.1);
+                } else if (type === 'success') {
+                    osc.frequency.setValueAtTime(523.25, now);
+                    osc.frequency.setValueAtTime(659.25, now + 0.1);
+                    osc.frequency.setValueAtTime(783.99, now + 0.2);
+                    gain.gain.setValueAtTime(0.2, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.4);
+                    osc.start(now); osc.stop(now + 0.4);
+                } else if (type === 'error') {
+                    osc.type = 'sawtooth';
+                    osc.frequency.setValueAtTime(180, now);
+                    osc.frequency.setValueAtTime(130, now + 0.15);
+                    gain.gain.setValueAtTime(0.2, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.3);
+                    osc.start(now); osc.stop(now + 0.3);
+                }
+            } catch(e) {}
+        }
+
+        function toggleSound() {
+            soundEnabled = !soundEnabled;
+            if (!soundEnabled && 'speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+            }
+            document.getElementById('sound-icon').innerText = soundEnabled ? '🔊' : '🔇';
+        }
+
+        // Additional Level & CT Features
+        let currentLevel = 1;
+        let isSpicyOption = false;
+
+        function openCtGuide() {
+            playSound('click');
+            document.getElementById('ct-guide-modal').classList.remove('hidden');
+        }
+
+        function closeCtGuide() {
+            playSound('click');
+            document.getElementById('ct-guide-modal').classList.add('hidden');
+        }
+
+        function copyReflection() {
+            const text = document.getElementById('teacher-reflection').value;
+            const msgEl = document.getElementById('reflection-msg');
+            if (!text.trim()) {
+                if (msgEl) {
+                    msgEl.innerText = "Isi catatan refleksi terlebih dahulu.";
+                    msgEl.className = "text-xs font-bold text-rose-600 mt-1";
+                    msgEl.classList.remove('hidden');
+                    setTimeout(() => msgEl.classList.add('hidden'), 3000);
+                }
+                return;
+            }
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).catch(() => {});
             } else {
-                const oscillator = audioContext.createOscillator();
-                oscillator.type = 'sine';
-                oscillator.frequency.setValueAtTime(392, now);
-                oscillator.frequency.linearRampToValueAtTime(523.25, now + 0.12);
-                oscillator.connect(master);
-                oscillator.start(now);
-                oscillator.stop(now + 0.2);
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+            }
+
+            if (msgEl) {
+                msgEl.innerText = "Catatan refleksi berhasil disalin!";
+                msgEl.className = "text-xs font-bold text-emerald-600 mt-1";
+                msgEl.classList.remove('hidden');
+                setTimeout(() => msgEl.classList.add('hidden'), 3000);
             }
         }
 
-        function showToast(msg, type) {
-            playSound(type);
-            const container = document.getElementById('toast-container');
-            const t = document.createElement('div');
-            t.className = 'toast-item';
-            t.style.background = type === 'success' ? 'linear-gradient(135deg,#059669,#10b981)' : type === 'error' ? 'linear-gradient(135deg,#dc2626,#ef4444)' : 'linear-gradient(135deg,#1e3a5f,#2563eb)';
-            t.textContent = msg;
-            container.appendChild(t);
-            setTimeout(() => { t.classList.add('removing'); setTimeout(() => t.remove(), 300); }, 2500);
+        // Master definition of the Cooking Steps
+        const masterSteps = [
+            {
+                id: 'step-prep',
+                correctOrder: 1,
+                title: 'Siapkan alat & bahan (wajan, nasi, bumbu)',
+                iconHtml: `<svg class="w-8 h-8 text-pink-500" viewBox="0 0 24 24" fill="currentColor"><path d="M20 6h-3V4c0-1.11-.89-2-2-2h-6c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>`,
+                emoji: '🧰'
+            },
+            {
+                id: 'step-stove-on',
+                correctOrder: 2,
+                title: 'Nyalakan kompor gas',
+                iconHtml: `<svg class="w-8 h-8 text-amber-500" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 11c-.27 0-.5.23-.5.5v3.5c0 .28.23.5.5.5s.5-.22.5-.5v-3.5c0-.27-.23-.5-.5-.5z"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 16h-2v-2h2v2zm1.07-7.75l-.9.92C12.45 11.9 12 12.5 12 14h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>`,
+                emoji: '🔥'
+            },
+            {
+                id: 'step-oil',
+                correctOrder: 3,
+                title: 'Tuangkan minyak goreng ke wajan',
+                iconHtml: `<svg class="w-8 h-8 text-orange-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>`,
+                emoji: '🍳'
+            },
+            {
+                id: 'step-bumbu',
+                correctOrder: 4,
+                title: 'Tumis bumbu hingga harum',
+                iconHtml: `<svg class="w-8 h-8 text-rose-300" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>`,
+                emoji: '🧄'
+            },
+            {
+                id: 'step-chili',
+                correctOrder: 4.5,
+                title: '🌶️ [IF Pedas] Tambahkan Cabai / Sambal',
+                iconHtml: `<span class="text-3xl sm:text-4xl">🌶️</span>`,
+                emoji: '🌶️',
+                isConditional: true
+            },
+            {
+                id: 'step-rice',
+                correctOrder: 5,
+                title: 'Masukkan nasi putih & bumbu',
+                iconHtml: `<svg class="w-8 h-8 text-slate-100" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.22 19.64 10.57 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9z"/></svg>`,
+                emoji: '🍚'
+            },
+            {
+                id: 'step-stir',
+                correctOrder: 6,
+                title: 'Aduk & bumbui hingga matang',
+                iconHtml: `<svg class="w-8 h-8 text-rose-500" viewBox="0 0 24 24" fill="currentColor"><path d="M8.1 13.34l2.83-2.83-6.36-6.36-2.83 2.83 6.36 6.36zm12.37-9.19c-.39-.39-1.02-.39-1.41 0l-2.12 2.12-2.83-2.83-1.41 1.41 2.83 2.83-6.36 6.36 1.41 1.41 6.36-6.36 2.83 2.83 1.41-1.41-2.83-2.83 2.12-2.12c.39-.38.39-1.02 0-1.41z"/></svg>`,
+                emoji: '🥢'
+            },
+            {
+                id: 'step-stove-off',
+                correctOrder: 7,
+                title: 'Matikan kompor gas',
+                iconHtml: `<svg class="w-8 h-8 text-rose-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>`,
+                emoji: '🛑'
+            },
+            {
+                id: 'step-serve',
+                correctOrder: 8,
+                title: 'Sajikan nasi goreng ke piring',
+                iconHtml: `<svg class="w-8 h-8 text-purple-400" viewBox="0 0 24 24" fill="currentColor"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.55 3.89 3.57 4.23V22h2.86v-8.77C11.45 12.89 13 11.12 13 9V2h-2v7zm8-7v8h2V2h-2zm0 10.1v9.9h2V12.1c1.72-.45 3-2.01 3-3.87V2h-2v6.23c0 1.25-1.01 2.27-2.27 2.27H19z"/></svg>`,
+                emoji: '🍽️'
+            }
+        ];
+
+        // Initial card layout sequence
+        const defaultInitialSequence = [
+            'step-bumbu',     // Tumis bumbu
+            'step-stove-off', // Matikan kompor
+            'step-serve',     // Sajikan
+            'step-oil',       // Tuangkan minyak
+            'step-stir',      // Aduk & bumbui
+            'step-prep',      // Siapkan alat
+            'step-rice',      // Masukkan nasi
+            'step-stove-on'   // Nyalakan kompor
+        ];
+
+        let currentSequence = [...defaultInitialSequence];
+
+        function changeLevel(val) {
+            currentLevel = parseInt(val);
+            const l2Panel = document.getElementById('level2-panel');
+            if (currentLevel === 2) {
+                l2Panel.classList.remove('hidden');
+                document.getElementById('cond-spicy').checked = true;
+                isSpicyOption = true;
+            } else {
+                l2Panel.classList.add('hidden');
+                document.getElementById('cond-spicy').checked = false;
+                isSpicyOption = false;
+            }
+            updateSequenceForLevel();
         }
 
-        function isOrderCorrect(steps) { return steps.every((s,i) => s.id === CORRECT_STEPS[i].id); }
-
-        function shuffleSteps() {
-            do { currentSteps = [...CORRECT_STEPS].sort(() => Math.random() - 0.5); } while (isOrderCorrect(currentSteps));
-            selectedIndexForTap = null;
+        function toggleCondition() {
+            isSpicyOption = document.getElementById('cond-spicy').checked;
+            updateSequenceForLevel();
         }
 
+        function updateSequenceForLevel() {
+            currentSequence = currentSequence.filter(id => id !== 'step-chili');
+            if (currentLevel === 2 && isSpicyOption) {
+                currentSequence.splice(1, 0, 'step-chili');
+            }
+            selectedIndex = null;
+            renderGrid();
+        }
+
+        // Render Cards Grid
         function renderGrid() {
-            gridContainer.innerHTML = '';
-            currentSteps.forEach((step, index) => {
-                const card = document.createElement('div');
-                const isSelected = selectedIndexForTap === index;
-                card.className = `grid-card relative bg-white border-2 border-slate-200 rounded-2xl p-3 md:p-4 flex flex-col items-center justify-between text-center shadow-md hover:shadow-lg ${isSelected ? 'selected' : ''}`;
-                card.setAttribute('draggable', 'true');
-                card.setAttribute('data-index', index);
-                card.innerHTML = `
-                    <span class="absolute top-2 left-2 w-7 h-7 md:w-8 md:h-8 rounded-full bg-gradient-to-br from-blue-800 to-blue-950 text-white font-black text-xs md:text-sm flex items-center justify-center shadow-sm">${index + 1}</span>
-                    <div class="my-auto py-1 flex flex-col items-center justify-center gap-1.5">
-                        <span class="text-3xl md:text-4xl my-1 transform hover:scale-110 transition-transform">${step.icon}</span>
-                        <div class="text-xs md:text-base font-extrabold text-slate-800 leading-tight">${step.text}</div>
+            const gridEl = document.getElementById('card-grid');
+            if (!gridEl) return;
+            gridEl.innerHTML = '';
+
+            currentSequence.forEach((stepId, index) => {
+                const stepObj = masterSteps.find(s => s.id === stepId);
+                if (!stepObj) return;
+                const positionNum = index + 1;
+                const isChili = stepObj.id === 'step-chili';
+
+                const cardEl = document.createElement('div');
+                cardEl.className = `step-card rounded-2xl p-4 sm:p-5 shadow-sm border-2 flex flex-col justify-between items-center relative cursor-pointer min-h-[160px] sm:min-h-[190px] ${
+                    isChili ? 'bg-amber-50 border-rose-400 text-rose-950 ring-2 ring-rose-300' : 'bg-white border-transparent'
+                } ${selectedIndex === index ? 'selected' : ''}`;
+                cardEl.setAttribute('draggable', 'true');
+                cardEl.setAttribute('data-index', index);
+
+                cardEl.innerHTML = `
+                    <div class="absolute top-3 left-3 w-7 h-7 sm:w-8 sm:h-8 rounded-full ${isChili ? 'bg-rose-600' : 'bg-brand-badge'} text-white font-black text-xs sm:text-sm flex items-center justify-center shadow-sm">
+                        ${positionNum}
                     </div>
-                    <div class="text-[10px] md:text-xs text-slate-400 font-bold mt-auto flex items-center justify-center gap-1"><span>⋮⋮ geser / tap</span></div>`;
-                card.addEventListener('dragstart', function(e) { draggedIndex = index; this.classList.add('dragging'); e.dataTransfer.effectAllowed = 'move'; });
-                card.addEventListener('dragover', e => e.preventDefault());
-                card.addEventListener('dragenter', function(e) { e.preventDefault(); this.classList.add('drag-over'); });
-                card.addEventListener('dragleave', function() { this.classList.remove('drag-over'); });
-                card.addEventListener('drop', function(e) { e.preventDefault(); this.classList.remove('drag-over'); const ti = parseInt(this.getAttribute('data-index')); if (draggedIndex !== null && draggedIndex !== ti) { [currentSteps[draggedIndex], currentSteps[ti]] = [currentSteps[ti], currentSteps[draggedIndex]]; selectedIndexForTap = null; showToast('🔄 Kartu ditukar!', 'info'); renderGrid(); } });
-                card.addEventListener('dragend', function() { this.classList.remove('dragging'); document.querySelectorAll('.grid-card').forEach(c => c.classList.remove('drag-over')); draggedIndex = null; });
-                card.addEventListener('click', () => handleCardClick(index));
-                gridContainer.appendChild(card);
+
+                    ${isChili ? '<span class="absolute top-2 right-2 px-2 py-0.5 bg-rose-200 text-rose-800 rounded-full text-[9px] font-black uppercase">Percabangan IF</span>' : ''}
+
+                    <div class="my-auto pt-2 flex flex-col items-center justify-center">
+                        <div class="text-3xl sm:text-4xl my-1 transform transition-transform group-hover:scale-110">
+                            ${getIconMarkup(stepObj)}
+                        </div>
+                    </div>
+
+                    <div class="text-center font-bold ${isChili ? 'text-rose-900' : 'text-slate-800'} text-xs sm:text-sm md:text-base leading-snug px-1 my-1 min-h-[2.5rem] flex items-center justify-center">
+                        ${stepObj.title}
+                    </div>
+
+                    <div class="text-[10px] sm:text-xs font-semibold ${isChili ? 'text-rose-500' : 'text-slate-400'} mt-1 flex items-center gap-1">
+                        <i class="fa-solid fa-grip text-[9px]"></i> geser / tap
+                    </div>
+                `;
+
+                // Drag and Drop Event Listeners
+                cardEl.addEventListener('dragstart', handleDragStart);
+                cardEl.addEventListener('dragenter', handleDragEnter);
+                cardEl.addEventListener('dragover', handleDragOver);
+                cardEl.addEventListener('dragleave', handleDragLeave);
+                cardEl.addEventListener('drop', handleDrop);
+                cardEl.addEventListener('dragend', handleDragEnd);
+
+                // Tap / Click Event Listener
+                cardEl.addEventListener('click', () => handleCardClick(index));
+
+                gridEl.appendChild(cardEl);
             });
         }
 
-        function handleCardClick(index) {
-            if (selectedIndexForTap === null) { selectedIndexForTap = index; renderGrid(); }
-            else if (selectedIndexForTap === index) { selectedIndexForTap = null; renderGrid(); }
-            else { [currentSteps[selectedIndexForTap], currentSteps[index]] = [currentSteps[index], currentSteps[selectedIndexForTap]]; selectedIndexForTap = null; showToast('🔄 Kartu ditukar!', 'info'); renderGrid(); }
-        }
-
-        function analyzeBugMessage() {
-            const firstStep = currentSteps[0];
-            const oilIdx = currentSteps.findIndex(s => s.code === 'POUR_OIL');
-            const stoveIdx = currentSteps.findIndex(s => s.code === 'IGNITE_STOVE');
-            const sauteIdx = currentSteps.findIndex(s => s.code === 'SAUTE_SPICES');
-            const riceIdx = currentSteps.findIndex(s => s.code === 'ADD_RICE');
-            const turnOffIdx = currentSteps.findIndex(s => s.code === 'TURN_OFF_STOVE');
-            const serveIdx = currentSteps.findIndex(s => s.code === 'SERVE');
-            if (firstStep.code !== 'PREPARE') return { code:'🚨 BUG #001', desc:'Robot bingung mencari wajan & spatula! Instruksi "Siapkan alat & bahan" harus dilakukan di posisi 1.' };
-            if (oilIdx > sauteIdx) return { code:'🚨 BUG #002', desc:'Robot menumis bumbu di atas wajan kering tanpa minyak goreng!' };
-            if (riceIdx < sauteIdx) return { code:'🚨 BUG #003', desc:'Robot memasukkan nasi sebelum bumbu ditumis! Nasi gorengnya jadi hambar.' };
-            if (serveIdx < turnOffIdx) return { code:'🚨 BUG #004', desc:'Bahaya! Robot menyajikan nasi goreng tetapi kompor gas masih menyala.' };
-            if (serveIdx < riceIdx) return { code:'🚨 BUG #005', desc:'Robot menyajikan piring kosong ke meja makan karena nasi belum dimasukkan!' };
-            return { code:'🚨 BUG #006', desc:'Urutan instruksi belum runtut! Periksa kembali alur logika dari awal hingga akhir.' };
-        }
-
-        btnExecute.addEventListener('click', () => {
-            if (isOrderCorrect(currentSteps)) {
-                showToast('✅ Algoritma benar! Robot berhasil memasak!', 'success');
-                modalSuccess.classList.remove('opacity-0','pointer-events-none'); modalSuccess.classList.add('opacity-100','pointer-events-auto');
-                successBox.classList.remove('scale-90'); successBox.classList.add('scale-100');
-                startConfetti();
-            } else {
-                const bugInfo = analyzeBugMessage();
-                bugCodeTitle.textContent = bugInfo.code; bugCodeDesc.textContent = bugInfo.desc;
-                showToast('❌ Error ditemukan! Perbaiki urutannya.', 'error');
-                modalError.classList.remove('opacity-0','pointer-events-none'); modalError.classList.add('opacity-100','pointer-events-auto');
-                errorBox.classList.remove('scale-90'); errorBox.classList.add('scale-100');
-                errorBox.classList.add('shake-modal'); setTimeout(() => errorBox.classList.remove('shake-modal'), 450);
+        function getIconMarkup(step) {
+            switch(step.id) {
+                case 'step-bumbu':
+                    return '<span class="text-3xl sm:text-4xl">🧄</span>';
+                case 'step-stove-off':
+                    return '<div class="w-8 h-8 rounded-lg bg-rose-500 text-white flex items-center justify-center text-xs font-black"><i class="fa-solid fa-stop text-lg"></i></div>';
+                case 'step-serve':
+                    return '<span class="text-3xl sm:text-4xl">🍽️</span>';
+                case 'step-oil':
+                    return '<span class="text-3xl sm:text-4xl">🍳</span>';
+                case 'step-stir':
+                    return '<span class="text-3xl sm:text-4xl">🥢</span>';
+                case 'step-prep':
+                    return '<div class="w-9 h-9 rounded-xl bg-pink-500 text-white flex items-center justify-center"><i class="fa-solid fa-toolbox text-lg"></i></div>';
+                case 'step-rice':
+                    return '<span class="text-3xl sm:text-4xl">🍚</span>';
+                case 'step-stove-on':
+                    return '<span class="text-3xl sm:text-4xl">🔥</span>';
+                default:
+                    return step.emoji;
             }
+        }
+
+        // Tap to Swap Logic
+        function handleCardClick(index) {
+            playSound('click');
+            if (selectedIndex === null) {
+                selectedIndex = index;
+                renderGrid();
+            } else if (selectedIndex === index) {
+                selectedIndex = null;
+                renderGrid();
+            } else {
+                swapCards(selectedIndex, index);
+                selectedIndex = null;
+                renderGrid();
+            }
+        }
+
+        function swapCards(idx1, idx2) {
+            playSound('swap');
+            const temp = currentSequence[idx1];
+            currentSequence[idx1] = currentSequence[idx2];
+            currentSequence[idx2] = temp;
+        }
+
+        // Drag & Drop Handlers
+        function handleDragStart(e) {
+            playSound('click');
+            dragSourceIndex = parseInt(this.getAttribute('data-index'));
+            this.classList.add('dragging');
+            e.dataTransfer.effectAllowed = 'move';
+            e.dataTransfer.setData('text/plain', dragSourceIndex);
+        }
+
+        function handleDragOver(e) {
+            if (e.preventDefault) e.preventDefault();
+            e.dataTransfer.dropEffect = 'move';
+            return false;
+        }
+
+        function handleDragEnter(e) {
+            this.classList.add('drag-over');
+        }
+
+        function handleDragLeave(e) {
+            this.classList.remove('drag-over');
+        }
+
+        function handleDrop(e) {
+            if (e.stopPropagation) e.stopPropagation();
+            const targetIndex = parseInt(this.getAttribute('data-index'));
+            if (dragSourceIndex !== null && dragSourceIndex !== targetIndex) {
+                swapCards(dragSourceIndex, targetIndex);
+                selectedIndex = null;
+                renderGrid();
+            }
+            return false;
+        }
+
+        function handleDragEnd(e) {
+            this.classList.remove('dragging');
+            document.querySelectorAll('.step-card').forEach(card => {
+                card.classList.remove('drag-over');
+            });
+        }
+
+        function resetToInitial() {
+            playSound('click');
+            currentSequence = [...defaultInitialSequence];
+            if (currentLevel === 2 && isSpicyOption) {
+                currentSequence.splice(1, 0, 'step-chili');
+            }
+            selectedIndex = null;
+            renderGrid();
+        }
+
+        function initCanvas() {
+            simCanvas = document.getElementById('simCanvas');
+            if (simCanvas) simCtx = simCanvas.getContext('2d');
+        }
+
+        function resizeCanvas() {
+            if (!simCanvas) return;
+            const rect = simCanvas.parentElement.getBoundingClientRect();
+            simCanvas.width = rect.width * (window.devicePixelRatio || 1);
+            simCanvas.height = rect.height * (window.devicePixelRatio || 1);
+            if (simCtx) simCtx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
+        }
+
+        function runCookingProgram() {
+            playSound('click');
+            const modal = document.getElementById('simulation-modal');
+            modal.classList.remove('hidden');
+
+            setTimeout(() => {
+                resizeCanvas();
+                startCookingSimulation();
+            }, 100);
+        }
+
+        function closeModal() {
+            playSound('click');
+            if (animFrameId) cancelAnimationFrame(animFrameId);
+            if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+            document.getElementById('simulation-modal').classList.add('hidden');
+        }
+
+        function evaluateSequence() {
+            let errors = [];
+            
+            const prepIdx = currentSequence.indexOf('step-prep');
+            const stoveOnIdx = currentSequence.indexOf('step-stove-on');
+            const oilIdx = currentSequence.indexOf('step-oil');
+            const bumbuIdx = currentSequence.indexOf('step-bumbu');
+            const chiliIdx = currentSequence.indexOf('step-chili');
+            const riceIdx = currentSequence.indexOf('step-rice');
+            const stirIdx = currentSequence.indexOf('step-stir');
+            const stoveOffIdx = currentSequence.indexOf('step-stove-off');
+            const serveIdx = currentSequence.indexOf('step-serve');
+
+            if (prepIdx > stoveOnIdx || prepIdx > oilIdx || prepIdx > bumbuIdx) {
+                errors.push("Bahan & alat belum disiapkan tetapi proses memasak sudah dimulai!");
+            }
+            if (stoveOnIdx > oilIdx && stoveOnIdx > bumbuIdx) {
+                errors.push("Menuangkan minyak/bumbu ke dalam wajan dingin sebelum kompor dinyalakan!");
+            }
+            if (oilIdx > bumbuIdx) {
+                errors.push("Menumis bumbu langsung ke wajan kering tanpa minyak goreng!");
+            }
+            if (bumbuIdx > riceIdx) {
+                errors.push("Nasi dimasukkan sebelum bumbu ditumis hingga harum!");
+            }
+            
+            if (currentLevel === 2 && isSpicyOption) {
+                if (chiliIdx === -1) {
+                    errors.push("[Tingkat 2 - IF Pedas] Kartu cabai belum dimasukkan ke dalam alur algoritma!");
+                } else {
+                    if (chiliIdx < oilIdx || chiliIdx < stoveOnIdx) {
+                        errors.push("[Tingkat 2 - IF Pedas] Cabai dimasukkan sebelum kompor dinyalakan atau minyak dituang!");
+                    }
+                    if (chiliIdx > riceIdx) {
+                        errors.push("[Tingkat 2 - IF Pedas] Cabai ditambahkan setelah nasi masuk (seharusnya ditumis bersama bumbu)!");
+                    }
+                }
+            }
+
+            if (riceIdx > stirIdx) {
+                errors.push("Nasi goreng disajikan/dimatikan sebelum diaduk & dibumbui merata!");
+            }
+            if (stirIdx > stoveOffIdx) {
+                errors.push("Nasi disajikan saat kompor gas masih menyala panas!");
+            }
+            if (stoveOffIdx > serveIdx) {
+                errors.push("Nasi disajikan sebelum kompor gas dimatikan!");
+            }
+
+            const isPerfect = errors.length === 0;
+            return { isPerfect, errors };
+        }
+
+        function startCookingSimulation() {
+            const { isPerfect, errors } = evaluateSequence();
+            const badge = document.getElementById('modal-status-badge');
+            const title = document.getElementById('modal-title');
+            const pedagogicalBox = document.getElementById('pedagogical-box');
+
+            if (isPerfect) {
+                playSound('success');
+                badge.className = "px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider bg-emerald-100 text-emerald-800";
+                badge.innerText = currentLevel === 2 ? "BERHASIL 100% - ALGORITMA & KONDISIONAL VALID" : "BERHASIL 100% - LOGIKA VALID";
+                title.innerText = "🎉 Nasi Goreng Lezat Siap Disajikan!";
+                
+                pedagogicalBox.innerHTML = `
+                    <div class="flex items-start gap-3">
+                        <div class="text-2xl text-emerald-500"><i class="fa-solid fa-circle-check"></i></div>
+                        <div>
+                            <p class="font-extrabold text-slate-900 mb-1">Refleksi Berpikir Komputasional (Algoritma Sekuensial & Pre-Kondisi):</p>
+                            <p class="text-slate-600">Luar biasa! Komputer mengeksekusi perintah secara <strong>sekuensial (runtut)</strong>. ${currentLevel === 2 ? 'Percabangan logika IF-ELSE (Pedas) juga telah dipenuhi.' : ''} Karena urutan langkah logis, program berhasil dijalankan tanpa error!</p>
+                        </div>
+                    </div>
+                `;
+            } else {
+                playSound('error');
+                badge.className = "px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider bg-rose-100 text-rose-800";
+                badge.innerText = "ERROR ALGORITMA";
+                title.innerText = "⚠️ Program Memasak Mengalami Bug!";
+
+                pedagogicalBox.innerHTML = `
+                    <div class="flex items-start gap-3">
+                        <div class="text-2xl text-rose-500"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                        <div>
+                            <p class="font-extrabold text-slate-900 mb-1">Analisis Logika Komputer (Debugging):</p>
+                            <ul class="list-disc list-inside space-y-1 text-slate-600 font-medium">
+                                ${errors.map(err => `<li>${err}</li>`).join('')}
+                            </ul>
+                            <p class="mt-2 text-xs font-bold text-slate-500">
+                                💡 Komputer tidak dapat berasumsi. Jika urutan algoritma salah, hasil eksekusi akan gagal (GIGO: Garbage In, Garbage Out).
+                            </p>
+                        </div>
+                    </div>
+                `;
+            }
+
+            let frame = 0;
+            const stepDuration = 40;
+            const totalSteps = currentSequence.length;
+
+            setTimeout(() => {
+                speakFeedback();
+            }, 600);
+
+            function drawSim() {
+                frame++;
+                const w = simCanvas.width / (window.devicePixelRatio || 1);
+                const h = simCanvas.height / (window.devicePixelRatio || 1);
+
+                simCtx.fillStyle = '#0f172a';
+                simCtx.fillRect(0, 0, w, h);
+
+                simCtx.fillStyle = '#1e293b';
+                simCtx.fillRect(0, h * 0.65, w, h * 0.35);
+                simCtx.fillStyle = '#334155';
+                simCtx.fillRect(0, h * 0.65, w, 4);
+
+                const currentStepIdx = Math.min(Math.floor(frame / stepDuration), totalSteps - 1);
+                const activeStepId = currentSequence[currentStepIdx];
+                const activeStepObj = masterSteps.find(s => s.id === activeStepId);
+
+                document.getElementById('sim-subtitle').innerText = `Langkah ${currentStepIdx + 1}/${totalSteps}: ${activeStepObj.title}`;
+
+                simCtx.fillStyle = '#334155';
+                simCtx.beginPath();
+                simCtx.arc(w * 0.5, h * 0.62, 60, 0, Math.PI);
+                simCtx.fill();
+                simCtx.lineWidth = 4;
+                simCtx.strokeStyle = '#64748b';
+                simCtx.stroke();
+
+                simCtx.lineWidth = 8;
+                simCtx.strokeStyle = '#1e293b';
+                simCtx.beginPath();
+                simCtx.moveTo(w * 0.5 - 60, h * 0.62);
+                simCtx.lineTo(w * 0.5 - 100, h * 0.58);
+                simCtx.stroke();
+
+                const stoveActive = currentSequence.indexOf('step-stove-on') <= currentStepIdx && currentSequence.indexOf('step-stove-off') > currentStepIdx;
+                if (stoveActive) {
+                    const fireH = 12 + Math.sin(frame * 0.3) * 4;
+                    simCtx.fillStyle = '#f97316';
+                    simCtx.beginPath();
+                    simCtx.arc(w * 0.5 - 20, h * 0.72, 10, 0, Math.PI * 2);
+                    simCtx.arc(w * 0.5 + 20, h * 0.72, 10, 0, Math.PI * 2);
+                    simCtx.arc(w * 0.5, h * 0.72 - fireH, 14, 0, Math.PI * 2);
+                    simCtx.fill();
+
+                    simCtx.fillStyle = '#fbcfe8';
+                    simCtx.beginPath();
+                    simCtx.arc(w * 0.5, h * 0.72 - 3, 8, 0, Math.PI * 2);
+                    simCtx.fill();
+                }
+
+                if (currentSequence.indexOf('step-rice') <= currentStepIdx) {
+                    simCtx.fillStyle = isPerfect ? '#d97706' : '#78350f';
+                    simCtx.beginPath();
+                    simCtx.ellipse(w * 0.5, h * 0.64, 45, 14, 0, 0, Math.PI * 2);
+                    simCtx.fill();
+
+                    simCtx.fillStyle = '#fef08a';
+                    for(let i = 0; i < 15; i++) {
+                        const rx = w * 0.5 + Math.cos(i * 2 + frame * 0.1) * 30;
+                        const ry = h * 0.64 + Math.sin(i * 3) * 8;
+                        simCtx.fillRect(rx, ry, 3, 2);
+                    }
+                }
+
+                drawChefRobot(simCtx, w * 0.8, h * 0.5, isPerfect, currentStepIdx === totalSteps - 1);
+
+                if (frame < totalSteps * stepDuration) {
+                    animFrameId = requestAnimationFrame(drawSim);
+                }
+            }
+
+            drawSim();
+        }
+
+        function drawChefRobot(ctx, x, y, isPerfect, isFinished) {
+            ctx.fillStyle = '#1e293b';
+            ctx.strokeStyle = '#3b82f6';
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.roundRect(x - 25, y - 35, 50, 40, 8);
+            ctx.fill();
+            ctx.stroke();
+
+            ctx.fillStyle = '#0f172a';
+            ctx.beginPath();
+            ctx.roundRect(x - 18, y - 28, 36, 18, 4);
+            ctx.fill();
+
+            ctx.fillStyle = isFinished ? (isPerfect ? '#4ade80' : '#f87171') : '#38bdf8';
+            if (isFinished && !isPerfect) {
+                ctx.font = 'bold 10px sans-serif';
+                ctx.fillText('✕', x - 12, y - 16);
+                ctx.fillText('✕', x + 4, y - 16);
+            } else if (isFinished && isPerfect) {
+                ctx.font = 'bold 12px sans-serif';
+                ctx.fillText('^', x - 12, y - 14);
+                ctx.fillText('^', x + 4, y - 14);
+            } else {
+                ctx.beginPath(); ctx.arc(x - 8, y - 19, 3, 0, Math.PI * 2); ctx.fill();
+                ctx.beginPath(); ctx.arc(x + 8, y - 19, 3, 0, Math.PI * 2); ctx.fill();
+            }
+
+            ctx.fillStyle = '#ffffff';
+            ctx.beginPath();
+            ctx.roundRect(x - 20, y - 55, 40, 18, [6, 6, 0, 0]);
+            ctx.fill();
+            ctx.beginPath();
+            ctx.arc(x - 10, y - 55, 10, 0, Math.PI * 2);
+            ctx.arc(x + 10, y - 55, 10, 0, Math.PI * 2);
+            ctx.arc(x, y - 60, 13, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        // Initialize application on window load
+        window.addEventListener('load', () => {
+            initCanvas();
+            renderGrid();
         });
 
-        btnFix.addEventListener('click', () => { modalError.classList.add('opacity-0','pointer-events-none'); modalError.classList.remove('opacity-100','pointer-events-auto'); errorBox.classList.add('scale-90'); errorBox.classList.remove('scale-100'); });
-        btnRestart.addEventListener('click', () => { modalSuccess.classList.add('opacity-0','pointer-events-none'); modalSuccess.classList.remove('opacity-100','pointer-events-auto'); successBox.classList.add('scale-90'); successBox.classList.remove('scale-100'); stopConfetti(); shuffleSteps(); renderGrid(); });
-
-        const canvas = document.getElementById('confettiCanvas');
-        const ctx = canvas.getContext('2d');
-        let confettiParticles = [], animationFrameId = null;
-        function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-        window.addEventListener('resize', resizeCanvas); resizeCanvas();
-        function startConfetti() { confettiParticles = []; const colors = ['#1e3a5f','#3b82f6','#22c55e','#ec4899','#a855f7','#f59e0b']; for(let i=0;i<90;i++) confettiParticles.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height-canvas.height,size:Math.random()*8+4,color:colors[Math.floor(Math.random()*colors.length)],speedY:Math.random()*3+2,speedX:Math.random()*2-1,rotation:Math.random()*360,rotSpeed:Math.random()*6-3}); drawConfetti(); }
-        function drawConfetti() { ctx.clearRect(0,0,canvas.width,canvas.height); confettiParticles.forEach(p=>{p.y+=p.speedY;p.x+=p.speedX;p.rotation+=p.rotSpeed;if(p.y>canvas.height){p.y=-10;p.x=Math.random()*canvas.width;}ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.rotation*Math.PI/180);ctx.fillStyle=p.color;ctx.fillRect(-p.size/2,-p.size/2,p.size,p.size);ctx.restore();}); animationFrameId=requestAnimationFrame(drawConfetti); }
-        function stopConfetti() { if(animationFrameId) cancelAnimationFrame(animationFrameId); ctx.clearRect(0,0,canvas.width,canvas.height); }
-
-        window.onload = function() { shuffleSteps(); renderGrid(); };
+        window.addEventListener('resize', () => {
+            if (simCanvas && !document.getElementById('simulation-modal').classList.contains('hidden')) {
+                resizeCanvas();
+            }
+        });
     </script>
- 
-</body></html>
+</body>
+
+</html>
